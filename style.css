@@ -62,92 +62,97 @@
  *
  */
 
+:root {
+    --FP-01-size: clamp(1.5rem, 5vw - 1rem, 2rem);
+    --FP-01-line: clamp(1.875rem, 5vw - 0.5rem, 2.5rem);
+    --FP-01-weight: 300;
 
- :root {
- 
-	--FP-01-size: clamp(1.5rem, 5vw - 1rem, 2rem);
- 	--FP-01-line: clamp(1.875rem, 5vw - 0.5rem, 2.5rem);
- 	--FP-01-weight: 300 ;
- 
- 	--FQ-01-size: clamp(1.25rem, 4vw - 0.5rem, 2rem);
-	--FQ-01-line: clamp(1.625rem, 5vw - 0.5rem, 2.5rem); 
-	--FQ-01-weight: 400 ;
- 
-	--FQ-02-size: clamp(2.25rem, 5vw + 0.25rem, 3.75rem); 
-	--FQ-02-line: clamp(2.75rem, 5vw + 1rem, 4.375rem);
-	--FQ-02-weight: 300 ;
+    --FQ-01-size: clamp(1.25rem, 4vw - 0.5rem, 2rem);
+    --FQ-01-line: clamp(1.625rem, 5vw - 0.5rem, 2.5rem);
+    --FQ-01-weight: 400;
 
-	--FD-01-size: clamp(2.625rem, 5vw + 1rem, 4.75rem);
-	--FD-01-line: clamp(3.125rem, 5vw + 1.75rem, 5.375rem);
-	--FD-01-weight: 300 ;
+    --FQ-02-size: clamp(2.25rem, 5vw + 0.25rem, 3.75rem);
+    --FQ-02-line: clamp(2.75rem, 5vw + 1rem, 4.375rem);
+    --FQ-02-weight: 300;
 
-	--FD-02-size: clamp(2.625rem, 3vw + 1.75rem, 4.75rem); 
-	--FD-02-line: clamp(3.125rem, 5vw + 1.75rem, 5.375rem);
-	--FD-02-weight: 600 ;
+    --FD-01-size: clamp(2.625rem, 5vw + 1rem, 4.75rem);
+    --FD-01-line: clamp(3.125rem, 5vw + 1.75rem, 5.375rem);
+    --FD-01-weight: 300;
 
-	--FD-03-size: clamp(3.375rem, 4vw + 2.25rem, 5.25rem); 
-	--FD-03-line: clamp(4rem, 4vw + 2.75rem, 5.875rem);
-	--FD-03-weight: 600 ;
+    --FD-02-size: clamp(2.625rem, 3vw + 1.75rem, 4.75rem);
+    --FD-02-line: clamp(3.125rem, 5vw + 1.75rem, 5.375rem);
+    --FD-02-weight: 600;
 
-	--FD-04-size: clamp(4.25rem, 5vw + 3rem, 9.75rem);
-	--FD-04-line: clamp(4.875rem, 5vw + 3rem, 10.25rem);
-	--FD-04-weight: 600 ;
+    --FD-03-size: clamp(3.375rem, 4vw + 2.25rem, 5.25rem);
+    --FD-03-line: clamp(4rem, 4vw + 2.75rem, 5.875rem);
+    --FD-03-weight: 600;
 
+    --FD-04-size: clamp(4.25rem, 5vw + 3rem, 9.75rem);
+    --FD-04-line: clamp(4.875rem, 5vw + 3rem, 10.25rem);
+    --FD-04-weight: 600;
 
+    --blue60: #6464c8;
+    --red60: #be4747;
+    --green20: #23ab23;
+    --yellow10: #d8d84e;
+    --cyan20: #d2e5ef;
+    --white: #ffffff;
+    --black: #000000;
+    --grey10: #f4f4f4;
+    --grey20: #e0e0e0;
+    --grey30: #c6c6c6;
+    --grey40: #a8a8a8;
+    --grey70: #4d5358;
 
-	--blue60: #6464C8 ;
-	--red60: #BE4747 ;
-	--green20: #23AB23 ;
-	--yellow10: #D8D84E ;
-	--cyan20: #D2E5EF ;
-	--white: #FFFFFF ;
-	--black: #000000;
-	--grey10: #F4F4F4  ;
-	--grey20: #E0E0E0 ;
-	--grey30: #C6C6C6 ;
-	--grey40: #A8A8A8 ;
+    --font-size: 12px;
+    --ff: "fira";
+    --padding: 1rem;
+    --max-width: 1600px;
+    /* Padding between hero text and subtext (how much of the background image we show) */
+    --padding-hero-top-bottom: 10rem;
+    --padding-hero-elements: 5.25rem;
 	
-	--font-size: 12px;
-     	--ff:'fira'; 
-	--padding: 1rem;
-	--max-width: 1600px;
+	/* Section break variables */
+	--section-break-height: 1.5rem;
 
+
+	/* Tab padding for sections */
+	--tab-padding: 6.75rem;
 }
 
-@font-face{
-        font-family: 'fira';
-        font-style: normal;
-        font-weight: 400 ;
-        src: url(./assets/fonts/FiraSans-Regular.woff2);
+@font-face {
+    font-family: "fira";
+    font-style: normal;
+    font-weight: 400;
+    src: url(./assets/fonts/FiraSans-Regular.woff2);
 }
 
-@font-face{
-        font-family: 'fira';
-        font-style: normal;
-        font-weight: 300 ;
-        src: url(./assets/fonts/FiraSans-Light.woff2);
+@font-face {
+    font-family: "fira";
+    font-style: normal;
+    font-weight: 300;
+    src: url(./assets/fonts/FiraSans-Light.woff2);
 }
 
-@font-face{
-        font-family: 'fira';
-        font-style: normal;
-        font-weight: 600 ;
-        src: url(./assets/fonts/FiraSans-SemiBold.woff2);
+@font-face {
+    font-family: "fira";
+    font-style: normal;
+    font-weight: 600;
+    src: url(./assets/fonts/FiraSans-SemiBold.woff2);
 }
-
 
 * {
-  margin: 0;
-  padding: 0;
-  border: none;
-  font-size: var(--font-size);
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-size: var(--font-size);
 }
 
 /* Box sizing rules */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Remove default margin */
@@ -161,36 +166,37 @@ figure,
 blockquote,
 dl,
 dd {
-  margin: 0;
+    margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
 }
 
 /* Set core root defaults */
 html:focus-within {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+	background-color: var(--gray10);
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -198,74 +204,73 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
+    html:focus-within {
+        scroll-behavior: auto;
+    }
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
-h1{
-	font-family: var(--ff);
-	font-size: var(--FD-04-size);
-	line-height: var(--FD-04-line);
-	font-weight: var(--FD-04-weight); 
+h1 {
+    font-family: var(--ff);
+    font-size: var(--FD-04-size);
+    line-height: var(--FD-04-line);
+    font-weight: var(--FD-04-weight);
 }
 
-h2{
-	font-family: var(--ff);
-	font-size: var(--FD-03-size);
-	line-height: var(--FD-03-line);
-	font-weight: var(--FD-03-weight); 
+h2 {
+    font-family: var(--ff);
+    font-size: var(--FD-03-size);
+    line-height: var(--FD-03-line);
+    font-weight: var(--FD-03-weight);
 }
 
-h3{
-	font-family: var(--ff);
-	font-size: var(--FD-02-size);
-	line-height: var(--FD-02-line);
-	font-weight: var(--FD-02-weight); 
+h3 {
+    font-family: var(--ff);
+    font-size: var(--FD-02-size);
+    line-height: var(--FD-02-line);
+    font-weight: var(--FD-02-weight);
 }
 
-h4{
-	font-family: var(--ff);
-	font-size: var(--FD-01-size);
-	line-height: var(--FD-01-line);
-	font-weight: var(--FD-01-weight); 
+h4 {
+    font-family: var(--ff);
+    font-size: var(--FD-01-size);
+    line-height: var(--FD-01-line);
+    font-weight: var(--FD-01-weight);
 }
 
-h5{
-	font-family: var(--ff);
-	font-size: var(--FQ-02-size);
-	line-height: var(--FQ-02-line);
-	font-weight: var(--FQ-02-weight); 
+h5 {
+    font-family: var(--ff);
+    font-size: var(--FQ-02-size);
+    line-height: var(--FQ-02-line);
+    font-weight: var(--FQ-02-weight);
 }
 
-h6{
-	font-family: var(--ff);
-	font-size: var(--FQ-01-size);
-	line-height: var(--FQ-01-line);
-	font-weight: var(--FQ-01-weight); 
+h6 {
+    font-family: var(--ff);
+    font-size: var(--FQ-01-size);
+    line-height: var(--FQ-01-line);
+    font-weight: var(--FQ-01-weight);
 }
 
-p{
-	font-family: var(--ff);
-	font-size: var(--FP-01-size);
-	line-height: var(--FP-01-line);
-	font-weight: var(--FP-01-weight); 
+p {
+    font-family: var(--ff);
+    font-size: var(--FP-01-size);
+    line-height: var(--FP-01-line);
+    font-weight: var(--FP-01-weight);
 }
-
 
 .menu-container {
     display: flex;
@@ -273,6 +278,7 @@ p{
     max-width: var(--max-width);
     margin: auto;
     padding: var(--padding);
+    background-color: var(--grey70);
 }
 
 .logo {
@@ -280,200 +286,212 @@ p{
 }
 
 .button {
-    	padding: var(--padding);
-    	background: var(--blue60);
-	color: var(--white);
+    padding: var(--padding);
+    background-color: var(--blue60);
+    color: var(--white);
+    cursor: pointer;
 }
-
 
 .hero-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-    	max-width: var(--max-width);
-    	text-align: center;
-    	margin: auto;
-    	padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: var(--max-width);
+    text-align: center;
+    margin: auto;
+
+    /* Best practice incase image doesn't load */
+    background-color: var(--blue60);
+    background-image: url("./assets/images/background_hero.png");
+    background-size: cover;
+    /* 
+		Padding between top and bottom of hero text and sub-text
+		This is how much of the image we show
+	*/
+    padding-top: var(--padding-hero-top-bottom);
+    padding-bottom: var(--padding-hero-top-bottom);
+
+    color: var(--white);
 }
 
-img.star {
-	width: min(60vh, 60vw);
+.hero {
+    padding-bottom: var(--padding-hero-elements);
+}
+
+.section-break {
+	margin: auto;
+    max-width: var(--max-width);
+    height: var(--section-break-height);
+    background-color: var(--blue60);
+    background-image: url("./assets/images/section-break.svg");
+	/*padding-bottom: 1.5rem;*/
+	margin-bottom: 1rem;
 }
 
 .feature-container {
-	display: flex;
-	flex-wrap: wrap;
-    	max-width: var(--max-width);
-	margin: auto;
-	background: var(--grey10);
-	margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: var(--max-width);
+    margin: auto;
+    background: var(--grey10);
 }
 
-input[type="radio"]{
-        display: none;
+input[type="radio"] {
+    display: none;
 }
 
 input[type="radio"]:checked + label {
-        background: var(--white);
+    background: var(--white);
 }
 
 input[type="radio"]:checked + label.blue {
-	border-color: var(--blue60);
+    border-color: var(--blue60);
 }
 
 input[type="radio"]:checked + label.red {
-	border-color: var(--red60);
+    border-color: var(--red60);
 }
 
 input[type="radio"]:checked + label.yellow {
-	border-color: var(--yellow10);
+    border-color: var(--yellow10);
 }
 
 input[type="radio"]:checked + label.green {
-	border-color: var(--green20);
+    border-color: var(--green20);
 }
 
-
 input[type="radio"] + label {
-	display: flex;
-	justify-content: center;
-	width: 25% ;
-    	padding: 1rem;
-    	text-align: center;
-	border-bottom-style: solid ;
-	border-width: 0.35rem;
-	border-color: var(--grey40);
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    padding: 1rem;
+    text-align: center;
+    border-bottom-style: solid;
+    border-width: 0.35rem;
+    border-color: var(--grey40);
 }
 
 .feature-container label img {
-	width: 2rem;
-	margin-left: 1rem;
+    width: 2rem;
+    margin-left: 1rem;
 }
 
-
-input[type='radio']:checked + label + .feature-content {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap ;
-    	padding: 1rem;
-	margin-top: 2rem;
+input[type="radio"]:checked + label + .feature-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
-input[type='radio']:checked + label.blue + .feature-content {
-	background: var(--blue60)
+input[type="radio"]:checked + label.blue + .feature-content {
+    background: var(--blue60);
 }
 
-input[type='radio']:checked + label.red + .feature-content {
-	background: var(--red60)
+input[type="radio"]:checked + label.red + .feature-content {
+    background: var(--red60);
 }
 
-input[type='radio']:checked + label.green + .feature-content {
-	background: var(--green20)
+input[type="radio"]:checked + label.green + .feature-content {
+    background: var(--green20);
 }
 
-input[type='radio']:checked + label.yellow + .feature-content {
-	background: var(--yellow10)
+input[type="radio"]:checked + label.yellow + .feature-content {
+    background: var(--yellow10);
 }
 
-.feature-content{
-	display: none;
-	order: 1;
+.feature-content {
+    display: none;
+    order: 1;
 }
 
-.feature-30{
-	display: flex;
-	flex-direction: column;
-	width: 30%;
-	padding: 2rem;
-	background: var(--grey10);
-	align-items: center;
-	justify-content: center;
-        border-style: solid ;
-        border-width: 0.35rem;
-        border-color: var(--white);
-
+.feature-30 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 2rem;
+    background: var(--grey10);
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 0.35rem;
+    border-color: var(--white);
 }
 
 .feature-30.blue h5 {
-	color: var(--blue60);
+    color: var(--blue60);
 }
 
 .feature-30.red h5 {
-	color: var(--red60);
+    color: var(--red60);
 }
 
 .feature-30.yellow h5 {
-	color: var(--yellow10);
+    color: var(--yellow10);
 }
 
 .feature-30.green h5 {
-	color: var(--green20);
+    color: var(--green20);
 }
-
-
 
 .feature-30 p {
-	padding-top: 2rem;
+    padding-top: 2rem;
 }
 
-.feature-30 img{
-	width: min(10vh, 10vw);
-	padding: var(--padding);
+.feature-30 img {
+    width: min(10vh, 10vw);
+    padding: var(--padding);
 }
 
-.feature-30 img.sankey{
-	width: 100%;
-	padding: var(--padding);
+.feature-30 img.sankey {
+    width: 100%;
+    padding: var(--padding);
 }
-
 
 h6.button {
-	background: var(--white);
-	color: var(--blue60);
-	margin-top: 2rem;
+    background: var(--white);
+    color: var(--blue60);
+    margin-top: 2rem;
 }
 
 .feature-40 {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 40%;
-	padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+    padding: 2rem;
 }
 
 .feature-40.blue h5 {
-	color: var(--white);
+    color: var(--white);
 }
 
 .feature-40.red h5 {
-	color: var(--white);
+    color: var(--white);
 }
 
 .feature-40.yellow h5 {
-	color: var(--black);
+    color: var(--black);
 }
 
 .feature-40.green h5 {
-	color: var(--black);
+    color: var(--black);
 }
 
 .feature-40 p {
-	margin-top: 2rem;
-	color: var(--white);
+    margin-top: 2rem;
+    color: var(--white);
 }
-
-
 
 ul {
-	list-style-type: none;
+    list-style-type: none;
 }
 
-
 .users-container {
-	background: var(--grey40);
-	text-align: center;
-	margin-top: 5rem;
-	padding: var(--padding);
+    background: var(--grey40);
+    text-align: center;
+    margin-top: 5rem;
+    padding: var(--padding);
 }
 
 .users-grid {
@@ -492,14 +510,13 @@ ul {
     padding: 1rem;
 }
 
-
-.why-container{
-	max-width: var(--max-width);
-	text-align: center;
-	margin: auto;
-	background: var(--blue60);
-	margin-top: 5rem;
-	padding: var(--padding);
+.why-container {
+    max-width: var(--max-width);
+    text-align: center;
+    margin: auto;
+    background: var(--blue60);
+    margin-top: 5rem;
+    padding: var(--padding);
 }
 
 .why-grid {
@@ -507,48 +524,41 @@ ul {
     grid-template-columns: repeat(2, 1fr);
     max-width: var(--max-width);
     gap: 1rem;
-
 }
 
-.why-content p{
-	text-align: left;	
+.why-content p {
+    text-align: left;
 }
 
-
-.footer-container{
-	display: flex;
-	justify-content: space-between;
-    	max-width: var(--max-width);
-	margin: auto;
-	margin-top: 5rem;
-	padding: var(--padding);
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: auto;
+    margin-top: 5rem;
+    padding: var(--padding);
 }
 
+@media only screen and (max-width: 650px) {
+    input[type="radio"] + label {
+        width: 100%;
+        order: 1;
+    }
 
-@media only screen and (max-width: 650px){
+    .feature-30 {
+        width: 100%;
+    }
 
-	input[type='radio'] + label {
-	width: 100% ;
-	order: 1 ;
-	}
+    .feature-40 {
+        width: 100%;
+    }
 
-	.feature-30 {
-		width: 100%;
-	}
+    .users-grid {
+        grid-template-columns: repeat(2, 1fr);
+        background: var(--green20);
+    }
 
-	.feature-40 {
-		width: 100%;
-	}
-
-	.users-grid {
-    		grid-template-columns: repeat(2, 1fr);
-    		background: var(--green20);
-	}
-
-	.why-grid {
-    		grid-template-columns: repeat(1, 1fr);
-	}
-
+    .why-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
-
-
