@@ -323,7 +323,6 @@ p {
     height: var(--section-break-height);
     background-color: var(--blue60);
     background-image: url("./assets/images/section-break.svg");
-    /*padding-bottom: 1.5rem;*/
     margin-bottom: 1rem;
 }
 
@@ -423,9 +422,9 @@ p {
     background: var(--grey10);
     text-align: center;
     margin-top: 5rem;
-    padding: var(--padding);
     max-width: var(--max-width);
     margin: auto;
+    border: 1px red solid;
 }
 
 .user-header {
@@ -441,6 +440,7 @@ p {
     margin-left: 10rem;
     margin-right: 10rem;
 
+
 }
 
 .users-grid img {
@@ -455,18 +455,22 @@ p {
     text-align: center;
     margin: auto;
     background: var(--blue60);
-    margin-top: 5rem;
-    padding: var(--padding);
     color: white;
+}
+
+.why-container h2 {
+    margin-top: 5rem;
 }
 
 .why-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: var(--max-width);
-    gap: 1rem;
-    margin: 10rem;
     gap: 10rem;
+    padding-right: 10rem;
+    padding-left: 10rem;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
 }
 
 .why-content {
@@ -481,16 +485,10 @@ p {
     width: 6rem;
 }
 
-
-
-
-
 .footer-container {
     display: flex;
     justify-content: space-between;
     max-width: var(--max-width);
     margin: auto;
-    margin-top: 5rem;
-    padding: var(--padding);
-
+    padding: 1rem;
 }
