@@ -291,6 +291,22 @@ p {
     cursor: pointer;
 }
 
+
+.header-button {
+    display: flex;
+    padding: var(--padding);
+    background-color: var(--blue60);
+    color: var(--white);
+    font-size: 1rem;;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    width: 245px;
+    cursor: pointer;
+}
+
+
+
 .hero-container {
     display: flex;
     flex-direction: column;
@@ -337,7 +353,7 @@ p {
 
 .tab-button {
     display: flex;
-    border: 1px red solid;
+    border: 1px black solid;
     text-justify: center;
     justify-content: left;
     padding: 1rem;
@@ -412,13 +428,6 @@ p {
     display: none;
 }
 
-.feature-40 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 40%;
-    padding: 2rem;
-}
 
 .users-container {
     background: var(--grey10);
@@ -426,7 +435,7 @@ p {
     margin-top: 5rem;
     max-width: var(--max-width);
     margin: auto;
-    border: 1px red solid;
+    padding-bottom: 2rem;
 }
 
 .user-header {
