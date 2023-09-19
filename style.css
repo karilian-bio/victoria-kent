@@ -343,6 +343,7 @@ p {
     padding: 1rem;
     align-content: center;
     padding: 1.5rem;
+    cursor: pointer;
 }
 
 .tab-icon {
@@ -391,6 +392,7 @@ p {
     height: 42px;
     width: 240px;
     background-color: transparent; 
+    cursor: pointer;
 }
 
 .section-button-icon {
