@@ -111,13 +111,12 @@
     /* Padding between hero text and subtext (how much of the background image we show) */
     --padding-hero-top-bottom: 10rem;
     --padding-hero-elements: 5.25rem;
-	
-	/* Section break variables */
-	--section-break-height: 1.5rem;
 
+    /* Section break variables */
+    --section-break-height: 1.5rem;
 
-	/* Tab padding for sections */
-	--tab-padding: 6.75rem;
+    /* Tab padding for sections */
+    --tab-padding: 6.75rem;
 }
 
 @font-face {
@@ -184,7 +183,7 @@ html:focus-within {
 body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-	background-color: var(--gray10);
+    background-color: var(--gray10);
 }
 
 /* A elements that don't have a class get default styles */
@@ -319,139 +318,97 @@ p {
 }
 
 .section-break {
-	margin: auto;
+    margin: auto;
     max-width: var(--max-width);
     height: var(--section-break-height);
     background-color: var(--blue60);
     background-image: url("./assets/images/section-break.svg");
-	/*padding-bottom: 1.5rem;*/
-	margin-bottom: 1rem;
+    /*padding-bottom: 1.5rem;*/
+    margin-bottom: 1rem;
 }
+
+.tab-bar {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    max-width: var(--max-width);
+    padding-left: var(--tab-padding);
+    padding-right: var(--tab-padding);
+}
+
+.tab-button {
+    display: flex;
+    border: 1px red solid;
+    text-justify: center;
+    justify-content: left;
+    padding: 1rem;
+    align-content: center;
+    padding: 1.5rem;
+}
+
+.tab-icon {
+    padding-left: 1rem;
+}
+
+.tab-section-full {
+    background-color: var(--blue60);
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+.tab-grid {
+    display: grid;
+    grid-template-columns: 25% 25% 40%;
+    max-width: var(--max-width);
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 8rem;
+    column-gap: 2rem;
+}
+
+.tab-section-with-icon {
+    display: grid;
+    margin: 1rem;
+    border: 1px red solid;
+    background-color: white;
+}
+
+.tab-section-with-icon img {
+    width: 6rem;
+}
+
+.tab-section-text-with-button {
+    display: grid;
+    color: white;
+}
+
+.section-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px white solid;
+    height: 42px;
+    width: 240px;
+    background-color: transparent; 
+}
+
+.section-button-icon {
+    size: 1rem;
+}
+
+
 
 .feature-container {
     display: flex;
     flex-wrap: wrap;
     max-width: var(--max-width);
     margin: auto;
-    background: var(--grey10);
-}
-
-input[type="radio"] {
-    display: none;
-}
-
-input[type="radio"]:checked + label {
-    background: var(--white);
-}
-
-input[type="radio"]:checked + label.blue {
-    border-color: var(--blue60);
-}
-
-input[type="radio"]:checked + label.red {
-    border-color: var(--red60);
-}
-
-input[type="radio"]:checked + label.yellow {
-    border-color: var(--yellow10);
-}
-
-input[type="radio"]:checked + label.green {
-    border-color: var(--green20);
-}
-
-input[type="radio"] + label {
-    display: flex;
-    justify-content: center;
-    width: 25%;
-    padding: 1rem;
-    text-align: center;
-    border-bottom-style: solid;
-    border-width: 0.35rem;
-    border-color: var(--grey40);
-}
-
-.feature-container label img {
-    width: 2rem;
-    margin-left: 1rem;
-}
-
-input[type="radio"]:checked + label + .feature-content {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-input[type="radio"]:checked + label.blue + .feature-content {
-    background: var(--blue60);
-}
-
-input[type="radio"]:checked + label.red + .feature-content {
-    background: var(--red60);
-}
-
-input[type="radio"]:checked + label.green + .feature-content {
-    background: var(--green20);
-}
-
-input[type="radio"]:checked + label.yellow + .feature-content {
-    background: var(--yellow10);
 }
 
 .feature-content {
     display: none;
-    order: 1;
-}
-
-.feature-30 {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    padding: 2rem;
-    background: var(--grey10);
-    align-items: center;
-    justify-content: center;
-    border-style: solid;
-    border-width: 0.35rem;
-    border-color: var(--white);
-}
-
-.feature-30.blue h5 {
-    color: var(--blue60);
-}
-
-.feature-30.red h5 {
-    color: var(--red60);
-}
-
-.feature-30.yellow h5 {
-    color: var(--yellow10);
-}
-
-.feature-30.green h5 {
-    color: var(--green20);
-}
-
-.feature-30 p {
-    padding-top: 2rem;
-}
-
-.feature-30 img {
-    width: min(10vh, 10vw);
-    padding: var(--padding);
-}
-
-.feature-30 img.sankey {
-    width: 100%;
-    padding: var(--padding);
-}
-
-h6.button {
-    background: var(--white);
-    color: var(--blue60);
-    margin-top: 2rem;
 }
 
 .feature-40 {
@@ -462,52 +419,35 @@ h6.button {
     padding: 2rem;
 }
 
-.feature-40.blue h5 {
-    color: var(--white);
-}
-
-.feature-40.red h5 {
-    color: var(--white);
-}
-
-.feature-40.yellow h5 {
-    color: var(--black);
-}
-
-.feature-40.green h5 {
-    color: var(--black);
-}
-
-.feature-40 p {
-    margin-top: 2rem;
-    color: var(--white);
-}
-
-ul {
-    list-style-type: none;
-}
-
 .users-container {
-    background: var(--grey40);
+    background: var(--grey10);
     text-align: center;
     margin-top: 5rem;
     padding: var(--padding);
+    max-width: var(--max-width);
+    margin: auto;
+}
+
+.user-header {
+    padding: 4rem;
 }
 
 .users-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     max-width: var(--max-width);
-    gap: 1rem;
-    margin: auto;
-    background: var(--grey40);
+    gap: 2rem;
+    margin-bottom: 4rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+
 }
 
 .users-grid img {
     height: 10rem;
     width: 100%;
-    background: var(--white);
     padding: 1rem;
+    background-color: transparent;
 }
 
 .why-container {
@@ -517,6 +457,7 @@ ul {
     background: var(--blue60);
     margin-top: 5rem;
     padding: var(--padding);
+    color: white;
 }
 
 .why-grid {
@@ -524,11 +465,25 @@ ul {
     grid-template-columns: repeat(2, 1fr);
     max-width: var(--max-width);
     gap: 1rem;
+    margin: 10rem;
+    gap: 10rem;
 }
 
-.why-content p {
-    text-align: left;
+.why-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+
+.why-content img {
+    height: 6rem;
+    width: 6rem;
+}
+
+
+
+
 
 .footer-container {
     display: flex;
@@ -537,28 +492,5 @@ ul {
     margin: auto;
     margin-top: 5rem;
     padding: var(--padding);
-}
 
-@media only screen and (max-width: 650px) {
-    input[type="radio"] + label {
-        width: 100%;
-        order: 1;
-    }
-
-    .feature-30 {
-        width: 100%;
-    }
-
-    .feature-40 {
-        width: 100%;
-    }
-
-    .users-grid {
-        grid-template-columns: repeat(2, 1fr);
-        background: var(--green20);
-    }
-
-    .why-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
 }

@@ -1,170 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>karilian</title>
+    </head>
 
-<head>
-	<meta charset="UTF-8">
- 	<link rel="stylesheet" href="style.css">
- 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<title>karilian</title>
-</head>
+    <body>
+        <div class="menu-container">
+            <img
+                class="logo"
+                src="./assets/images/logo-rev.svg"
+                alt="karilian-logo"
+            />
+            <p class="button">contact us</p>
+        </div>
 
-<body>
-	<div class="menu-container">
-		<img class="logo" src="./assets/images/logo-rev.svg" alt="karilian-logo"> 
-		<p class="button">contact us</p>
-	</div>
+        <div class="hero-container">
+            <h1 class="hero">Your Assay; But Improved</h1>
+            <h5 class="hero-subtext">
+                safer, more effective and compliant software through
+                retorspective design and implementation
+            </h5>
+        </div>
 
-	<div class="hero-container">
-		<h1 class="hero">Your Assay; But Improved</h1>
-		<h5 class="hero-subtext">safer, more effective and compliant software through retorspective design and implementation</h5>
-	</div>
+        <div class="section-break"></div>
 
-	<div class="section-break">
-	</div>
+        <div class="tab-bar">
+            <button class="tab-button" onclick="openSection('Regulatory')">
+                <p>Regulatory Compliance</p>
+                <img
+                    class="tab-icon"
+                    src="./assets/images/rule--draft.svg"
+                    alt="rule--draft-icon"
+                />
+            </button>
+            <button class="tab-button" onclick="openSection('Assay-Platform')">
+                <p>Assay Platform</p>
+                <img
+                    class="tab-icon"
+                    src="./assets/images/application--web.svg"
+                    alt="application--web-icon"
+                />
+            </button>
+            <button
+                class="tab-button"
+                onclick="openSection('Professional-Services')"
+            >
+                <p>Professional Services</p>
+                <img
+                    class="tab-icon"
+                    src="./assets/images/microservices--1.svg"
+                    alt="microservices--1-icon"
+                />
+            </button>
+            <button class="tab-button" onclick="openSection('Cloud')">
+                <p>Cloud</p>
+                <img
+                    class="tab-icon"
+                    src="./assets/images/cloud--services.svg"
+                    alt="cloud--services-icon"
+                />
+            </button>
+        </div>
 
-	<div class="feature-container">
-			
-		<input type="radio" id="blue-feature" name="tabs" checked="checked">
-		<label for="blue-feature" class="blue">
-			<p>regulatory compliance</p>
-			<img src="./assets/images/rule--draft.svg" alt="rule--draft-icon"> 
-		</label>			
-		<div class="feature-content">
-			<div class="feature-30 blue">
-				<img src="./assets/images/question.svg" alt="question"> 
-				<h5>Lab ready for IVDR</h5>
-				<p>do you have your quality and risk management systems in place, completed all your documentation?</p>
-			</div>
-			<div class="feature-30 blue">
-				<img src="./assets/images/renew.svg" alt="renew"> 
-				<h5>wash, rinse, repeat</h5>
-				<p>work with the team that has put multiple sequencing based bioinformatic pipelines into various markets around the globe</p>
-			</div>
-			<div class="feature-40 blue">
-				<h5>IVDR compliant bioinformatic pipelines</h5>
-				<p>karilian will design, develop, implement and maintain your IVDR compliant bioinformatic pipelines</p>
-				<h6 class="button">contact us</h6>
-			</div>
-		</div>
+        <div id="Regulatory" class="services tab-section-full">
+            <div class="tab-grid">
+                <div class="tab-section-with-icon">
+                    <img
+                        class="icon-img"
+                        src="./assets/images/question.svg"
+                        alt="question"
+                    />
+                    <h5>Lab ready for IVDR</h5>
+                    <p>
+                        do you have your quality and risk management systems in
+                        place, completed all your documentation?
+                    </p>
+                </div>
+                <div class="tab-section-with-icon">
+                    <img src="./assets/images/renew.svg" alt="renew" />
+                    <h5>wash, rinse, repeat</h5>
+                    <p>
+                        work with the team that has put multiple sequencing
+                        based bioinformatic pipelines into various markets
+                        around the globe
+                    </p>
+                </div>
+                <div class="tab-section-text-with-button">
+                    <h5>IVDR compliant bioinformatic pipelines</h5>
+                    <p>
+                        karilian will design, develop, implement and maintain
+                        your IVDR compliant bioinformatic pipelines
+                    </p>
+                    <button class="section-button">
+                        Contact Us
+                        <img
+                            class="section-button-icon"
+                            src="./assets/images/email-vector.svg"
+                            alt="email"
+                        />
+                    </button>
+                </div>
+            </div>
+        </div>
 
-		<input type="radio" id="red-feature" name="tabs">
-		<label for="red-feature" class="red">
-			<p>assay platform</p>
-			<img src="./assets/images/application--web.svg" alt="application--web-icon"> 
-		</label>
-		<div class="feature-content">
-			<div class="feature-30 red">
-				<img src="./assets/images/warning--01.svg" alt="warning"> 
-				<h5>Keeping up to date is complicated</h5>
-				<p>New publications, biomarkers and companion diagnostics are launched on a daily basis.  Where can you find the time to stay up to date?</p>
-			</div>
-			<div class="feature-30 red">
-				<img class="sankey" src="./assets/images/complexity.png" alt="complexity"> 
-				<h5>Our Data model can handle the complexity</h5>
-			</div>
-			<div class="feature-40 red">
-				<h5>Software platform for diagnostic biomarker assays</h5>
-				<p>Upload your data to the karilian platform, organize, analyze and report on your diagnostics results</p>
-				<h6 class="button">Try it today</h6>
-			</div>
-			
-		</div>
-		
+        <div id="Assay-Platform" class="feature-content services">
+            <div class="feature-30 red">
+                <img src="./assets/images/warning--01.svg" alt="warning" />
+                <h5>Keeping up to date is complicated</h5>
+                <p>
+                    New publications, biomarkers and companion diagnostics are
+                    launched on a daily basis. Where can you find the time to
+                    stay up to date?
+                </p>
+            </div>
+            <div class="feature-30 red">
+                <img
+                    class="sankey"
+                    src="./assets/images/complexity.png"
+                    alt="complexity"
+                />
+                <h5>Our Data model can handle the complexity</h5>
+            </div>
+            <div class="feature-40 red">
+                <h5>Software platform for diagnostic biomarker assays</h5>
+                <p>
+                    Upload your data to the karilian platform, organize, analyze
+                    and report on your diagnostics results
+                </p>
+                <h6 class="button">Try it today</h6>
+            </div>
+        </div>
 
-		<input type="radio" id="yellow-feature" name="tabs">
-		<label for="yellow-feature" class="yellow">
-			<p>professional services</p>
-			<img src="./assets/images/microservices--1.svg" alt="microservices--1-icon"> 
-		</label>
-		<div class="feature-content">
-			<div class="feature-30 yellow">
-				<img src="./assets/images/availability.svg" alt="wheel"> 
-				<h5>Don't reinvent the wheel...</h5>
-				<p>Are you tackling a solved problem, karilian will take off-the shelf solutions and tailor them to your requirements.</p>
-			</div>
-			<div class="feature-30 yellow">
-				<img src="./assets/images/rocket.svg" alt="rocket"> 
-				<h5>unless you are on the bleeding edge!</h5>
-				<p>If you need a customer solution, karilian will design, develop, test and implement a bespoke software solution to meet your requirements</p>
-			</div>
-			<div class="feature-40 yellow">
-				<h5>Bioinformatics Consulting + Professional Services</h5>
-				<p>Our scientists and engineers are ready to you listen to your problems :-)</p>
-				<h6 class="button">Talk to a specialist</h6>
-			</div>
+        <div id="Professional-Services" class="feature-content services">
+            <div class="feature-30 yellow">
+                <img src="./assets/images/availability.svg" alt="wheel" />
+                <h5>Don't reinvent the wheel...</h5>
+                <p>
+                    Are you tackling a solved problem, karilian will take
+                    off-the shelf solutions and tailor them to your
+                    requirements.
+                </p>
+            </div>
+            <div class="feature-30 yellow">
+                <img src="./assets/images/rocket.svg" alt="rocket" />
+                <h5>unless you are on the bleeding edge!</h5>
+                <p>
+                    If you need a customer solution, karilian will design,
+                    develop, test and implement a bespoke software solution to
+                    meet your requirements
+                </p>
+            </div>
+            <div class="feature-40 yellow">
+                <h5>Bioinformatics Consulting + Professional Services</h5>
+                <p>
+                    Our scientists and engineers are ready to you listen to your
+                    problems :-)
+                </p>
+                <h6 class="button">Talk to a specialist</h6>
+            </div>
+        </div>
 
-		</div>
+        <div id="Cloud" class="feature-content services">
+            <div class="feature-30 green">
+                <h5>Is your cloud bill starting to get out of hand?</h5>
+                <p></p>
+            </div>
+            <div class="feature-30 green">
+                <h5></h5>
+                <p>
+                    switching from a X to a Y reduced our compute by 30% some
+                    quote
+                </p>
+            </div>
+            <div class="feature-40 green">
+                <h5>content-04</h5>
+                <p>
+                    We wil review and analyse your cloud compute infrastructure
+                    and advise on where you can save your time and money
+                </p>
+                <h6 class="button">start saving today</h6>
+            </div>
+        </div>
 
-		
-		<input type="radio" id="green-feature" name="tabs">
-		<label for="green-feature" class="green">
-			<p>cloud</p>
-			<img src="./assets/images/cloud--services.svg" alt="cloud--services-icon"> 
-		</label>
-		<div class="feature-content">
-			<div class="feature-30 green">
-				<h5>Is your cloud bill starting to get out of hand?</h5>
-				<p></p>
-			</div>
-			<div class="feature-30 green">
-				<h5></h5>
-				<p>switching from a X to a Y reduced our compute by 30% some quote</p>
-			</div>
-			<div class="feature-40 green">
-				<h5>content-04</h5>
-				<p>We wil review and analyse your cloud compute infrastructure and advise on where you can save your time and money</p>
-				<h6 class="button">start saving today</h6>
-			</div>
-		</div>
+        <div class="users-container">
+            <div class="section-break"></div>
 
-	</div>
-	<div class="users-container">
-		<h2 class="" >users of karilian software</h2>
-		
-		<div class="users-grid">
-			<img class="clemen" src="./assets/images/clemenshospital.svg" alt="clemenshospital-logo"> 
-			<img class="eko" src="./assets/images/eko.svg" alt="eko-logo"> 
-			<img class="helios" src="./assets/images/helios.svg" alt="helios-logo"> 
-			<img class="aschaffenburg" src="./assets/images/aschaffenburg.svg" alt="aschaffenburg-logo"> 
-			<img class="erlangen" src="./assets/images/erlangen.svg" alt="erlangen-logo"> 
-			<img class="luneburg" src="./assets/images/luneburg.svg" alt="luneburg-logo"> 
-			<img class="thuringen" src="./assets/images/thuringen.svg" alt="thuringen-logo"> 
-			<img class="carus" src="./assets/images/ukd-carus.svg" alt="ukd-caurs-logo"> 
-			<img class="ukd" src="./assets/images/ukd.svg" alt="ukd-logo"> 
-			<img class="koln" src="./assets/images/uk-koln.svg" alt="uk-koln-logo"> 
-			<img class="uksh" src="./assets/images/uksh.svg" alt="uksh-logo"> 
-			<img class="vvp" src="./assets/images/vvp.svg" alt="vvp-logo"> 
+            <h2 class="user-header">users of karilian software</h2>
 
-		</div>
-	</div>
+            <div class="users-grid">
+                <img
+                    class="clemen"
+                    src="./assets/images/clemenshospital.svg"
+                    alt="clemenshospital-logo"
+                />
+                <img class="eko" src="./assets/images/eko.svg" alt="eko-logo" />
+                <img
+                    class="helios"
+                    src="./assets/images/helios.svg"
+                    alt="helios-logo"
+                />
+                <img
+                    class="aschaffenburg"
+                    src="./assets/images/aschaffenburg.svg"
+                    alt="aschaffenburg-logo"
+                />
+                <img
+                    class="erlangen"
+                    src="./assets/images/erlangen.svg"
+                    alt="erlangen-logo"
+                />
+                <img
+                    class="luneburg"
+                    src="./assets/images/luneburg.svg"
+                    alt="luneburg-logo"
+                />
+                <img
+                    class="thuringen"
+                    src="./assets/images/thuringen.svg"
+                    alt="thuringen-logo"
+                />
+                <img
+                    class="carus"
+                    src="./assets/images/ukd-carus.svg"
+                    alt="ukd-caurs-logo"
+                />
+                <img class="ukd" src="./assets/images/ukd.svg" alt="ukd-logo" />
+                <img
+                    class="koln"
+                    src="./assets/images/uk-koln.svg"
+                    alt="uk-koln-logo"
+                />
+                <img
+                    class="uksh"
+                    src="./assets/images/uksh.svg"
+                    alt="uksh-logo"
+                />
+                <img class="vvp" src="./assets/images/vvp.svg" alt="vvp-logo" />
+            </div>
+        </div>
 
-	<div class="why-container">
-		<h2>why Karilian</h2>
+        <div class="why-container">
+            <div class="section-break"></div>
 
-		<div  class="why-grid">
-			<div  class="why-content">
-				<h4>diverse</h4>
-				<p>we are a diverse group of software engineers and biomedical scientist who have traveled various paths and experiences</p>
-			</div>
-			<div  class="why-content">
-				<h4>patient focused</h4>
-				<p>however we have a shared goal of making sure the best decision is made for the patient.</p>
-			</div>
-			<div  class="why-content">
-				<h4>unbiased</h4>
-				<p>we are a private, employee owned company and are not not funded by pharmaceutical, device manufacturer or private equity, through this independence we can deliver, unbiased, transparent, high quality information.</p>
-			</div>
-			<div  class="why-content">
-				<h4>problem solvers</h4>
-				<p>We assist in this decision process because our skill set and expertise is in the process of transforming raw machine data into high quality information.</p>
-			</div>
-	
-		</div>
-	</div>
+            <h2>why Karilian</h2>
 
-	<div class="footer-container">
-		<img class="logo" src="./karilian-logo.svg" alt="karilian-logo"> 
-		<p>copyright 2023 Karilian Biotechnologia sl</p>
-	</div>
-		
-</body>
+            <div class="why-grid">
+                <div class="why-content">
+                    <img src="./assets/images/diverse.svg" alt="diverse" />
+                    <h4>diverse</h4>
+                    <p>
+                        we are a diverse group of software engineers and
+                        biomedical scientist who have traveled various paths and
+                        experiences
+                    </p>
+                </div>
+                <div class="why-content">
+                    <img src="./assets/images/doctor-patient.svg" alt="doctor" />
+                    <h4>patient focused</h4>
+                    <p>
+                        however we have a shared goal of making sure the best
+                        decision is made for the patient.
+                    </p>
+                </div>
+                <div class="why-content">
+                    <img src="./assets/images/digital-trust.svg" alt="trust" />
+                    <h4>unbiased</h4>
+                    <p>
+                        we are a private, employee owned company and are not not
+                        funded by pharmaceutical, device manufacturer or private
+                        equity, through this independence we can deliver,
+                        unbiased, transparent, high quality information.
+                    </p>
+                </div>
+                <div class="why-content">
+                    <img src="./assets/images/solve.svg" alt="solving" />
+                    <h4>problem solvers</h4>
+                    <p>
+                        We assist in this decision process because our skill set
+                        and expertise is in the process of transforming raw
+                        machine data into high quality information.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-container">
+            <img
+                class="logo"
+                src="./assets/images/logo.svg"
+                alt="karilian-logo"
+            />
+            <p>© 2023 Karilian Biotechnologia sl</p>
+        </div>
+        <script>
+            function openSection(sectionName) {
+                var i;
+                var x = document.getElementsByClassName("services");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                document.getElementById(sectionName).style.display = "flex";
+            }
+        </script>
+    </body>
+</html>
