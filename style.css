@@ -368,7 +368,7 @@ p {
     padding-right: var(--tab-padding);
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1200px) {
     .tab-bar {
         grid-template-columns: 1fr;
     }
@@ -587,6 +587,7 @@ p {
 
 .submission-img {
     display: flex;
+    width: 80%;
 }
 
 /* end of sumbission CSS */
