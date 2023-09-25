@@ -50,162 +50,162 @@
             >
                 <p>Software Development</p>
             </button>
-            <button class="tab-button" onclick="openSection('Assay-Platform')">
+            <button
+                class="tab-button"
+                onclick="openSection('Software-Maintenance')"
+            >
                 <p>Software Maintenance</p>
             </button>
             <button
                 class="tab-button"
-                onclick="openSection('Professional-Services')"
+                onclick="openSection('Software-Security')"
             >
                 <p>Software Security</p>
             </button>
-            <button class="tab-button" onclick="openSection('Cloud')">
+            <button
+                class="tab-button"
+                onclick="openSection('Analytical-Clinical-Validation')"
+            >
                 <p>Analytical + Clinical Validation</p>
             </button>
         </div>
 
         <div id="Software-Development" class="services tab-section-full">
             <div class="tab-grid">
-                <img
+                <div
                     class="feature-section-image"
-                    src="./assets/images/dna_for_tabs.svg"
-                    alt="question"
-                />
-                <div class="tab-section-text-with-button">
+                    style="--path: url('./assets/images/dna_for_tabs.svg')"
+                ></div>
+
+                <div class="tab-header-and-text">
                     <h5>
                         Software Development: Innovation without regulatory
                         barriers
                     </h5>
                     <p>
                         retrospectively create software development process and
-                        tooling keep the clinical pipeline already in use
-                        changes to process and deployment, not to algorithms
-                        minimize regulatory hindrance on development create
-                        design documentation to help communicate to regulators
-                        and team members. ensure the labs software is able to
-                        run anywhere at anytime at any scale
                     </p>
-                    <button class="section-button">
-                        Contact Us
-                        <img
-                            class="section-button-icon"
-                            src="./assets/images/email-vector.svg"
-                            alt="email"
-                        />
-                    </button>
+                    <p>tooling keep the clinical pipeline already in use</p>
+                    <p>changes to process and deployment, not to algorithms</p>
+                    <p>minimize regulatory hindrance on development</p>
+                    <p>
+                        create design documentation to help communicate to
+                        regulators and team members.
+                    </p>
+                    <p>
+                        ensure the labs software is able to run anywhere at
+                        anytime at any scale
+                    </p>
                 </div>
             </div>
         </div>
 
         <div
-            id="Assay-Platform"
+            id="Software-Maintenance"
             class="services feature-content tab-section-full"
+            style="background-color: var(--red60)"
         >
             <div class="tab-grid">
-                <div class="tab-section-with-icon">
-                    <img src="./assets/images/warning--01.svg" alt="warning" />
-                    <h5>Keeping up to date is complicated</h5>
+                <div
+                    class="feature-section-image"
+                    style="--path: url('./assets/images/pcr_plot.svg')"
+                ></div>
+
+                <div class="tab-header-and-text">
+                    <h5>
+                        Software Maintenance: change control and communication
+                        to stakeholders
+                    </h5>
                     <p>
-                        New publications, biomarkers and companion diagnostics
-                        are launched on a daily basis. Where can you find the
-                        time to stay up to date?
+                        ensure issues with software are reported, fixed, and
+                        never regressed
                     </p>
-                </div>
-                <div class="tab-section-with-icon">
-                    <img
-                        class="sankey"
-                        src="./assets/images/complexity.png"
-                        alt="complexity"
-                    />
-                    <h5>Our Data model can handle the complexity</h5>
-                </div>
-                <div class="tab-section-text-with-button">
-                    <h5>Software platform for diagnostic biomarker assays</h5>
                     <p>
-                        Upload your data to the karilian platform, organize,
-                        analyze and report on your diagnostics results
+                        ensure decision makers have insight into design and
+                        features of the software
                     </p>
-                    <button class="section-button">
-                        Try it today
-                        <img
-                            class="section-button-icon"
-                            src="./assets/images/email-vector.svg"
-                            alt="email"
-                        />
-                    </button>
+                    <p>track development - be it bug fixes or new features</p>
+                    <p>
+                        safely upgrade, bug fix, or enhance the software with
+                        robust testing infrastructure
+                    </p>
+                    <p>
+                        communicate [testing process] and strategy easily with
+                        regulators, clinicians, and stakeholders
+                    </p>
                 </div>
             </div>
         </div>
 
         <div
-            id="Professional-Services"
+            id="Software-Security"
             class="services feature-content tab-section-full"
+            style="background-color: var(--yellow30)"
         >
             <div class="tab-grid">
-                <div class="tab-section-with-icon">
-                    <img src="./assets/images/availability.svg" alt="wheel" />
-                    <h5>Don't reinvent the wheel...</h5>
+                <div
+                    class="feature-section-image"
+                    style="--path: url('./assets/images/binary_wall.svg')"
+                ></div>
+
+                <div class="tab-header-and-text">
+                    <h5>Software Security: safety for all patients</h5>
                     <p>
-                        Are you tackling a solved problem, karilian will take
-                        off-the shelf solutions and tailor them to your
-                        requirements.
+                        software gives the best results and same analysis for
+                        every person
                     </p>
-                </div>
-                <div class="tab-section-with-icon">
-                    <img src="./assets/images/rocket.svg" alt="rocket" />
-                    <h5>unless you are on the bleeding edge!</h5>
+                    <p>remove manual steps from clinical processes</p>
                     <p>
-                        If you need a customer solution, karilian will design,
-                        develop, test and implement a bespoke software solution
-                        to meet your requirements
+                        allow manual steps to be accessed easily for debugging
+                        and R&D proposes
                     </p>
-                </div>
-                <div class="tab-section-text-with-button">
-                    <h5>Bioinformatics Consulting + Professional Services</h5>
                     <p>
-                        Our scientists and engineers are ready to you listen to
-                        your problems :-)
+                        ensure every patient can get analysis re-run when
+                        software is enhanced or after a bug fix
                     </p>
-                    <button class="section-button">
-                        Talk to a specialist
-                        <img
-                            class="section-button-icon"
-                            src="./assets/images/email-vector.svg"
-                            alt="email"
-                        />
-                    </button>
+                    <p>
+                        ensure software is robust against supply chain attacks
+                        or malicious software updates
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div id="Cloud" class="services feature-content tab-section-full">
+        <div
+            id="Analytical-Clinical-Validation"
+            class="services feature-content tab-section-full"
+            style="background-color: var(--green60)"
+        >
             <div class="tab-grid">
-                <div class="tab-section-with-icon">
-                    <h5>Is your cloud bill starting to get out of hand?</h5>
-                    <p></p>
-                </div>
-                <div class="tab-section-with-icon">
-                    <h5></h5>
+                <div
+                    class="feature-section-image"
+                    style="
+                        --path: url('./assets/images/manhattan-plots-featured.svg');
+                    "
+                ></div>
+
+                <div class="tab-header-and-text">
+                    <h5>
+                        Analytical & Clinical Performance: testing at scale for
+                        every change
+                    </h5>
                     <p>
-                        switching from a X to a Y reduced our compute by 30%
-                        some quote
+                        software gives the best results and same analysis for
+                        every person
                     </p>
-                </div>
-                <div class="feature-40 green">
-                    <h5>content-04</h5>
+                    <p>remove manual steps from clinical processes</p>
                     <p>
-                        We wil review and analyse your cloud compute
-                        infrastructure and advise on where you can save your
-                        time and money
+                        allow manual steps to be accessed easily for debugging
+                        and R&D proposes
                     </p>
-                    <button class="section-button">
-                        Start saving today!
-                        <img
-                            class="section-button-icon"
-                            src="./assets/images/email-vector.svg"
-                            alt="email"
-                        />
-                    </button>
+                    <p>
+                        ensure every patient can get analysis re-run when
+                        software is enhanced or after a bug fix
+                    </p>
+                    <p>
+                        ensure software is robust against supply chain attacks
+                        or malicious software updates
+                    </p>
                 </div>
             </div>
         </div>
@@ -313,6 +313,8 @@
             </div>
         </div>
 
+        <div class="section-break"></div>
+
         <div class="call-to-action">
             <img
                 class="call-to-action-img"
@@ -335,6 +337,8 @@
                 />
             </button>
         </div>
+
+        <div class="section-break"></div>
 
         <div class="footer-container">
             <img

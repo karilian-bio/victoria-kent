@@ -94,7 +94,9 @@
     --blue60: #6464c8;
     --red60: #be4747;
     --green20: #23ab23;
+    --green60: #1A811A;
     --yellow10: #d8d84e;
+    --yellow30: #CDCD2D;
     --cyan20: #d2e5ef;
     --white: #ffffff;
     --black: #000000;
@@ -399,14 +401,42 @@ p {
 .tab-grid {
     display: grid;
     grid-template-areas:
-        "header test test"
-        "header test test"
-        "header test test";
+        "header text"
+        "header text"
+        "header text";
 }
 
 .feature-section-image {
+    display: flex;
+
     background-color: white;
+    grid-area: header;
+    height: 100%;
+    width: 20rem;
+    
+    /* HTML MUST hand the image being used with URL */
+    background-image: var(--path);
+    background-size: cover;
 }
+
+.tab-header-and-text {
+    grid-area: text;
+    margin-left: 2rem;
+    color: white;
+    margin-right: 10rem;
+    padding-bottom: 4rem;
+}
+
+.tab-header-and-text h5 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.tab-header-and-text p {
+    display: list-item;
+    margin-left: 4rem;
+}
+
 
 /* end of CSS logic for tabs */
 
@@ -561,7 +591,6 @@ p {
     text-align: center;
     text-justify: center;
 
-    /* Best practice incase image doesn't load */
     background-image: url("./assets/images/circo-plot-call-to-action.svg");
     background-size: cover;
 }
@@ -581,7 +610,6 @@ p {
     margin: auto;
     margin-top: 5rem;
     margin-bottom: 5rem;
-    
 }
 
 /* end of call to arms section */
