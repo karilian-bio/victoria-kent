@@ -109,7 +109,7 @@
     --padding: 1rem;
     --max-width: 1600px;
     /* Padding between hero text and subtext (how much of the background image we show) */
-    --padding-hero-top-bottom: 10rem;
+    --padding-hero-top-bottom: 5rem;
     --padding-hero-elements: 5.25rem;
 
     /* Section break variables */
@@ -291,13 +291,12 @@ p {
     cursor: pointer;
 }
 
-
 .header-button {
     display: flex;
     padding: var(--padding);
     background-color: var(--blue60);
     color: var(--white);
-    font-size: 1rem;;
+    font-size: 1rem;
     justify-content: space-between;
     align-items: center;
     height: 48px;
@@ -305,7 +304,7 @@ p {
     cursor: pointer;
 }
 
-
+/* Start of HERO section */
 
 .hero-container {
     display: flex;
@@ -315,10 +314,7 @@ p {
     text-align: center;
     margin: auto;
 
-    /* Best practice incase image doesn't load */
-    background-color: var(--blue60);
-    background-image: url("./assets/images/background_hero.png");
-    background-size: cover;
+    background-color: var(--grey20);
     /* 
 		Padding between top and bottom of hero text and sub-text
 		This is how much of the image we show
@@ -326,13 +322,24 @@ p {
     padding-top: var(--padding-hero-top-bottom);
     padding-bottom: var(--padding-hero-top-bottom);
 
-    color: var(--white);
+    color: var(--black);
 }
 
 .hero {
     padding-bottom: var(--padding-hero-elements);
 }
 
+.ruo-to-ivd {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2rem;
+}
+
+/* END OF HERO SECTION */
+
+/* 
+    SECTION BREAK LOGIC 
+*/
 .section-break {
     margin: auto;
     max-width: var(--max-width);
@@ -341,14 +348,27 @@ p {
     background-image: url("./assets/images/section-break.svg");
     margin-bottom: 1rem;
 }
+/* END OF SECTION BREAK LOGIC */
 
+/* Tab/Featured section start of logic */
+
+/* 
+    Sub section to make buttons at the top work properly
+*/
 .tab-bar {
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
     max-width: var(--max-width);
     padding-left: var(--tab-padding);
     padding-right: var(--tab-padding);
+}
+
+@media (max-width: 1600px) {
+    .tab-bar {
+        grid-template-columns: 1fr;
+    }
 }
 
 .tab-button {
@@ -362,72 +382,83 @@ p {
     cursor: pointer;
 }
 
-.tab-icon {
-    padding-left: 1rem;
+.feature-content {
+    /* this is required to "hide" the non-clicked feature tab section */
+    display: none;
 }
+/* end of button at top subsection */
 
 .tab-section-full {
     background-color: var(--blue60);
     max-width: var(--max-width);
     margin: auto;
+
+    margin-bottom: 2rem;
 }
 
 .tab-grid {
     display: grid;
-    grid-template-columns: 25% 25% 40%;
-    max-width: var(--max-width);
-    margin: auto;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 8rem;
-    column-gap: 2rem;
+    grid-template-areas:
+        "header test test"
+        "header test test"
+        "header test test";
 }
 
-.tab-section-with-icon {
-    display: grid;
-    margin: 1rem;
-    border: 1px red solid;
+.feature-section-image {
     background-color: white;
 }
 
-.tab-section-with-icon img {
-    width: 6rem;
-}
+/* end of CSS logic for tabs */
 
-.tab-section-text-with-button {
+/* 
+    Regulatory advantage section 
+*/
+
+.regulatory-advantage {
     display: grid;
-    color: white;
-}
+    text-justify: center;
 
-.section-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    border: 1px white solid;
-    height: 42px;
-    width: 240px;
-    background-color: transparent; 
-    cursor: pointer;
-}
-
-.section-button-icon {
-    size: 1rem;
-}
-
-
-
-.feature-container {
-    display: flex;
-    flex-wrap: wrap;
     max-width: var(--max-width);
     margin: auto;
+
+    grid-gap: 2rem;
+    grid-template-areas:
+        "regulatory-header regulatory-header"
+        "regulatory-image regulatory-text";
+
+    grid-template-columns: 50%;
+    grid-template-rows: auto;
+    padding-bottom: 5rem;
+
+    justify-items: center;
+    align-content: center;
 }
 
-.feature-content {
-    display: none;
+.regulatory-header {
+    grid-area: regulatory-header;
+    text-align: center;
+    text-justify: center;
 }
 
+.regulatory-image {
+    display: flex;
+    grid-area: regulatory-image;
+    align-self: center;
+}
+
+.regulatory-text {
+    grid-area: regulatory-text;
+    font-size: 72px;
+    text-justify: center;
+    justify-self: center;
+    align-self: center;
+}
+
+/* END OF REGULTORY ADVANTAGE SECTION */
+
+/* 
+    Start of USER OF KARILIAN GRID 
+*/
 
 .users-container {
     background: var(--grey10);
@@ -436,10 +467,14 @@ p {
     max-width: var(--max-width);
     margin: auto;
     padding-bottom: 2rem;
+
+    color: white;
+
+    background: linear-gradient(90deg, #6464c8 0%, #be4747 100%);
 }
 
 .user-header {
-    padding: 4rem;
+    padding: 1rem;
 }
 
 .users-grid {
@@ -450,8 +485,7 @@ p {
     margin-bottom: 4rem;
     margin-left: 10rem;
     margin-right: 10rem;
-
-
+    padding-top: 4rem;
 }
 
 .users-grid img {
@@ -459,42 +493,100 @@ p {
     width: 100%;
     padding: 1rem;
     background-color: transparent;
+    margin: 1rem;
+
+    /* Little sneaky to make the svg white without resaving them */
+    filter: brightness(0) invert(1);
 }
 
-.why-container {
-    max-width: var(--max-width);
-    text-align: center;
-    margin: auto;
-    background: var(--blue60);
-    color: white;
-}
+/* End of USER LOGIC */
 
-.why-container h2 {
-    margin-top: 5rem;
-}
+/* Submssion to regulatory bodies section */
 
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    max-width: var(--max-width);
-    gap: 10rem;
-    padding-right: 10rem;
-    padding-left: 10rem;
-    padding-bottom: 5rem;
-    padding-top: 5rem;
-}
-
-.why-content {
+.submission-section {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: auto;
+    max-width: var(--max-width);
     flex-direction: column;
+    justify-self: center;
+    justify-items: center;
+    text-align: center;
+    /* Best practice incase image doesn't load */
+    background-color: var(--blue60);
+    background-image: url("./assets/images/background_hero.png");
+    background-size: cover;
+
+    color: var(--white);
+
+    padding-bottom: 10rem;
 }
 
-.why-content img {
-    height: 6rem;
-    width: 6rem;
+.submission-header {
+    font-size: 10rem;
 }
+
+.submission-text {
+    font-size: 4rem;
+}
+
+.submission-img-grid {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+
+    padding: 10rem;
+}
+
+.submission-img {
+    display: flex;
+}
+
+/* end of sumbission CSS */
+
+/* call to action section */
+
+.call-to-action {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width);
+    margin: auto;
+
+    justify-self: center;
+    justify-items: center;
+    justify-content: center;
+
+    text-align: center;
+    text-justify: center;
+
+    /* Best practice incase image doesn't load */
+    background-image: url("./assets/images/circo-plot-call-to-action.svg");
+    background-size: cover;
+}
+
+.call-to-action-img {
+    display: flex;
+    width: 40%;
+    justify-self: center;
+    justify-content: center;
+    margin: auto;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.call-to-action-button {
+    justify-self: center;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    
+}
+
+/* end of call to arms section */
+
+/* footer */
 
 .footer-container {
     display: flex;
@@ -503,3 +595,4 @@ p {
     margin: auto;
     padding: 1rem;
 }
+/* end of footer */
