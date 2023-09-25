@@ -94,9 +94,9 @@
     --blue60: #6464c8;
     --red60: #be4747;
     --green20: #23ab23;
-    --green60: #1A811A;
+    --green60: #1a811a;
     --yellow10: #d8d84e;
-    --yellow30: #CDCD2D;
+    --yellow30: #cdcd2d;
 
     --cyan20: #d2e5ef;
     --white: #ffffff;
@@ -383,13 +383,29 @@ p {
     align-content: center;
     padding: 1.5rem;
     cursor: pointer;
+    align-content: center;
+    align-items: center;
 }
+
+.tab-button:focus {
+    color: white;
+    font-weight: bolder;
+    background-color: var(--focusColor);
+}
+
+.tab-button:hover {
+    background-color: var(--grey40);
+}
+.tab-button:active {
+    background-color: var(--focusColor);
+}
+
+/* end of button at top subsection */
 
 .feature-content {
     /* this is required to "hide" the non-clicked feature tab section */
     display: none;
 }
-/* end of button at top subsection */
 
 .tab-section-full {
     background-color: var(--blue60);
@@ -409,12 +425,11 @@ p {
 
 .feature-section-image {
     display: flex;
-
     background-color: white;
     grid-area: header;
     height: 100%;
     width: 20rem;
-    
+
     /* HTML MUST hand the image being used with URL */
     background-image: var(--path);
     background-size: cover;
@@ -437,7 +452,6 @@ p {
     display: list-item;
     margin-left: 4rem;
 }
-
 
 /* end of CSS logic for tabs */
 
