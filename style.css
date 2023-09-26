@@ -70,7 +70,7 @@
     --padding-hero-elements: 5.25rem;
 
     /* Section break variables */
-    --section-break-height: 1.5rem;
+    --section-break-height: 1rem;
 
     /* Tab padding for sections */
     --tab-padding: 6.75rem;
@@ -306,7 +306,8 @@ p {
     margin: auto;
     max-width: var(--max-width);
     height: var(--section-break-height);
-    background-color: var(--blue60);
+
+    background-color: var(--grey40);
     background-image: url("./assets/images/section-break.svg");
     margin-bottom: 1rem;
 }
@@ -525,7 +526,7 @@ p {
 }
 
 .users-grid img {
-    height: 10rem;
+    height: 7rem;
     width: 100%;
     padding: 1rem;
     background-color: transparent;
