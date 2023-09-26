@@ -360,17 +360,12 @@ p {
 
 /* end of button at top subsection */
 
-.feature-content {
-    /* this is required to "hide" the non-clicked feature tab section */
-    display: none;
-}
-
-.tab-section-full {
-    background-color: var(--blue60);
-    max-width: var(--max-width);
-    margin: auto;
-
-    margin-bottom: 2rem;
+.tab-section-full .tab-grid:nth-child(even) {
+    color: pink;
+    grid-template-areas:
+        "text header"
+        "text header"
+        "text header";
 }
 
 .tab-grid {
@@ -379,6 +374,8 @@ p {
         "header text"
         "header text"
         "header text";
+    height: 20rem;
+    align-items: center;
 }
 
 .feature-section-image {
@@ -411,11 +408,6 @@ p {
 .tab-header-and-text h5 {
     padding-top: 2rem;
     padding-bottom: 2rem;
-}
-
-.tab-header-and-text p {
-    display: list-item;
-    margin-left: 4rem;
 }
 
 /* end of CSS logic for tabs */
