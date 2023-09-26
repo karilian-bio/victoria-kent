@@ -25,26 +25,25 @@
     --FH-05-line: clamp(3.75rem, 3vw + 2.5rem, 4.375rem);
     --FH-05-weight: 300;
 
-    --HG-07-size: 3.75rem ; 
-    --HG-07-line: 4.0rem ;
+    --HG-07-size: 3.75rem;
+    --HG-07-line: 4rem;
     --HG-07-weight: 300;
 
-    --HG-06-size: 2.625rem ; 
-    --HG-06-line: 3.125rem ;
+    --HG-06-size: 2.625rem;
+    --HG-06-line: 3.125rem;
     --HG-06-weight: 300;
 
-    --HG-05-size: 2.0rem ; 
-    --HG-05-line: 2.5rem ;
+    --HG-05-size: 2rem;
+    --HG-05-line: 2.5rem;
     --HG-05-weight: 300;
 
-    --HC-02-size: 1.0rem ; 
-    --HC-02-line: 1.375rem ;
+    --HC-02-size: 1rem;
+    --HC-02-line: 1.375rem;
     --HC-02-weight: 600;
 
-    --BD-02-size: 1.0rem ; 
-    --BD-02-line: 1.5rem ;
+    --BD-02-size: 1rem;
+    --BD-02-line: 1.5rem;
     --BD-02-weight: 400;
-
 
     --blue60: #6464c8;
     --red60: #be4747;
@@ -559,7 +558,6 @@ p {
 }
 
 .submission-header {
-    
     font-size: 10rem;
 
     @media (max-width: 1200px) {
@@ -589,7 +587,6 @@ p {
         grid-template-rows: repeat(3, 1fr);
         gap: 1rem;
     }
-
 }
 
 .submission-img {
