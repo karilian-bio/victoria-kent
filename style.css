@@ -1,95 +1,50 @@
 /*see Ken Taylor Figma doc
  *
  *font			size	size	line	line weight	short	map
- *name			small	max	small	max		ID	to
+ *name			XL	max	XL	max		ID	to
  * ---------------------------------------------------------------------------
- *fluid-paragraph-01	24	32	30	40	300	FP-01	p
- *fluid-quotation-01	20	32	26	40	400	FQ-01	h6
- *fluid-quotation-02	36	60	44	70	300	FQ-01	h5
- *fluid-display-01	42	76	50	86	300	FD-01	h4
- *fluid-display-02	42	76	50	86	600	FD-02	h3
- *fluid-display-03	54	84	64	94	600	FD-03	h2
- *fluid-display-04	68	156	78	164	600	FD-04	h1
+ *XLG/fluid-display-03	76	84	86	94	600	FD-03	h1
+ *XLG/fluid-heading-05	48	60	56	70	300	FH-05	h2
+ *heading-07		3.375	-	4.0	-	300	HG-07	h3
+ *heading-06		2.625	-	3.125	-	300	HG-06	h4
+ *heading-05		2.0	-	2.5	-	300	HG-05	h5
+ *heading-compact-02 	1.0	-	1.375	-	600	HC-02	h6
+ *body-02		1	-	1.5	-	400	BD-02	p
  *
  * for clamp() ramping, see "https://modern-fluid-typography.vercel.app/"
- *
- *FP-01-size: clamp(1.5rem, 5vw - 1rem, 2rem);
- *FP-01-line: clamp(1.875rem, 5vw - 0.5rem, 2.5rem);
- *FP-01-weight: 300 ;
- *
- *FQ-01-size: clamp(1.25rem, 4vw - 0.5rem, 2rem);
- *FQ-01-line: clamp(1.625rem, 5vw - 0.5rem, 2.5rem); 
- *FQ-01-weight: 400 ;
- *
- *FQ-02-size: clamp(2.25rem, 5vw + 0.25rem, 3.75rem); 
- *FQ-02-line: clamp(2.75rem, 5vw + 1rem, 4.375rem);
- *FQ-02-weight: 300 ;
- *
- *FD-01-size: clamp(2.625rem, 5vw + 1rem, 4.75rem);
- *FD-01-line: clamp(3.125rem, 5vw + 1.75rem, 5.375rem);
- *FD-01-weight: 300 ;
- *
- *FD-02-size: clamp(2.625rem, 3vw + 1.75rem, 4.75rem); 
- *FD-02-line: clamp(3.125rem, 5vw + 1.75rem, 5.375rem);
- *FD-02-weight: 600 ;
- *
- *FD-03-size: clamp(3.375rem, 4vw + 2.25rem, 5.25rem); 
- *FD-03-line: clamp(4rem, 4vw + 2.75rem, 5.875rem);
- *FD-03-weight: 600 ;
- *
- *FD-04-size: clamp(4.25rem, 5vw + 3rem, 9.75rem);
- *FD-04-line: clamp(4.875rem, 5vw + 3rem, 10.25rem);
- *FD-04-weight: 600 ;
- *
- *
- *note: fonts seemed quite large, I reduced font-size to 8px but size still seemed large
- *I scaled fonts as shown below
- *
- *font			size	size	line	line weight	short	map
- *name			small	max	small	max		ID	to
- * ---------------------------------------------------------------------------
- *fluid-paragraph-01KM	12	20	30	40	300	FP-01KM	p
- *fluid-quotation-01KM	20	37	26	40	400	FQ-01KM	h6
- *fluid-quotation-02KM	28	54	44	70	300	FQ-01KM	h5
- *fluid-display-01KM	36	71	50	86	300	FD-01KM	h4
- *fluid-display-02KM	44	88	50	86	600	FD-02KM	h3
- *fluid-display-03KM	52	95	64	94	600	FD-03KM	h2
- *fluid-display-04KM	68	156	78	164	600	FD-04KM	h1
- *
- *
- *
  *
  *
  */
 
 :root {
-    --FP-01-size: clamp(1.5rem, 5vw - 1rem, 2rem);
-    --FP-01-line: clamp(1.875rem, 5vw - 0.5rem, 2.5rem);
-    --FP-01-weight: 300;
-
-    --FQ-01-size: clamp(1.25rem, 4vw - 0.5rem, 2rem);
-    --FQ-01-line: clamp(1.625rem, 5vw - 0.5rem, 2.5rem);
-    --FQ-01-weight: 400;
-
-    --FQ-02-size: clamp(2.25rem, 5vw + 0.25rem, 3.75rem);
-    --FQ-02-line: clamp(2.75rem, 5vw + 1rem, 4.375rem);
-    --FQ-02-weight: 300;
-
-    --FD-01-size: clamp(2.625rem, 5vw + 1rem, 4.75rem);
-    --FD-01-line: clamp(3.125rem, 5vw + 1.75rem, 5.375rem);
-    --FD-01-weight: 300;
-
-    --FD-02-size: clamp(2.625rem, 3vw + 1.75rem, 4.75rem);
-    --FD-02-line: clamp(3.125rem, 5vw + 1.75rem, 5.375rem);
-    --FD-02-weight: 600;
-
-    --FD-03-size: clamp(3.375rem, 4vw + 2.25rem, 5.25rem);
-    --FD-03-line: clamp(4rem, 4vw + 2.75rem, 5.875rem);
+    --FD-03-size: clamp(4.75rem, 5vw + 2.5rem, 5.25rem);
+    --FD-03-line: clamp(5.25rem, 5vw + 3rem, 5.875rem);
     --FD-03-weight: 600;
 
-    --FD-04-size: clamp(4.25rem, 5vw + 3rem, 9.75rem);
-    --FD-04-line: clamp(4.875rem, 5vw + 3rem, 10.25rem);
-    --FD-04-weight: 600;
+    --FH-05-size: clamp(3rem, 1vw + 2.75rem, 3.5rem);
+    --FH-05-line: clamp(3.75rem, 3vw + 2.5rem, 4.375rem);
+    --FH-05-weight: 300;
+
+    --HG-07-size: 3.75rem ; 
+    --HG-07-line: 4.0rem ;
+    --HG-07-weight: 300;
+
+    --HG-06-size: 2.625rem ; 
+    --HG-06-line: 3.125rem ;
+    --HG-06-weight: 300;
+
+    --HG-05-size: 2.0rem ; 
+    --HG-05-line: 2.5rem ;
+    --HG-05-weight: 300;
+
+    --HC-02-size: 1.0rem ; 
+    --HC-02-line: 1.375rem ;
+    --HC-02-weight: 600;
+
+    --BD-02-size: 1.0rem ; 
+    --BD-02-line: 1.5rem ;
+    --BD-02-weight: 400;
+
 
     --blue60: #6464c8;
     --red60: #be4747;
@@ -227,51 +182,51 @@ select {
 
 h1 {
     font-family: var(--ff);
-    font-size: var(--FD-04-size);
-    line-height: var(--FD-04-line);
-    font-weight: var(--FD-04-weight);
-}
-
-h2 {
-    font-family: var(--ff);
     font-size: var(--FD-03-size);
     line-height: var(--FD-03-line);
     font-weight: var(--FD-03-weight);
 }
 
+h2 {
+    font-family: var(--ff);
+    font-size: var(--FH-05-size);
+    line-height: var(--FH-05-line);
+    font-weight: var(--FH-05-weight);
+}
+
 h3 {
     font-family: var(--ff);
-    font-size: var(--FD-02-size);
-    line-height: var(--FD-02-line);
-    font-weight: var(--FD-02-weight);
+    font-size: var(--HG-07-size);
+    line-height: var(--HG-07-line);
+    font-weight: var(--HG-07-weight);
 }
 
 h4 {
     font-family: var(--ff);
-    font-size: var(--FD-01-size);
-    line-height: var(--FD-01-line);
-    font-weight: var(--FD-01-weight);
+    font-size: var(--HG-06-size);
+    line-height: var(--HG-06-line);
+    font-weight: var(--HG-06-weight);
 }
 
 h5 {
     font-family: var(--ff);
-    font-size: var(--FQ-02-size);
-    line-height: var(--FQ-02-line);
-    font-weight: var(--FQ-02-weight);
+    font-size: var(--HG-05-size);
+    line-height: var(--HG-05-line);
+    font-weight: var(--HG-05-weight);
 }
 
 h6 {
     font-family: var(--ff);
-    font-size: var(--FQ-01-size);
-    line-height: var(--FQ-01-line);
-    font-weight: var(--FQ-01-weight);
+    font-size: var(--HC-02-size);
+    line-height: var(--HC-02-line);
+    font-weight: var(--HC-02-weight);
 }
 
 p {
     font-family: var(--ff);
-    font-size: var(--FP-01-size);
-    line-height: var(--FP-01-line);
-    font-weight: var(--FP-01-weight);
+    font-size: var(--BD-02-size);
+    line-height: var(--BD-02-line);
+    font-weight: var(--BD-02-weight);
 }
 
 .menu-container {
