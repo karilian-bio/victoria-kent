@@ -360,6 +360,14 @@ p {
 
 /* end of button at top subsection */
 
+.tab-section-full {
+    background-color: var(--blue60);
+    max-width: var(--max-width);
+    margin: auto;
+
+    margin-bottom: 2rem;
+}
+
 .tab-section-full .tab-grid:nth-child(even) {
     color: pink;
     grid-template-areas:
