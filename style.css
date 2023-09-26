@@ -614,6 +614,7 @@ p {
 
     background-image: url("./assets/images/circo-plot-call-to-action.svg");
     background-size: cover;
+    background-position: center;
 }
 
 .call-to-action-img {
