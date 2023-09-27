@@ -159,58 +159,187 @@
         <div class="section-break"></div>
 
         <div class="tab-section-full">
-            <div class="tab-grid" style="background-color: var(--blue60)">
+            <div
+                class="tab-grid"
+                style="background-color: var(--blue60)"
+                onclick="openSection('Development')"
+            >
                 <div
                     class="feature-section-image"
                     style="--path: url('./assets/images/dna_for_tabs.svg')"
                 ></div>
 
                 <div class="tab-header-and-text">
-                    <h3>
-                        Software Development: Innovation without regulatory
-                        barriers
-                    </h3>
+                    <div class="tab-header">
+                        <h3>
+                            Software Development: Innovation without regulatory
+                            barriers
+                        </h3>
+
+                        <div class="down">
+                            <img
+                                src="./assets/images/chevron--down.svg"
+                                alt="Expand"
+                            />
+                        </div>
+                    </div>
+                    <div id="Development" class="tab-content">
+                        <p>
+                            retrospectively create software development process
+                            and tooling
+                        </p>
+                        <p>keep the clinical pipeline already in use</p>
+                        <p>
+                            changes to process and deployment, not to algorithms
+                        </p>
+                        <p>minimize regulatory hindrance on development</p>
+                        <p>
+                            create design documentation to help communicate to
+                            regulators and team members.
+                        </p>
+                        <p>
+                            ensure the labs software is able to run anywhere at
+                            anytime at any scale
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="tab-grid" style="background-color: var(--red60)">
+            <div
+                class="tab-grid"
+                style="background-color: var(--red60)"
+                onclick="openSection('Maintenance')"
+            >
                 <div
                     class="feature-section-image"
                     style="--path: url('./assets/images/pcr_plot.svg')"
                 ></div>
 
                 <div class="tab-header-and-text">
-                    <h3>
-                        Software Maintenance: change control and communication
-                        to stakeholders
-                    </h3>
+                    <div class="tab-header">
+                        <h3>
+                            Software Maintenance: change control and
+                            communication to stakeholders
+                        </h3>
+                        <div class="down">
+                            <img
+                                src="./assets/images/chevron--down.svg"
+                                alt="Expand"
+                            />
+                        </div>
+                    </div>
+                    <div id="Maintenance" class="tab-content">
+                        <p>
+                            ensure issues with software are reported, fixed, and
+                            never regressed
+                        </p>
+                        <p>
+                            ensure decision makers have insight into design and
+                            features of the software
+                        </p>
+                        <p>
+                            track development - be it bug fixes or new features
+                        </p>
+                        <p>
+                            safely upgrade, bug fix, or enhance the software
+                            with robust testing infrastructure
+                        </p>
+                        <p>
+                            communicate [testing process] and strategy easily
+                            with regulators, clinicians, and stakeholders
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="tab-grid" style="background-color: var(--yellow30)">
+            <div
+                class="tab-grid"
+                style="background-color: var(--yellow30)"
+                onclick="openSection('Security')"
+            >
                 <div
                     class="feature-section-image"
                     style="--path: url('./assets/images/binary_wall.svg')"
                 ></div>
 
-                <div class="tab-header-and-text" style="color: black">
-                    <h3>Software Security: safety for all patients</h3>
+                <div class="tab-header-and-text">
+                    <div class="tab-header">
+                        <h3>Software Security: safety for all patients</h3>
+                        <div class="down">
+                            <img
+                                src="./assets/images/chevron--down.svg"
+                                alt="Expand"
+                            />
+                        </div>
+                    </div>
+                    <div id="Security" class="tab-content">
+                        <p>
+                            software gives the best results and same analysis
+                            for every person
+                        </p>
+                        <p>remove manual steps from clinical processes</p>
+                        <p>
+                            allow manual steps to be accessed easily for
+                            debugging and R&D proposes
+                        </p>
+                        <p>
+                            ensure every patient can get analysis re-run when
+                            software is enhanced or after a bug fix
+                        </p>
+                        <p>
+                            ensure software is robust against supply chain
+                            attacks or malicious software updates
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="tab-grid" style="background-color: var(--green60)">
+            <div
+                class="tab-grid"
+                style="background-color: var(--green60)"
+                onclick="openSection('Validation')"
+            >
                 <div
                     class="feature-section-image"
                     style="
                         --path: url('./assets/images/manhattan-plots-featured.svg');
                     "
                 ></div>
-
                 <div class="tab-header-and-text">
-                    <h3>
-                        Analytical & Clinical Performance: testing at scale for
-                        every change
-                    </h3>
+                    <div class="tab-header">
+                        <h3>
+                            Analytical & Clinical Performance: testing at scale for every change
+                        </h3>
+                        <div class="down">
+                            <img
+                                src="./assets/images/chevron--down.svg"
+                                alt="Expand"
+                            />
+                        </div>
+                    </div>
+                    <div id="Validation" class="tab-content">
+                        <p>
+                            create analytical and clinical performance planning
+                        </p>
+                        <p>
+                            in-silicon simulation testing, available datasets,
+                            previous patients, artificial DNA
+                        </p>
+                        <p>
+                            communicate assay performance to stakeholders and
+                            clinicians
+                        </p>
+                        <p>
+                            offload clinical and analytical validation to
+                            alternate computational resources
+                        </p>
+                        <p>move to the cloud to reduce resource constraints</p>
+                        <p>keep patient processing hardware uninterrupted</p>
+                        <p>
+                            ensure EVERY assay and software changes keep a high
+                            standard
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -253,12 +382,13 @@
 
         <script>
             function openSection(sectionName) {
-                var i;
-                var x = document.getElementsByClassName("services");
-                for (i = 0; i < x.length; i++) {
-                    x[i].style.display = "none";
+                if (
+                    document.getElementById(sectionName).style.display == "flex"
+                ) {
+                    document.getElementById(sectionName).style.display = "none";
+                } else {
+                    document.getElementById(sectionName).style.display = "flex";
                 }
-                document.getElementById(sectionName).style.display = "flex";
             }
         </script>
     </body>

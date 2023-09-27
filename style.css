@@ -368,54 +368,63 @@ p {
     margin-bottom: 2rem;
 }
 
-.tab-section-full .tab-grid:nth-child(even) {
-    color: pink;
-    grid-template-areas:
-        "text header"
-        "text header"
-        "text header";
-}
-
 .tab-grid {
-    display: grid;
-    grid-template-areas:
-        "header text"
-        "header text"
-        "header text";
-    height: 20rem;
-    align-items: center;
+    display: flex;
+    gap: 1rem;
+    align-content: center;
 }
 
 .feature-section-image {
     display: flex;
-    background-color: white;
-    grid-area: header;
-    height: 100%;
-    width: 20rem;
+    width: 12rem;
+    padding-top: 12%;
 
     /* HTML MUST hand the image being used with URL */
+    background-color: white;
     background-image: var(--path);
-    background-size: cover;
+
     @media (max-width: 1200px) {
         display: none;
     }
 }
 
 .tab-header-and-text {
-    grid-area: text;
-    margin-left: 2rem;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
     color: white;
-    margin-right: 10rem;
-    padding-bottom: 4rem;
 
-    @media (max-width: 1200px) {
-        margin-right: 1rem;
-    }
+    align-self: center;
+    justify-content: center;
 }
 
-.tab-header-and-text h5 {
+.tab-header {
+    display: flex;
+    flex-direction: row;
     padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.tab-header h3 {
+    width: 90%;
+}
+
+.tab-content {
+    display: none;
+    flex-direction: column;
+    padding-left: 2rem;
     padding-bottom: 2rem;
+}
+
+.tab-content p {
+    display: list-item;
+}
+.down {
+    border: 1px red solid;
+    color: white;
+    filter: brightness(0) invert(1);
+    height: 5rem;
+    width: 5rem;
 }
 
 /* end of CSS logic for tabs */
