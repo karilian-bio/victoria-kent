@@ -368,19 +368,20 @@ p {
     margin-bottom: 2rem;
 }
 
-.tab-section-full .tab-grid:nth-child(even) {
-    color: pink;
-    grid-template-areas:
-        "text header"
-        "text header"
-        "text header";
+.tab-grid-seperator {
+    display: flex;
+    max-width: var(--max-width);
+
+    height: 2rem;
+
+    background-color: var(--grey10);
+    background-image: var(--path);
+    background-position: center;
 }
 
 .tab-grid {
-    display: grid;
+    display: flex;
     grid-template-areas:
-        "header text"
-        "header text"
         "header text";
     height: 20rem;
     align-items: center;
@@ -394,11 +395,11 @@ p {
     width: 20rem;
 
     /* HTML MUST hand the image being used with URL */
-    background-image: var(--path);
+    /*background-image: var(--path);
     background-size: cover;
     @media (max-width: 1200px) {
         display: none;
-    }
+    }*/
 }
 
 .tab-header-and-text {
@@ -408,6 +409,7 @@ p {
     margin-right: 10rem;
     padding-bottom: 4rem;
 
+    text-align: left;
     @media (max-width: 1200px) {
         margin-right: 1rem;
     }
