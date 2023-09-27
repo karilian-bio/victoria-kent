@@ -3,13 +3,13 @@
  *font			size	size	line	line weight	short	map
  *name			XL	max	XL	max		ID	to
  * ---------------------------------------------------------------------------
- *XLG/fluid-display-03	76	84	86	94	600	FD-03	h1
- *XLG/fluid-heading-05	48	60	56	70	300	FH-05	h2
+ *XLG/fluid-display-03	4.75	5.25	5.375	5.875	600	FD-03	h1
+ *XLG/fluid-heading-05	3.0	3.75	3.5	3.75	300	FH-05	h2
  *heading-07		3.375	-	4.0	-	300	HG-07	h3
  *heading-06		2.625	-	3.125	-	300	HG-06	h4
  *heading-05		2.0	-	2.5	-	300	HG-05	h5
  *heading-compact-02 	1.0	-	1.375	-	600	HC-02	h6
- *body-02		1	-	1.5	-	400	BD-02	p
+ *body-02		1.0	-	1.5	-	400	BD-02	p
  *
  * for clamp() ramping, see "https://modern-fluid-typography.vercel.app/"
  *
@@ -17,10 +17,6 @@
  */
 
 :root {
-    --FD-01-size: 3.75rem;
-    --FD-01-height: 4.375rem;
-    --FD-01-weight: 300;
-
     --FD-03-size: clamp(4.75rem, 5vw + 2.5rem, 5.25rem);
     --FD-03-line: clamp(5.25rem, 5vw + 3rem, 5.875rem);
     --FD-03-weight: 600;
@@ -29,13 +25,9 @@
     --FH-05-line: clamp(3.75rem, 3vw + 2.5rem, 4.375rem);
     --FH-05-weight: 300;
 
-    --FH-07-size: 3.375rem;
-    --FH-07-line: 4rem;
-    --FH-07-weight: 600;
-
     --HG-07-size: 3.75rem;
     --HG-07-line: 4rem;
-    --HG-07-weight: 300;
+    --HG-07-weight: 600;
 
     --HG-06-size: 2.625rem;
     --HG-06-line: 3.125rem;
@@ -69,13 +61,16 @@
     --grey30: #c6c6c6;
     --grey40: #a8a8a8;
     --grey70: #4d5358;
+    --grey90: #262626;
 
-    --font-size: 12px;
+    --font-size: 16px;
     --ff: "fira";
     --padding: 1rem;
     --max-width: 1600px;
-    /* Padding between hero text and subtext (how much of the background image we show) */
-    --padding-hero-top-bottom: 5rem;
+    /* Padding between heading text and sub-heading(how much of the background image we show) */
+    
+    /* Padding at top and bottom of each section */
+    --padding-section-top-bottom: 5rem;
     --padding-hero-elements: 5.25rem;
 
     /* Section break variables */
@@ -85,14 +80,14 @@
     --tab-padding: 6.75rem;
 }
 
-@font-face {
+@font-face{
     font-family: "fira";
     font-style: normal;
     font-weight: 400;
     src: url(./assets/fonts/FiraSans-Regular.woff2);
 }
 
-@font-face {
+@font-face{
     font-family: "fira";
     font-style: normal;
     font-weight: 300;
@@ -255,7 +250,7 @@ p {
     max-width: var(--max-width);
     margin: auto;
     padding: var(--padding);
-    background-color: var(--grey70);
+    background-color: var(--grey90);
 }
 
 .logo {
@@ -302,20 +297,20 @@ p {
 		Padding between top and bottom of hero text and sub-text
 		This is how much of the image we show
 	*/
-    padding-top: var(--padding-hero-top-bottom);
-    padding-bottom: var(--padding-hero-top-bottom);
+    padding-bottom: var(--padding-section-top-bottom);
+    padding-top: var(--padding-section-top-bottom);
 
     color: var(--black);
 }
 
-.hero {
-    padding-bottom: var(--padding-hero-elements);
+.hero-heading {
 }
 
 .ruo-to-ivd {
     padding-left: 5rem;
     padding-right: 5rem;
     padding-top: 2rem;
+    width: var(--max-width)
 }
 
 /* END OF HERO SECTION */
@@ -333,6 +328,29 @@ p {
     margin-bottom: 1rem;
 }
 /* END OF SECTION BREAK LOGIC */
+
+
+/* SECTION LOGIC */
+
+.section {
+    display: flex;
+    margin: auto;
+    max-width: var(--max-width);
+    flex-direction: column;
+    justify-self: center;
+    padding-bottom: var(--padding-section-top-bottom);
+    padding-top: var(--padding-section-top-bottom);
+}
+
+.sub-section {
+    width: 85%;
+    margin: auto;
+}
+
+
+/* END SECTION LOGIC */
+
+
 
 /* Tab/Featured section start of logic */
 
@@ -418,35 +436,15 @@ p {
 /* end of CSS logic for tabs */
 
 /* 
-    Regulatory advantage section 
+    START OF PROBLEM section 
 */
 
-.regulatory-advantage {
-    display: flex;
-    text-justify: center;
-
-    max-width: var(--max-width);
-    margin: auto;
-
-    padding-top: 10rem;
-    padding-bottom: 10rem;
-
+.problem {
     background: linear-gradient(90deg, #6464c8 0%, #be4747 100%);
     color: white;
 }
 
-.regulatory-text {
-    width: 90%;
-    margin: auto;
-}
-
-.regulatory-subtext {
-    font-weight: 300;
-    font-size: 42px;
-    line-height: 50px;
-}
-
-.regulatory-grid {
+.problem-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -458,25 +456,15 @@ p {
     }
 }
 
-.regulatory-cell h2 {
-    font-weight: 600;
-}
-/* END OF REGULTORY SECTION */
+/* END OF PROBLEM SECTION */
 
 /* 
-    Start of USER OF KARILIAN GRID 
+    START OF USER SECTION 
 */
 
-.users-container {
-    background: var(--grey10);
-    text-align: center;
-    margin-top: 5rem;
-    max-width: var(--max-width);
-    margin: auto;
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+.users {
     color: white;
-
+    background: var(--grey20);
     background-image: url("./assets/images/background_hero.png");
     background-size: cover;
     background-position: center;
@@ -484,13 +472,10 @@ p {
 
 .users-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    padding-top: 4rem;
+    grid-template-columns: repeat(4, 1fr);
     max-width: var(--max-width);
     gap: 2rem;
-    margin-bottom: 4rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
-    padding-top: 4rem;
 
     @media (max-width: 1200px) {
         grid-template-columns: repeat(2, 1fr);
@@ -518,30 +503,13 @@ p {
 
 /* Submssion to regulatory bodies section */
 
-.submission-section {
-    display: flex;
-    margin: auto;
 
-    max-width: var(--max-width);
+.submission {
+    background-color: var(--white);
 
-    flex-direction: column;
-    justify-self: center;
-    text-align: left;
-
-    /* Best practice incase image doesn't load */
-    background-color: var(--grey10);
-
-    padding-bottom: 3rem;
-    padding-top: 3rem;
 }
 
-.submission-subsection {
-    width: 85%;
-    margin: auto;
-}
-
-.submission-header {
-    padding-bottom: 3rem;
+.submission-heading {
 
     @media (max-width: 1200px) {
         padding-top: 1rem;
@@ -549,15 +517,6 @@ p {
     }
 }
 
-.submission-header-text {
-    color: var(--blue90);
-}
-
-.submission-subtext {
-    font-weight: 300;
-    font-size: 42px;
-    line-height: 50px;
-}
 
 .label-submission-color {
     color: var(--blue60);
@@ -570,6 +529,7 @@ p {
     justify-items: center;
     align-content: center;
     align-items: center;
+    padding-top: 3rem;
     padding-bottom: 3rem;
     margin: auto;
 
