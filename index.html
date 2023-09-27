@@ -204,22 +204,28 @@
         <div class="section-break"></div>
 
         <div class="tab-section-full">
-            <div
-                class="tab-grid"
-                style="background-color: var(--blue60)"
-                onclick="openSection('Development')"
-            >
+            <div class="tab-grid" onclick="openSection('Development')">
                 <div
                     class="feature-section-image"
                     style="--path: url('./assets/images/dna_for_tabs.svg')"
                 ></div>
 
                 <div class="tab-header-and-text">
-                    <div class="tab-header">
-                        <h3>
-                            Software Development: Innovation without regulatory
-                            barriers
-                        </h3>
+                    <div class="tab-header-and-arrow">
+                        <div class="tab-header">
+                            <p
+                                class="header-label"
+                                style="color: var(--blue60)"
+                            >
+                                SOLUTION
+                            </p>
+                            <div class="fixed-heading-07">
+                                Software Development
+                            </div>
+                            <div class="tab-header-subtext">
+                                Innovation without regulatory barriers
+                            </div>
+                        </div>
 
                         <div class="down">
                             <img
@@ -228,33 +234,51 @@
                             />
                         </div>
                     </div>
-                    <div id="Development" class="tab-content">
-                        <p>
-                            retrospectively create software development process
-                            and tooling
-                        </p>
-                        <p>keep the clinical pipeline already in use</p>
-                        <p>
-                            changes to process and deployment, not to algorithms
-                        </p>
-                        <p>minimize regulatory hindrance on development</p>
-                        <p>
-                            create design documentation to help communicate to
-                            regulators and team members.
-                        </p>
-                        <p>
-                            ensure the labs software is able to run anywhere at
-                            anytime at any scale
-                        </p>
+
+                    <div id="Development" class="tab-content" style="--section-color: #6464C8">
+                        <div class="tab-content-cell">
+                            <h2>retrospective</h2>
+                            <p>karilian will create process and tooling</p>
+                        </div>
+                        <div class="tab-content-cell">
+                            <h2>algorithms untouched</h2>
+                            <p>
+                                changes to process and deployment not to your
+                                core algorithms
+                            </p>
+                        </div>
+                        <div class="tab-content-cell">
+                            <h2>document design</h2>
+                            <p>
+                                create documentation to communicate to
+                                regulators + team members
+                            </p>
+                        </div>
+                        <div class="tab-content-cell">
+                            <h2>current pipeline</h2>
+                            <p>
+                                use the pipeline you currently have in routine
+                            </p>
+                        </div>
+                        <div class="tab-content-cell">
+                            <h2>system uptime</h2>
+                            <p>
+                                ensure the lab software can run anywhere +
+                                anytime at scale
+                            </p>
+                        </div>
+                        <div class="tab-content-cell">
+                            <h2>flexible</h2>
+                            <p>
+                                minimize regulator hindrence on development
+                                within the lab
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div
-                class="tab-grid"
-                style="background-color: var(--red60)"
-                onclick="openSection('Maintenance')"
-            >
+            <div class="tab-grid" onclick="openSection('Maintenance')">
                 <div
                     class="feature-section-image"
                     style="--path: url('./assets/images/pcr_plot.svg')"
@@ -262,10 +286,10 @@
 
                 <div class="tab-header-and-text">
                     <div class="tab-header">
-                        <h3>
+                        <div class="fixed-heading-07">
                             Software Maintenance: change control and
                             communication to stakeholders
-                        </h3>
+                        </div>
                         <div class="down">
                             <img
                                 src="./assets/images/chevron--down.svg"
@@ -274,25 +298,9 @@
                         </div>
                     </div>
                     <div id="Maintenance" class="tab-content">
-                        <p>
-                            ensure issues with software are reported, fixed, and
-                            never regressed
-                        </p>
-                        <p>
-                            ensure decision makers have insight into design and
-                            features of the software
-                        </p>
-                        <p>
-                            track development - be it bug fixes or new features
-                        </p>
-                        <p>
-                            safely upgrade, bug fix, or enhance the software
-                            with robust testing infrastructure
-                        </p>
-                        <p>
-                            communicate [testing process] and strategy easily
-                            with regulators, clinicians, and stakeholders
-                        </p>
+                        <div class="tab-content-cell">
+                            <h2>retor</h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -429,11 +437,11 @@
         <script>
             function openSection(sectionName) {
                 if (
-                    document.getElementById(sectionName).style.display == "flex"
+                    document.getElementById(sectionName).style.display == "grid"
                 ) {
                     document.getElementById(sectionName).style.display = "none";
                 } else {
-                    document.getElementById(sectionName).style.display = "flex";
+                    document.getElementById(sectionName).style.display = "grid";
                 }
             }
         </script>
