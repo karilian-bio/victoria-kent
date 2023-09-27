@@ -17,6 +17,10 @@
  */
 
 :root {
+    --FD-01-size: 3.75rem;
+    --FD-01-height: 4.375rem;
+    --FD-01-weight: 300;
+
     --FD-03-size: clamp(4.75rem, 5vw + 2.5rem, 5.25rem);
     --FD-03-line: clamp(5.25rem, 5vw + 3rem, 5.875rem);
     --FD-03-weight: 600;
@@ -239,6 +243,12 @@ p {
     line-height: var(--FH-07-line);
 }
 
+.fluid-display-01 {
+    font-size: var(--FD-01-size);
+    line-height: var(--FD-01-height);
+    font-weight: var(--FD-01-weight);
+}
+
 .menu-container {
     display: flex;
     justify-content: space-between;
@@ -445,63 +455,47 @@ p {
 */
 
 .regulatory-advantage {
-    display: grid;
+    display: flex;
     text-justify: center;
 
     max-width: var(--max-width);
     margin: auto;
 
-    grid-gap: 2rem;
-    grid-template-areas:
-        "regulatory-header regulatory-header"
-        "regulatory-image regulatory-text";
+    padding-top: 10rem;
+    padding-bottom: 10rem;
 
-    grid-template-columns: 50%;
-    grid-template-rows: auto;
-    padding-bottom: 5rem;
-
-    justify-items: center;
-    align-content: center;
-
-    @media (max-width: 1200px) {
-        grid-template-areas:
-            "regulatory-header"
-            "regulatory-text";
-        grid-template-columns: 95%;
-        text-justify: center;
-        text-align: center;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-}
-
-.regulatory-header {
-    display: flex;
-    margin: auto;
-    grid-area: regulatory-header;
-    text-align: center;
-    text-justify: center;
-}
-
-.regulatory-image {
-    display: flex;
-    grid-area: regulatory-image;
-    align-self: center;
+    background: linear-gradient(90deg, #6464c8 0%, #be4747 100%);
+    color: white;
 }
 
 .regulatory-text {
-    grid-area: regulatory-text;
-    font-size: 5rem;
-    text-justify: center;
-    justify-self: center;
-    align-self: center;
+    width: 90%;
+    margin: auto;
+}
 
+.regulatory-subtext {
+    font-weight: 300;
+    font-size: 42px;
+    line-height: 50px;
+}
+
+
+.regulatory-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    column-gap: 10rem;
+    padding-top: 4rem;
     @media (max-width: 1200px) {
-        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
     }
 }
 
-/* END OF REGULTORY ADVANTAGE SECTION */
+.regulatory-cell h2 {
+    font-weight: 600;
+}
+/* END OF REGULTORY SECTION */
 
 /* 
     Start of USER OF KARILIAN GRID 
@@ -514,14 +508,10 @@ p {
     max-width: var(--max-width);
     margin: auto;
     padding-bottom: 2rem;
-
+    padding-top: 2rem;
     color: white;
 
-    background: linear-gradient(90deg, #6464c8 0%, #be4747 100%);
-}
-
-.user-header {
-    padding: 1rem;
+    background-image: url("./assets/images/background_hero.png");
 }
 
 .users-grid {
@@ -614,7 +604,7 @@ p {
     align-items: center;
     padding-bottom: 3rem;
     margin: auto;
-    
+
     @media (max-width: 1200px) {
         display: flex;
         flex-direction: column;
