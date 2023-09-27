@@ -336,61 +336,16 @@ p {
 
 /* Tab/Featured section start of logic */
 
-/* 
-    Sub section to make buttons at the top work properly
-*/
-.tab-bar {
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-    max-width: var(--max-width);
-    padding-left: var(--tab-padding);
-    padding-right: var(--tab-padding);
-    @media (max-width: 1200px) {
-        grid-template-columns: 1fr;
-    }
-}
-
-.tab-button {
-    display: flex;
-    border: 1px black solid;
-    text-justify: center;
-    justify-content: left;
-    padding: 1rem;
-    align-content: center;
-    padding: 1.5rem;
-    cursor: pointer;
-    align-content: center;
-    align-items: center;
-}
-
-.tab-button:focus {
-    color: white;
-    font-weight: bolder;
-    background-color: var(--focusColor);
-}
-
-.tab-button:hover {
-    background-color: var(--grey40);
-}
-
-.tab-button:active {
-    background-color: var(--focusColor);
-}
-
-/* end of button at top subsection */
-
 .tab-section-full {
-    background-color: var(--blue60);
     max-width: var(--max-width);
     margin: auto;
-
     margin-bottom: 2rem;
 }
 
 .tab-grid {
     display: flex;
+    max-width: var(--max-width);
+    margin: auto;
     gap: 1rem;
     align-content: center;
 }
@@ -403,49 +358,61 @@ p {
     /* HTML MUST hand the image being used with URL */
     background-color: white;
     background-image: var(--path);
-
-    @media (max-width: 1200px) {
-        display: none;
-    }
 }
 
 .tab-header-and-text {
     display: flex;
     width: 100%;
-    flex-direction: column;
-    color: white;
 
+    flex-direction: column;
     align-self: center;
     justify-content: center;
 }
 
 .tab-header {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-top: 2rem;
     padding-bottom: 1rem;
-}
-
-.tab-header h3 {
     width: 90%;
 }
 
+.tab-header-subtext {
+    font-weight: 300;
+    font-size: 42px;
+    line-height: 50px;
+}
+
 .tab-content {
-    display: none;
-    flex-direction: column;
-    padding-left: 2rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
 }
 
-.tab-content p {
-    display: list-item;
+.tab-content-cell {
+    display: flex;
+    flex-direction: column;
 }
+
+.tab-content .tab-content-cell h2 {
+    color: var(--section-color);
+    font-weight: 600;
+}
+
 .down {
     border: 1px red solid;
-    color: white;
-    filter: brightness(0) invert(1);
     height: 5rem;
     width: 5rem;
+}
+
+.tab-header-and-arrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
 }
 
 /* end of CSS logic for tabs */
@@ -479,7 +446,6 @@ p {
     line-height: 50px;
 }
 
-
 .regulatory-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -512,6 +478,8 @@ p {
     color: white;
 
     background-image: url("./assets/images/background_hero.png");
+    background-size: cover;
+    background-position: center;
 }
 
 .users-grid {
