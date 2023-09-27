@@ -550,6 +550,29 @@ p {
 
 /* end of sumbission CSS */
 
+/* solution section */
+
+.solution-1 {
+
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    column-gap: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    @media (max-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
 /* call to action section */
 
 .call-to-action {
