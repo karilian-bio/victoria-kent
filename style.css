@@ -377,7 +377,7 @@ p {
     background-position: center;
 
     @media (max-width: 1200px) {
-        padding-left: 1rem;
+        width: 2rem;
     }
 }
 
@@ -508,7 +508,6 @@ p {
     width: 100%;
     padding: 1rem;
     background-color: transparent;
-    margin: 1rem;
 
     /* Little sneaky to make the svg white without resaving them */
     filter: brightness(0) invert(1);
