@@ -355,6 +355,7 @@ p {
     margin: auto;
     margin-bottom: 2rem;
     cursor: pointer;
+    width: 90%;
 }
 
 .tab-grid {
@@ -374,8 +375,9 @@ p {
     background-color: white;
     background-image: var(--path);
     background-position: center;
+
     @media (max-width: 1200px) {
-        width: 1rem;
+        padding-left: 1rem;
     }
 }
 
@@ -394,6 +396,11 @@ p {
     padding-top: 2rem;
     padding-bottom: 1rem;
     width: 90%;
+
+    @media (max-width: 1200px) {
+        width: 70%;
+        overflow-wrap: break-word;
+    }
 }
 
 .tab-header-subtext {
@@ -408,6 +415,11 @@ p {
     gap: 1rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: auto;
+        width: 90%;
+    }
 }
 
 .tab-content-cell {
@@ -420,7 +432,7 @@ p {
 }
 
 .down {
-    height: 5rem;
+    padding-right: 1rem;
     width: 5rem;
 
     :hover {
