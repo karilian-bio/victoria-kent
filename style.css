@@ -635,9 +635,11 @@ p {
 .footer-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     max-width: var(--max-width);
     margin: auto;
     padding: 1rem;
+    gap: 3rem;
 }
 
 /* end of footer */
