@@ -68,7 +68,7 @@
     --padding: 1rem;
     --max-width: 1600px;
     /* Padding between heading text and sub-heading(how much of the background image we show) */
-    
+
     /* Padding at top and bottom of each section */
     --padding-section-top-bottom: 5rem;
     --padding-hero-elements: 5.25rem;
@@ -80,14 +80,14 @@
     --tab-padding: 6.75rem;
 }
 
-@font-face{
+@font-face {
     font-family: "fira";
     font-style: normal;
     font-weight: 400;
     src: url(./assets/fonts/FiraSans-Regular.woff2);
 }
 
-@font-face{
+@font-face {
     font-family: "fira";
     font-style: normal;
     font-weight: 300;
@@ -310,7 +310,7 @@ p {
     padding-left: 5rem;
     padding-right: 5rem;
     padding-top: 2rem;
-    width: var(--max-width)
+    width: var(--max-width);
 }
 
 /* END OF HERO SECTION */
@@ -329,7 +329,6 @@ p {
 }
 /* END OF SECTION BREAK LOGIC */
 
-
 /* SECTION LOGIC */
 
 .section {
@@ -347,10 +346,7 @@ p {
     margin: auto;
 }
 
-
 /* END SECTION LOGIC */
-
-
 
 /* Tab/Featured section start of logic */
 
@@ -358,6 +354,7 @@ p {
     max-width: var(--max-width);
     margin: auto;
     margin-bottom: 2rem;
+    cursor: pointer;
 }
 
 .tab-grid {
@@ -376,6 +373,10 @@ p {
     /* HTML MUST hand the image being used with URL */
     background-color: white;
     background-image: var(--path);
+    background-position: center;
+    @media (max-width: 1200px) {
+        width: 1rem;
+    }
 }
 
 .tab-header-and-text {
@@ -414,15 +415,17 @@ p {
     flex-direction: column;
 }
 
-.tab-content .tab-content-cell h2 {
+.tab-content .tab-content-cell h5 {
     color: var(--section-color);
-    font-weight: 600;
 }
 
 .down {
-    border: 1px red solid;
     height: 5rem;
     width: 5rem;
+
+    :hover {
+        cursor: pointer;
+    }
 }
 
 .tab-header-and-arrow {
@@ -503,20 +506,16 @@ p {
 
 /* Submssion to regulatory bodies section */
 
-
 .submission {
     background-color: var(--white);
-
 }
 
 .submission-heading {
-
     @media (max-width: 1200px) {
         padding-top: 1rem;
         font-size: 3rem;
     }
 }
-
 
 .label-submission-color {
     color: var(--blue60);
@@ -553,7 +552,6 @@ p {
 /* solution section */
 
 .solution-1 {
-
 }
 
 .solution-grid {
@@ -568,10 +566,6 @@ p {
         flex-direction: column;
     }
 }
-
-
-
-
 
 /* call to action section */
 
