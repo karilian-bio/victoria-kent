@@ -639,7 +639,16 @@ p {
     max-width: var(--max-width);
     margin: auto;
     padding: 1rem;
-    gap: 3rem;
+
+    :nth-child(1) {
+        justify-self: left;
+    }
+}
+
+.footer-container p {
+    @media (max-width: 1200px) {
+        width: 20%;
+    }
 }
 
 /* end of footer */
