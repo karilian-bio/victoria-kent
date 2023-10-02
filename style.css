@@ -488,7 +488,7 @@ p {
 .users {
     color: white;
     background: var(--grey20);
-    background-image: url("./assets/images/background_hero.png");
+    background-image: url("./assets/images/background_hero.jpg");
     background-size: cover;
     background-position: center;
 }
