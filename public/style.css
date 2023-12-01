@@ -337,6 +337,28 @@ p {
 }
 /* END OF SECTION BREAK LOGIC */
 
+/* Target Audience section */
+
+.target-audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: var(--max-width);
+    padding-top: 4rem;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.1rem;
+        padding: 1rem;
+        margin: 0;
+    }
+}
+
+.target-audience-section {
+    background-color: green;
+}
+/* end of target audience section */
+
 /* SECTION LOGIC */
 
 .section {
@@ -522,6 +544,53 @@ p {
 }
 
 /* End of USER LOGIC */
+
+/* The Product Section */
+
+.product-grid {
+    display: grid;
+    padding-top: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: var(--max-width);
+    gap: 2rem;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 0rem;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        padding-top: 0rem;
+        gap: 0.1rem;
+        padding: 1rem;
+    }
+}
+
+.product-sub-grid {
+    display: grid;
+    padding-top: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: var(--max-width);
+    gap: 2rem;
+}
+
+/* End of Prudct section */
+
+/* Services section */
+
+.service-grid {
+    display: grid;
+    padding-top: 4rem;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: var(--max-width);
+    gap: 2rem;
+}
+
+.service-full-row {
+    grid-column: span 5;
+}
+
+
+/* end of service section */
 
 /* Submssion to regulatory bodies section */
 
