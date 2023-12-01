@@ -357,6 +357,26 @@ p {
 .target-audience-section {
 }
 
+.target-who {
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 3.125rem; /* 119.048% */
+}
+
+.target-question {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.5rem;
+}
+
+.target-blob {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
 /* end of target audience section */
 
 /* SECTION LOGIC */
@@ -547,10 +567,17 @@ p {
 
 /* The Product Section */
 
+.the-product {
+    color: var(--blue90);
+}
+
+.product-how-we-help {
+    color: var(--blue90);
+}
 .product-grid {
     display: grid;
     padding-top: 4rem;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, auto);
     max-width: var(--max-width);
     gap: 2rem;
 
@@ -573,6 +600,20 @@ p {
     gap: 2rem;
 }
 
+.product-title {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.5rem;
+}
+
+.product-text {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem; /* 150% */
+}
+
 /* End of Prudct section */
 
 /* Services section */
@@ -582,11 +623,43 @@ p {
     padding-top: 4rem;
     grid-template-columns: repeat(5, 1fr);
     max-width: var(--max-width);
-    gap: 2rem;
+    row-gap: 1rem;
+}
+
+.first-row {
+    background: var(--blue60);
+    color: var(--white);
+    /* Fixed heading styles/heading-05 */
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.5rem; /* 125% */
+
+    text-align: center;
 }
 
 .service-full-row {
     grid-column: span 5;
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 3.125rem;
+
+    border-bottom: 1px solid #000000;
+    padding-top: 2rem;
+}
+
+.service-row {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.5rem;
+    border-bottom: 1px solid #000000;
+}
+
+.service-check {
+    border-bottom: 1px solid #000000;
+    text-align: center;
 }
 
 

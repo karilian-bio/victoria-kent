@@ -13,6 +13,19 @@
         <title>karilian</title>
     </head>
 
+    <svg style="display: none" version="2.0">
+        <defs>
+            <symbol id="circle">
+                xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                viewBox="0 0 36 36" fill="none" >
+                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+            </symbol>
+        </defs>
+        <!-- to make the circle-arrow-left.svg file
+       also usable as image: -->
+        <use href="#circle-arrow-left" />
+    </svg>
+
     <div id="root"></div>
 
     <body>
@@ -56,9 +69,10 @@
             <div class="target-audience-grid">
                 <div class="target-audience-section">
                     <div class="target-who">clinical lab</div>
-                    <div class="target-question"></div>
-                    want keep your in-house assay on market post IVDR
-                    transition?
+                    <div class="target-question">
+                        want keep your in-house assay on market post IVDR
+                        transition?
+                    </div>
                     <div class="target-blob">
                         Are you a health institution and IVDR exempt as per
                         article 5(5) of (EU) 2017/746. General Safety and
@@ -81,9 +95,10 @@
                 </div>
                 <div class="target-audience-section">
                     <div class="target-who">start-up</div>
-                    <div class="target-question"></div>
-                    commercializing a novel assay that will be used in a
-                    regulated market?
+                    <div class="target-question">
+                        commercializing a novel assay that will be used in a
+                        regulated market?
+                    </div>
                     <div class="target-blob">
                         The start-up space is a tough environment in which to
                         operate. Don’t let regulatory compliance slow down your
@@ -105,9 +120,10 @@
                 </div>
                 <div class="target-audience-section">
                     <div class="target-who">industry</div>
-                    <div class="target-question"></div>
-                    looking to build a companion diagnostic to accompany your
-                    latest drug?
+                    <div class="target-question">
+                        looking to build a companion diagnostic to accompany
+                        your latest drug?
+                    </div>
                     <div class="target-blob">
                         Are you a large company with complex process and
                         systems. This can make obtaining regulatory approval
@@ -318,8 +334,8 @@
         <div class="section how-we-help">
             <div class="sub-section">
                 <div class="user-heading">
-                    <p class="">The PRODUCT</p>
-                    <h3>How can we help you ?</h3>
+                    <p class="the-product">The PRODUCT</p>
+                    <h3 class="product-how-we-help">How can we help you ?</h3>
                 </div>
                 <div class="user-sub-heading">
                     <h4>get your molecular diagnostic device compliant</h4>
@@ -328,145 +344,350 @@
                 <div class="how-we-help-text-grid">
                     <div class="product-grid">
                         <div class="product-sub-grid">
-                            <div class="product-title">Consultation</div>
-                            <div class="product-text">
+                            <h4 class="product-title">Consultation</h4>
+                            <p class="product-text">
                                 Speak to our experts, learn from their
                                 experience. We can review and give
                                 recommendations on how to improve efficiency and
                                 shorten time to compliance.
-                            </div>
+                            </p>
                         </div>
                         <div class="product-sub-grid">
-                            <div class="product-title">
+                            <h4 class="product-title">
                                 Software as a Medical Device
-                            </div>
-                            <div class="product-text">
+                            </h4>
+                            <p class="product-text">
                                 Your software stack must be under design
                                 control? We will development custom software
                                 solutions for your device.
-                            </div>
+                            </p>
                         </div>
                         <div class="product-sub-grid">
-                            <div class="product-title">
+                            <h4 class="product-title">
                                 Design Control as a service
-                            </div>
-                            <div class="product-text">
+                            </h4>
+                            <p class="product-text">
                                 Ensure you device is appropriate for its
                                 intended use. We will implement best practices
                                 and procedures into your product design and
                                 development.
-                            </div>
+                            </p>
                         </div>
                         <div class="product-sub-grid">
-                            <div class="product-title">Testing Service</div>
-                            <div class="product-text">
+                            <h4 class="product-title">Testing Service</h4>
+                            <p class="product-text">
                                 Your software stack must be under design
                                 control? We will development custom software
                                 solutions for your device.
-                            </div>
+                            </p>
                         </div>
                     </div>
-                
+
                     <br />
                     <br />
                     <br />
 
                     <div class="service-grid">
-                        <div></div>
-                        <div>Consultation</div>
-                        <div>Design Control as a service</div>
-                        <div>Software as a Medical Device</div>
-                        <div>Testing as a service</div>
-                    
+                        <div class="first-row"></div>
+                        <div class="first-row">Consultation</div>
+                        <div class="first-row">Design Control as a service</div>
+                        <div class="first-row">
+                            Software as a Medical Device
+                        </div>
+                        <div class="first-row">Testing as a service</div>
+
                         <div class="service-full-row">Quality</div>
-                        
+
                         <div class="service-row">Establishment</div>
-                        <div class="service-check">X</div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
                         <div class="service-check"></div>
                         <div class="service-check"></div>
                         <div class="service-check"></div>
 
                         <div class="service-row">Leadership Responsibility</div>
-                        <div class="service-check">X</div>
-                        <div class="service-check"></div>
-                        <div class="service-check"></div>
-                        <div class="service-check"></div>
-                        
-                        <div class="service-row">Resource Management</div>
-                        <div class="service-check">X</div>
-                        <div class="service-check"></div>
-                        <div class="service-check"></div>
-                        <div class="service-check"></div>
-                        
-                        <div class="service-row">Risk Management</div>
-                        <div class="service-check">X</div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
                         <div class="service-check"></div>
                         <div class="service-check"></div>
                         <div class="service-check"></div>
 
-                        <div class="service-full-row">Device Safety (NGS + PCR)</div>
+                        <div class="service-row">Resource Management</div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
+                        <div class="service-check"></div>
+                        <div class="service-check"></div>
+                        <div class="service-check"></div>
+
+                        <div class="service-row">Risk Management</div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
+                        <div class="service-check"></div>
+                        <div class="service-check"></div>
+                        <div class="service-check"></div>
+
+                        <div class="service-full-row">
+                            Device Safety (NGS + PCR)
+                        </div>
 
                         <div class="service-row">Sample Isolation</div>
-                        <div class="service-check">X</div>
-                        <div class="service-check">x</div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
                         <div class="service-check"></div>
                         <div class="service-check"></div>
 
                         <div class="service-row">Process Sample</div>
-                        <div class="service-check">X</div>
-                        <div class="service-check">X</div>
-                        <div class="service-check">X</div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
                         <div class="service-check"></div>
 
-                        <div class="service-row">Sequence /  Amplify</div>
-                        <div class="service-check">X</div>
+                        <div class="service-row">Sequence / Amplify</div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
                         <div class="service-check"></div>
                         <div class="service-check"></div>
                         <div class="service-check"></div>
 
                         <div class="service-row">Analysis Pipeline</div>
-                        <div class="service-check">X</div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
                         <div class="service-check"></div>
-                        <div class="service-check">X</div>
+                        <div class="service-check"></div>
                         <div class="service-check"></div>
 
                         <div class="service-row">Interpret results</div>
-                        <div class="service-check">X</div>
-                        <div class="service-check">X</div>
-                        <div class="service-check">X</div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
+                        <div class="service-check"></div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
                         <div class="service-check"></div>
 
                         <div class="service-full-row">Performance</div>
 
-                        <div class="service-row">Process measurement + analysis</div>
-                        <div class="service-check">X</div>
+                        <div class="service-row">
+                            Process measurement + analysis
+                        </div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
                         <div class="service-check"></div>
-                        <div class="service-check">X</div>
-                        <div class="service-check">X</div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
 
                         <div class="service-row">Analytical Validation</div>
-                        <div class="service-check">X</div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
                         <div class="service-check"></div>
-                        <div class="service-check">X</div>
-                        <div class="service-check">X</div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
 
                         <div class="service-row">Clinical Valiation</div>
-                        <div class="service-check">X</div>
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
                         <div class="service-check"></div>
                         <div class="service-check"></div>
-                        <div class="service-check">X</div>
-
-
-
-
-
-
-
-
-
-
+                        <div class="service-check">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="36"
+                                height="36"
+                                viewBox="0 0 36 36"
+                                fill="none"
+                            >
+                                <circle cx="18" cy="18" r="18" fill="#6464C8" />
+                            </svg>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
