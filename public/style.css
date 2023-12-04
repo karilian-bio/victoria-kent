@@ -309,9 +309,6 @@ p {
     color: var(--black);
 }
 
-.hero-heading {
-}
-
 .ruo-to-ivd {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -574,6 +571,7 @@ p {
 .product-how-we-help {
     color: var(--blue90);
 }
+
 .product-grid {
     display: grid;
     padding-top: 4rem;
