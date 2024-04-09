@@ -244,7 +244,9 @@ p {
     font-weight: var(--FD-01-weight);
 }
 
-.menu-container {
+/* start header */
+
+.header {
     display: flex;
     justify-content: space-between;
     max-width: var(--max-width);
@@ -255,13 +257,6 @@ p {
 
 .logo {
     width: 12rem;
-}
-
-.button {
-    padding: var(--padding);
-    background-color: var(--blue60);
-    color: var(--white);
-    cursor: pointer;
 }
 
 .header-button {
@@ -276,11 +271,14 @@ p {
     width: 245px;
     cursor: pointer;
 
+
     @media (max-width: 1200px) {
         font-size: 0;
         width: auto;
     }
 }
+
+
 
 .header-button p {
     @media (max-width: 1200px) {
@@ -288,44 +286,21 @@ p {
         width: auto;
     }
 }
-/* Start of HERO section */
 
-.hero-container {
+/*end header*/
+
+/*start section*/
+
+.section {
     display: flex;
     flex-direction: column;
-    align-items: center;
     max-width: var(--max-width);
-    text-align: center;
     margin: auto;
-
-    background-color: var(--grey20);
-    /* 
-		Padding between top and bottom of hero text and sub-text
-		This is how much of the image we show
-	*/
+    justify-self: center;
     padding-bottom: var(--padding-section-top-bottom);
     padding-top: var(--padding-section-top-bottom);
-
-    color: var(--black);
 }
 
-.hero-heading {
-}
-
-.ruo-to-ivd {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 2rem;
-
-    @media (max-width: 1200px) {
-    }
-}
-
-/* END OF HERO SECTION */
-
-/* 
-    SECTION BREAK LOGIC 
-*/
 .section-break {
     margin: auto;
     max-width: var(--max-width);
@@ -333,322 +308,208 @@ p {
 
     background-color: var(--grey40);
     background-image: url("./assets/images/section-break.svg");
-    margin-bottom: 1rem;
-}
-/* END OF SECTION BREAK LOGIC */
-
-/* SECTION LOGIC */
-
-.section {
-    display: flex;
-    margin: auto;
-    max-width: var(--max-width);
-    flex-direction: column;
-    justify-self: center;
-    padding-bottom: var(--padding-section-top-bottom);
-    padding-top: var(--padding-section-top-bottom);
+    margin-bottom: var(--padding);
 }
 
-.sub-section {
-    width: 85%;
-    margin: auto;
+/*end section*/
+
+/*start hero*/
+
+.hero {
+    text-align: center;
+    color: var(--black);
+    background-color: var(--grey20);
 }
 
-/* END SECTION LOGIC */
-
-/* Tab/Featured section start of logic */
-
-.tab-section-full {
-    max-width: var(--max-width);
-    margin: auto;
-    margin-bottom: 2rem;
-    cursor: pointer;
-    width: 90%;
-}
-
-.tab-grid {
-    display: flex;
-    max-width: var(--max-width);
-    margin: auto;
-    gap: 1rem;
-    align-content: center;
-}
-
-.feature-section-image {
-    display: flex;
-    width: 12rem;
-    padding-top: 12%;
-
-    /* HTML MUST hand the image being used with URL */
-    background-color: white;
-    background-image: var(--path);
-    background-position: center;
-
-    @media (max-width: 1200px) {
-        display: none;
-    }
-}
-
-.tab-header-and-text {
-    display: flex;
-    width: 100%;
-
-    flex-direction: column;
-    align-self: center;
-    justify-content: center;
-}
-
-.tab-header {
-    display: flex;
-    flex-direction: column;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-    width: 90%;
-
-    @media (max-width: 1200px) {
-        width: 80%;
-        overflow-wrap: break-word;
-    }
-}
-
-.tab-header-subtext {
-    font-weight: 300;
-    font-size: 42px;
-    line-height: 50px;
-}
-
-.tab-content {
-    display: none;
-    grid-template-columns: auto auto auto;
-    gap: 1rem;
+.connect-logo {
+    background: linear-gradient(90deg, var(--blue60) 0%, var(--red60) 100%);
     padding-top: 2rem;
     padding-bottom: 2rem;
 
     @media (max-width: 1200px) {
-        grid-template-columns: auto;
-        width: 90%;
     }
 }
 
-.tab-content-cell {
-    display: flex;
-    flex-direction: column;
-}
+.button-01 {
+    padding: var(--padding);
+    background-color: var(--blue60);
+    color: var(--white);
+    cursor: pointer;
+    margin: auto;
+    margin-top: 2rem;
 
-.tab-content .tab-content-cell h5 {
-    color: var(--section-color);
-}
-
-.down {
-    padding-right: 1rem;
-    width: 5rem;
-
-    :hover {
-        cursor: pointer;
+    @media (max-width: 1200px) {
+        font-size: 0;
+        width: auto;
     }
 }
 
-.tab-header-and-arrow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-}
+/*end hero*/
 
-/* end of CSS logic for tabs */
-
-/* 
-    START OF PROBLEM section 
-*/
+/*start problem*/
 
 .problem {
-    background: linear-gradient(90deg, #6464c8 0%, #be4747 100%);
-    color: white;
+    background-color: var(--grey40);
+    background-image: url(./assets/images/background_hero.jpg);
 }
 
-.problem-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    column-gap: 10rem;
-    padding-top: 4rem;
-    @media (max-width: 1200px) {
-        display: flex;
-        flex-direction: column;
+.problem-flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    padding: var(--padding);
+}
+  
+.flex-item-20 {
+    flex: 0 0 20%; /* Don't grow, don't shrink, start at 20% width */
+    max-width: 20%; /* Maximum width of 20% */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    padding: var(--padding);
+}
+  
+.flex-item-80 {
+    flex: 0 0 80%; /* Don't grow, don't shrink, start at 80% width */
+    max-width: 80%; /* Maximum width of 80% */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    padding: var(--padding);
+}
+
+@media (max-width: 1200px) {
+    .flex-container {
+      flex-direction: column; /* Stack items vertically */
+    }
+    .flex-item-20, .flex-item-80 {
+      flex: 0 0 100%; /* Each item takes full width on small screens */
+      max-width: 100%; /* Maximum width of 100% */
+    }
+    .flex-item-20 {
+        max-height: 5rem;
     }
 }
 
-/* END OF PROBLEM SECTION */
+/*end problem*/
 
-/* 
-    START OF USER SECTION 
-*/
+/*start solution*/
 
-.users {
-    color: white;
-    background: var(--grey20);
-    background-image: url("./assets/images/background_hero.jpg");
-    background-size: cover;
-    background-position: center;
+.solution {
+    text-align: center;
+    color: var(--black);
+    background-color: var(--grey20);
+    
 }
 
-.users-grid {
-    display: grid;
-    padding-top: 4rem;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: var(--max-width);
-    gap: 2rem;
+/*end solution*/
 
-    @media (max-width: 1200px) {
-        grid-template-columns: repeat(2, 1fr);
-        margin-bottom: 0rem;
-        margin-left: 0rem;
-        margin-right: 0rem;
-        padding-top: 0rem;
-        gap: 0.1rem;
-        padding: 1rem;
+/*start core*/
+
+.core {
+    background-color: var(--grey20);
+    color: var(--black);
+    text-align: center;
+}
+
+.core-flex-container-01 {
+    display: flex;
+    background: linear-gradient(90deg, var(--blue60) 0%, var(--red60) 100%);
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    color: var(--white);
+}
+
+.flex-item-50 {
+    flex: 0 0 50%; /* Don't grow, don't shrink, start at 20% width */
+    max-width: 50%; /* Maximum width of 20% */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    padding: var(--padding);
+}
+
+.flex-item-50 .mario {
+    display: block;
+    margin: 0 auto;
+}
+
+.core-flex-container-02 {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+}
+
+.flex-item-70 {
+    flex: 0 0 70%; /* Don't grow, don't shrink, start at 20% width */
+    max-width: 70%; /* Maximum width of 20% */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    padding: var(--padding);
+}
+
+.flex-item-30 {
+    flex: 0 0 30%; /* Don't grow, don't shrink, start at 20% width */
+    max-width: 30%; /* Maximum width of 20% */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    padding: var(--padding);
+}
+
+
+
+@media (max-width: 1200px) {
+    .flex-item-70, .flex-item-30, .flex-item-50{
+      flex: 0 0 100%; /* Each item takes full width on small screens */
+      max-width: 100%; /* Maximum width of 100% */
     }
+
+        
 }
 
-.users-grid img {
-    height: 7rem;
-    width: 100%;
-    padding: 1rem;
-    background-color: transparent;
+/*end core*/
 
-    /* Little sneaky to make the svg white without resaving them */
-    filter: brightness(0) invert(1);
+/*start finale*/
+
+.finale {
+    background-color: var(--grey20);
+    color: var(--black);
+    text-align: center;
 }
 
-/* End of USER LOGIC */
+.grid-container-finale {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--padding);
 
-/* Submssion to regulatory bodies section */
+}
 
-.submission {
+.grid-item-finale {
+    border: 1px solid #ccc;
+    padding: var(--padding);
     background-color: var(--white);
 }
 
-.submission-heading {
-    @media (max-width: 1200px) {
-        padding-top: 1rem;
-        font-size: 3rem;
+.grid-item-finale .title{
+    background-color: var(--blue60);
+    color: var(--white);
+}
+
+  .grid-item-finale .pictogram {
+
+}
+
+
+@media (max-width: 1200px) {
+    .grid-container-finale {
+      grid-template-columns: 1fr;
     }
 }
 
-.label-submission-color {
-    color: var(--blue60);
-}
+/*end finale*/
 
-.submission-img-grid {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
+/*start footer*/
 
-    justify-content: center;
-    justify-items: center;
-
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    margin: auto;
-
-    @media (max-width: 1200px) {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
-    }
-}
-
-.submission-img {
-    display: flex;
-
-    @media (max-width: 1200px) {
-        width: 12rem;
-    }
-}
-
-.world-image {
-    width: 100%;
-}
-
-/* end of sumbission CSS */
-
-/* solution section */
-
-.solution-1 {
-}
-
-.solution-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    column-gap: 2rem;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    @media (max-width: 1200px) {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-/* call to action section */
-
-.call-to-action {
-    display: flex;
-    flex-direction: column;
-    max-width: var(--max-width);
-    margin: auto;
-
-    justify-self: center;
-    justify-items: center;
-    justify-content: center;
-
-    text-align: center;
-    text-justify: center;
-
-    background-image: url("./assets/images/circo-plot-call-to-action.svg");
-    background-size: cover;
-    background-position: center;
-}
-
-.call-to-action-img {
-    display: flex;
-    width: 40%;
-    justify-self: center;
-    justify-content: center;
-    margin: auto;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-}
-
-.call-to-action-button {
-    justify-self: center;
-    margin: auto;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-}
-
-/* end of call to arms section */
-
-/* footer */
-
-.footer-container {
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: var(--max-width);
-    margin: auto;
-    padding: 1rem;
-
-    :nth-child(1) {
-        justify-self: left;
-    }
+    padding: var(--padding);
+    background-color: var(--grey90);
+    color: var(--white);
 }
 
-.footer-container p {
-    @media (max-width: 1200px) {
-        width: 20%;
-    }
-}
 
-/* end of footer */
+/*end footer*/
+
+
