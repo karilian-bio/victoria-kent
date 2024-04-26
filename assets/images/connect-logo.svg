@@ -1,22 +1,22 @@
 <svg width="1417" height="314" viewBox="0 0 1417 314" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<rect x="377.243" y="12.5" width="274.788" height="275" stroke="#F7F3F2" stroke-width="25"/>
-<rect x="914.863" y="12.5" width="124.894" height="275" stroke="#F7F3F2" stroke-width="25"/>
-<path d="M856.063 82.2314V204.546L847.735 201.489V85.2893L856.063 82.2314Z" fill="#F7F3F2"/>
-<path d="M714.496 134.216V152.563L689.513 143.389L714.496 134.216Z" fill="#F7F3F2"/>
-<path d="M822.753 94.4629L831.08 91.405V195.373L822.753 192.315V94.4629Z" fill="#F7F3F2"/>
-<path d="M864.39 207.604V79.1736L889.372 70V216.778L864.39 207.604Z" fill="#F7F3F2"/>
-<path d="M739.478 125.042L789.443 106.695V180.083L739.478 161.736V125.042Z" fill="#F7F3F2"/>
-<path d="M806.098 100.579V186.199L797.77 183.141V103.636L806.098 100.579Z" fill="#F7F3F2"/>
-<path d="M731.151 158.678L722.823 155.621V131.158L731.151 128.1V158.678Z" fill="#F7F3F2"/>
-<path d="M456.345 250H448.017V188.861L456.345 191.919V250Z" fill="#F7F3F2"/>
-<path d="M589.584 250H464.672V194.977L589.584 240.845V250Z" fill="#F7F3F2"/>
-<path d="M606.239 250H597.911V243.903L606.239 246.961V250Z" fill="#F7F3F2"/>
-<path d="M439.69 250H414.707V176.63L439.69 185.803V250Z" fill="#F7F3F2"/>
-<path d="M564.602 68.3284V50H614.514L564.602 68.3284Z" fill="#F7F3F2"/>
-<path d="M547.947 50H556.274V71.3862L547.947 74.4441V50Z" fill="#F7F3F2"/>
-<path d="M464.672 50H539.619V77.5019L464.672 105.023V50Z" fill="#F7F3F2"/>
-<path d="M456.345 108.081L448.017 111.138V50H456.345V108.081Z" fill="#F7F3F2"/>
-<path d="M439.69 114.196L414.707 123.37V50H439.69V114.196Z" fill="#F7F3F2"/>
+<rect x="377.243" y="12.5" width="274.788" height="275" stroke="#6464C8" stroke-width="25"/>
+<rect x="914.863" y="12.5" width="124.894" height="275" stroke="#BE4747" stroke-width="25"/>
+<path d="M856.063 82.2314V204.546L847.735 201.489V85.2893L856.063 82.2314Z" fill="#BE4747"/>
+<path d="M714.496 134.216V152.563L689.513 143.389L714.496 134.216Z" fill="#BE4747"/>
+<path d="M822.753 94.4629L831.08 91.405V195.373L822.753 192.315V94.4629Z" fill="#BE4747"/>
+<path d="M864.39 207.604V79.1736L889.372 70V216.778L864.39 207.604Z" fill="#BE4747"/>
+<path d="M739.478 125.042L789.443 106.695V180.083L739.478 161.736V125.042Z" fill="#BE4747"/>
+<path d="M806.098 100.579V186.199L797.77 183.141V103.636L806.098 100.579Z" fill="#BE4747"/>
+<path d="M731.151 158.678L722.823 155.621V131.158L731.151 128.1V158.678Z" fill="#BE4747"/>
+<path d="M456.345 250H448.017V188.861L456.345 191.919V250Z" fill="#6464C8"/>
+<path d="M589.584 250H464.672V194.977L589.584 240.845V250Z" fill="#6464C8"/>
+<path d="M606.239 250H597.911V243.903L606.239 246.961V250Z" fill="#6464C8"/>
+<path d="M439.69 250H414.707V176.63L439.69 185.803V250Z" fill="#6464C8"/>
+<path d="M564.602 68.3284V50H614.514L564.602 68.3284Z" fill="#6464C8"/>
+<path d="M547.947 50H556.274V71.3862L547.947 74.4441V50Z" fill="#6464C8"/>
+<path d="M464.672 50H539.619V77.5019L464.672 105.023V50Z" fill="#6464C8"/>
+<path d="M456.345 108.081L448.017 111.138V50H456.345V108.081Z" fill="#6464C8"/>
+<path d="M439.69 114.196L414.707 123.37V50H439.69V114.196Z" fill="#6464C8"/>
 <mask id="mask0_563_362" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1052" y="57" width="365" height="257">
 <path d="M1280.68 145.84H1417V314H1218.05L1118.57 244.198H1052.26V57H1151.73L1280.68 145.84Z" fill="black"/>
 </mask>
@@ -25,8 +25,7 @@
 <rect x="1033.27" y="40" width="383.729" height="290" fill="url(#pattern0_563_362)"/>
 </mask>
 <g mask="url(#mask1_563_362)">
-<rect x="1033.27" y="40" width="383.729" height="290" fill="#F7F3F2"/>
-<rect x="1033.27" y="40" width="383.729" height="290" fill="#F7F3F2"/>
+<rect x="1033.27" y="40" width="383.729" height="290" fill="#BE4747"/>
 </g>
 </g>
 <mask id="mask2_563_362" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="57" width="365" height="257">
@@ -34,10 +33,10 @@
 </mask>
 <g mask="url(#mask2_563_362)">
 <mask id="mask3_563_362" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-6" y="48" width="383" height="275">
-<rect x="-5.99573" y="48" width="382.73" height="275" fill="url(#pattern1_563_362)"/>
+<rect x="-5.99585" y="48" width="382.73" height="275" fill="url(#pattern1_563_362)"/>
 </mask>
 <g mask="url(#mask3_563_362)">
-<rect x="-5.99573" y="48" width="382.73" height="275" fill="#F7F3F2"/>
+<rect x="-5.99585" y="48" width="382.73" height="275" fill="#6464C8"/>
 </g>
 </g>
 <defs>

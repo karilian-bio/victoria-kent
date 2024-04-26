@@ -1,15 +1,15 @@
 /*see Ken Taylor Figma doc
  *
- *font			size	size	line	line weight	short	map
- *name			SM	MAX	SM	MAX		ID	to
+ *font			        size    line	weight	short	map
+ *name			        SM	MAX	SM	MAX		    ID	    to
  * ---------------------------------------------------------------------------
- *fluid-display-03	42	84	50	94	600	FD-03	h1
- *fluid-quotation-02	32	60	40	70	300	FQ-02	h2
- *fluid-heading-06	32	60	40	70	600	FH-06	h3
- *fluid-heading-05	32	60	40	70	300	FH-05	h4
- *fluid-heading-04	28	32	36	40	300	FH-04	h5
+ *fluid-display-03	    42	84	50	94	    600 FD-03	h1
+ *fluid-quotation-02	32	60	40	70	    300 FQ-02	h2
+ *fluid-heading-06	    32	60	40	70	    600 FH-06	h3
+ *fluid-heading-05	    32	60	40	70	    300 FH-05	h4
+ *fluid-heading-04	    28	32	36	40	    300 FH-04	h5
  *heading-compact-02 	-	1.0	-	1.375	600	HC-02	h6
- *body-02		-	1.0	-	1.5	400	BD-02	p
+ *body-02		        -	1.0	-	1.5	    400	BD-02	p
  *
  * for clamp() ramping, see "https://modern-fluid-typography.vercel.app/"
  *
@@ -62,6 +62,14 @@
     --grey40: #a8a8a8;
     --grey70: #4d5358;
     --grey90: #262626;
+
+    --gap-xs : 0.128;
+    --gap-s  : 0.272;
+    --gap-m  : 0.618;
+    --gap-l  : 1;
+    --gap-xl : 1.618;
+    --gap-xxl: 2.618;
+
 
     --font-size: 16px;
     --ff: "fira";
@@ -190,6 +198,7 @@ h1 {
     font-weight: var(--FD-03-weight);
 }
 
+
 h2 {
     font-family: var(--ff);
     font-size: var(--FQ-02-size);
@@ -251,12 +260,13 @@ p {
     justify-content: space-between;
     max-width: var(--max-width);
     margin: auto;
-    padding: var(--padding);
     background-color: var(--grey90);
 }
 
 .logo {
-    width: 12rem;
+    margin: var(--padding);
+    height: 24px ;
+
 }
 
 .header-button {
@@ -264,26 +274,19 @@ p {
     padding: var(--padding);
     background-color: var(--blue60);
     color: var(--white);
-    font-size: 1rem;
-    justify-content: space-between;
+    justify-content: space-between ;
     align-items: center;
-    height: 48px;
-    width: 245px;
     cursor: pointer;
-
-
-    @media (max-width: 1200px) {
-        font-size: 0;
-        width: auto;
-    }
 }
 
 
-
 .header-button p {
-    @media (max-width: 1200px) {
+    margin-right: var(--padding);
+
+    @media (max-width: 600px) {
         font-size: 0;
         width: auto;
+        margin-right: 0;
     }
 }
 
@@ -295,10 +298,9 @@ p {
     display: flex;
     flex-direction: column;
     max-width: var(--max-width);
-    margin: auto;
     justify-self: center;
-    padding-bottom: var(--padding-section-top-bottom);
-    padding-top: var(--padding-section-top-bottom);
+    margin: auto;
+    //padding-top: var(--padding-section-top-bottom);
 }
 
 .section-break {
@@ -317,30 +319,48 @@ p {
 
 .hero {
     text-align: center;
-    color: var(--black);
-    background-color: var(--grey20);
+    color: var(--grey90);
+    background-color: var(--grey10);
+    
+    //see figma file zambrano for spacing rules;
+    --h1-space-diff: calc( (var(--FD-03-line) - var(--FD-03-size))* 0.5) ;
+    padding-top: calc( var(--FD-03-size) - var(--h1-space-diff) ) ;
+    padding-bottom: var(--FD-03-size);
+    padding-left: var(--FD-03-size);
+    padding-right: var(--FD-03-size);
+
+    @media (max-width: 600px) {
+        text-align: left;
+        padding-left:  0; 
+        padding-right: 0;
+    }
+}
+    
+
+.hero h1 {
+    padding-bottom: calc( var(--FD-03-line) * var(--gap-xs) );
 }
 
+.hero h2 {
+    padding-bottom: calc( var(--FQ-02-line) * var(--gap-l) );
+}
+
+
 .connect-logo {
-    background: linear-gradient(90deg, var(--blue60) 0%, var(--red60) 100%);
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-bottom: calc( var(--FD-03-line) * var(--gap-m) );
 
     @media (max-width: 1200px) {
     }
 }
 
 .button-01 {
+    background: linear-gradient(90deg, var(--blue60) 0%, var(--red60) 100%);
     padding: var(--padding);
-    background-color: var(--blue60);
     color: var(--white);
     cursor: pointer;
     margin: auto;
-    margin-top: 2rem;
 
     @media (max-width: 1200px) {
-        font-size: 0;
-        width: auto;
     }
 }
 
@@ -349,42 +369,94 @@ p {
 /*start problem*/
 
 .problem {
-    background-color: var(--grey40);
+    
+    //see figma file zambrano for spacing rules;
+    //does not required diff as top left element is not text
+    --h1-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: var(--FH-06-size);
+    
+    //bottom padding coming from the .problem-flex-container  
+    //padding-bottom: var(--FH-06-size);
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+
     background-image: url(./assets/images/background_hero.jpg);
+    background-size: cover;
+    
+    @media (max-width: 600px) {
+    padding-left: 0px ;
+    padding-right: 0px;
+    }
 }
 
 .problem-flex-container {
     display: flex;
     flex-wrap: wrap; /* Allows items to wrap onto the next line */
-    padding: var(--padding);
+    margin-bottom: var(--FH-06-size);
 }
   
 .flex-item-20 {
     flex: 0 0 20%; /* Don't grow, don't shrink, start at 20% width */
     max-width: 20%; /* Maximum width of 20% */
     box-sizing: border-box; /* Include padding and border in the element's width */
-    padding: var(--padding);
+    //background-color: var(--grey90);
 }
-  
+
+.binary{
+    background-image: url(./assets/images/binary-rgb.svg);
+}
+.binary2{
+    background-image: url(./assets/images/dna-binary-rgb-2.svg);
+}
+.code{
+    background-image: url(./assets/images/dna-code-rgb.svg);
+}
+
 .flex-item-80 {
     flex: 0 0 80%; /* Don't grow, don't shrink, start at 80% width */
     max-width: 80%; /* Maximum width of 80% */
     box-sizing: border-box; /* Include padding and border in the element's width */
-    padding: var(--padding);
+    color: var(--white);
+
+
 }
 
-@media (max-width: 1200px) {
-    .flex-container {
-      flex-direction: column; /* Stack items vertically */
+.flex-item-80 h3 {
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+    padding-bottom: calc( var(--FH-06-line) * var(--gap-xs) );
+
+    @media (max-width: 600px) {
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
+    padding-left: 0px ;
+    padding-right: 0px ;
     }
-    .flex-item-20, .flex-item-80 {
+
+}
+
+.flex-item-80 h4 {
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+
+    @media (max-width: 600px) {
+    padding-left: 0px ;
+    padding-right: 0px ;
+        
+    }
+}
+
+@media (max-width: 600px) {
+    .flex-item-80, .flex-item-20 {
       flex: 0 0 100%; /* Each item takes full width on small screens */
       max-width: 100%; /* Maximum width of 100% */
     }
+
     .flex-item-20 {
         max-height: 5rem;
     }
 }
+
 
 /*end problem*/
 
@@ -395,6 +467,35 @@ p {
     color: var(--black);
     background-color: var(--grey20);
     
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+
+    @media (max-width: 600px) {
+        text-align: left;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+.solution h3 {
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
+    padding-bottom: calc( var(--FH-06-line) * var(--gap-xs) );
+}
+
+.solution h4 {
+    padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
+
+}
+
+.solution h5 {
+    padding-bottom: calc( var(--FH-04-line) * var(--gap-l) );
+
+
+}
+
+.world {
+    max-height: 20rem;
+    padding-bottom: var(--FH-06-size);
 }
 
 /*end solution*/
@@ -402,55 +503,126 @@ p {
 /*start core*/
 
 .core {
-    background-color: var(--grey20);
+    background-color: var(--grey70);
     color: var(--black);
+    text-align: left;
+    padding-bottom: var(--FH-05-line);
+
+    
+}
+.core h3 {
     text-align: center;
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+    padding-bottom: calc( var(--FH-06-size) );
+    
 }
 
-.core-flex-container-01 {
+.mario {
+    padding-top: var(--FH-06-size);
+    max-height: 20em;
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+    padding-bottom: calc( var(--FH-06-line) * var(--gap-xs) );
+    
+}
+.box {
+    //background: linear-gradient(90deg, var(--blue60) 0%, var(--red60) 100%);
+    background: var(--red60);
+    font-family: var(--ff);
+    font-size: var(--FH-05-size);
+    line-height: var(--FH-05-line);
+    font-weight: var(--FH-05-weight);
+    padding-left: calc( var(--FH-05-size) / 4 ) ;
+    padding-right: calc( var(--FH-05-size) / 4 ) ;
+
+}
+
+
+.core-flex-container {
     display: flex;
-    background: linear-gradient(90deg, var(--blue60) 0%, var(--red60) 100%);
     flex-wrap: wrap; /* Allows items to wrap onto the next line */
-    color: var(--white);
+    //margin-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
+    margin-bottom: var(--padding);
 }
 
-.flex-item-50 {
-    flex: 0 0 50%; /* Don't grow, don't shrink, start at 20% width */
-    max-width: 50%; /* Maximum width of 20% */
-    box-sizing: border-box; /* Include padding and border in the element's width */
-    padding: var(--padding);
-}
 
-.flex-item-50 .mario {
-    display: block;
-    margin: 0 auto;
-}
-
-.core-flex-container-02 {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap onto the next line */
-}
 
 .flex-item-70 {
     flex: 0 0 70%; /* Don't grow, don't shrink, start at 20% width */
     max-width: 70%; /* Maximum width of 20% */
     box-sizing: border-box; /* Include padding and border in the element's width */
-    padding: var(--padding);
+    background-color: #a8a8a8;
 }
+
+.flex-item-70 h4 {
+    --h3-space-diff: calc( (var(--FH-05-line) - var(--FH-05-size))* 0.5) ;
+    padding-top: calc( var(--FH-05-size) - var(--h3-space-diff) ) ;
+    padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
+    padding-left: var(--FH-05-size);
+    padding-right: var(--FH-05-size);
+   
+    @media (max-width: 600px) {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.flex-item-70 h5 {
+    padding-left: var(--FH-05-size);
+    padding-right: var(--FH-05-size);
+    padding-bottom: calc( var(--FH-05-line) );
+
+    @media (max-width: 600px) {
+    padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
 
 .flex-item-30 {
     flex: 0 0 30%; /* Don't grow, don't shrink, start at 20% width */
     max-width: 30%; /* Maximum width of 20% */
     box-sizing: border-box; /* Include padding and border in the element's width */
-    padding: var(--padding);
+    
+    @media (max-width: 600px) {
+    flex: 0 0 100%; /* Each item takes full width on small screens */
+    max-width: 100%; /* Maximum width of 100% */
+    min-height: 5rem;
+    margin-right: 100px;
+
+    }
+}
+
+.circos {
+    background-image: url(./assets/images/circos-plot.png);
+    background-repeat: no-repeat ;
+    background-size:cover;
+    background-position: center;
+}
+
+.node {
+    background-image: url(./assets/images/node-diagram.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.route {
+    background-image: url(./assets/images/ROUTING.png);
+    background-size: cover;
+    background-position: center;
 }
 
 
 
-@media (max-width: 1200px) {
-    .flex-item-70, .flex-item-30, .flex-item-50{
+@media (max-width: 600px) {
+    .flex-item-70, .flex-item-30 {
       flex: 0 0 100%; /* Each item takes full width on small screens */
       max-width: 100%; /* Maximum width of 100% */
+    }
+
+    .flex-item-30 {
     }
 
         
@@ -464,6 +636,26 @@ p {
     background-color: var(--grey20);
     color: var(--black);
     text-align: center;
+    padding-bottom: var(--FH-06-size);
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+    
+    @media (max-width: 600px) {
+    padding-left: 0px;
+    padding-right: 0px;
+    
+    }
+}
+
+.finale h3 {
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
+    padding-bottom: calc( var(--FH-06-line) * var(--gap-m) );
+}
+
+.connect-logo-bottom {
+    padding-bottom: var(--FH-06-size);
+    //max-height: 20em;
 }
 
 .grid-container-finale {
@@ -471,25 +663,37 @@ p {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--padding);
 
+    padding-bottom: var(--FH-06-size);
 }
 
 .grid-item-finale {
-    border: 1px solid #ccc;
-    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
     background-color: var(--white);
 }
 
-.grid-item-finale .title{
+
+.grid-item-finale h5{
+    --h5-space-diff: calc( (var(--FH-04-line) - var(--FH-04-size))* 0.5) ;
+    padding-top: calc( var(--FH-04-size) - var(--h5-space-diff) ) ;
+    padding-left: var(--FH-04-size);
+    padding-right: var(--FH-04-size);
+    padding-bottom: calc( var(--FH-04-line) * var(--gap-m) );
+}
+
+.grid-item-finale .head {
     background-color: var(--blue60);
     color: var(--white);
-}
-
-  .grid-item-finale .pictogram {
 
 }
 
+.grid-item-finale .pictogram {
+    padding-top: calc( var(--FH-04-line) * var(--gap-m) );
+    max-height: 6em;
+}
 
-@media (max-width: 1200px) {
+
+@media (max-width: 600px) {
     .grid-container-finale {
       grid-template-columns: 1fr;
     }
@@ -498,18 +702,26 @@ p {
 /*end finale*/
 
 /*start footer*/
+   
 
 .footer {
     display: flex;
     justify-content: space-between;
+    margin: auto;
     align-items: center;
     max-width: var(--max-width);
-    padding: var(--padding);
+    //padding: var(--padding);
     background-color: var(--grey90);
     color: var(--white);
 }
 
+.footer p {
+    padding-right: var(--padding);
+}
 
 /*end footer*/
 
 
+/*
+
+*/
