@@ -82,7 +82,7 @@
     --padding-hero-elements: 5.25rem;
 
     /* Section break variables */
-    --section-break-height: 1rem;
+    --section-break-height: 1.0rem;
 
     /* Tab padding for sections */
     --tab-padding: 6.75rem;
@@ -260,7 +260,7 @@ p {
     justify-content: space-between;
     max-width: var(--max-width);
     margin: auto;
-    background-color: var(--grey90);
+    background-color: var(--grey10);
 }
 
 .logo {
@@ -308,9 +308,9 @@ p {
     max-width: var(--max-width);
     height: var(--section-break-height);
 
-    background-color: var(--grey40);
-    background-image: url("./assets/images/section-break.svg");
-    margin-bottom: var(--padding);
+    background-image: url("./assets/images/pattern.svg");
+    background-color: var(--grey90);
+    background-size: contain;
 }
 
 /*end section*/
@@ -319,8 +319,8 @@ p {
 
 .hero {
     text-align: center;
-    color: var(--grey90);
-    background-color: var(--grey10);
+    color: var(--white);
+    background-color: var(--grey90);
     
     //see figma file zambrano for spacing rules;
     --h1-space-diff: calc( (var(--FD-03-line) - var(--FD-03-size))* 0.5) ;
@@ -464,8 +464,8 @@ p {
 
 .solution {
     text-align: center;
-    color: var(--black);
-    background-color: var(--grey20);
+    color: var(--white);
+    background-color: var(--grey90);
     
     padding-left: var(--FH-06-size);
     padding-right: var(--FH-06-size);
@@ -494,7 +494,7 @@ p {
 }
 
 .world {
-    max-height: 20rem;
+    //max-height: 20rem;
     padding-bottom: var(--FH-06-size);
 }
 
@@ -503,18 +503,11 @@ p {
 /*start core*/
 
 .core {
-    background-color: var(--grey70);
-    color: var(--black);
+    background-color: var(--grey90);
+    color: var(--white);
     text-align: left;
     padding-bottom: var(--FH-05-line);
 
-    
-}
-.core h3 {
-    text-align: center;
-    padding-left: var(--FH-06-size);
-    padding-right: var(--FH-06-size);
-    padding-bottom: calc( var(--FH-06-size) );
     
 }
 
@@ -523,18 +516,29 @@ p {
     max-height: 20em;
     padding-left: var(--FH-06-size);
     padding-right: var(--FH-06-size);
-    padding-bottom: calc( var(--FH-06-line) * var(--gap-xs) );
+    padding-bottom: calc( var(--FH-06-line) * var(--gap-l) );
     
+}
+.core h3 {
+    text-align: left;
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+    
+    @media (max-width: 600px) {
+       padding-left: 0px;
+       padding-right: 0px; 
+    }
+
 }
 .box {
     //background: linear-gradient(90deg, var(--blue60) 0%, var(--red60) 100%);
-    background: var(--red60);
+    background: var(--blue60);
     font-family: var(--ff);
     font-size: var(--FH-05-size);
     line-height: var(--FH-05-line);
     font-weight: var(--FH-05-weight);
-    padding-left: calc( var(--FH-05-size) / 4 ) ;
-    padding-right: calc( var(--FH-05-size) / 4 ) ;
+    padding-left: calc( var(--FH-05-size) / 2 ) ;
+    padding-right: calc( var(--FH-05-size) / 2 ) ;
 
 }
 
@@ -542,22 +546,26 @@ p {
 .core-flex-container {
     display: flex;
     flex-wrap: wrap; /* Allows items to wrap onto the next line */
-    //margin-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
-    margin-bottom: var(--padding);
-}
+    margin-top: calc( var(--FH-05-line) * var(--gap-m) );
+    margin-right: var(--FH-05-size); 
+    
+    @media (max-width: 600px) {
+        margin-right: 0px; 
 
+    }
+}
 
 
 .flex-item-70 {
     flex: 0 0 70%; /* Don't grow, don't shrink, start at 20% width */
     max-width: 70%; /* Maximum width of 20% */
     box-sizing: border-box; /* Include padding and border in the element's width */
-    background-color: #a8a8a8;
+    //background-color: var(--white);
 }
 
 .flex-item-70 h4 {
     --h3-space-diff: calc( (var(--FH-05-line) - var(--FH-05-size))* 0.5) ;
-    padding-top: calc( var(--FH-05-size) - var(--h3-space-diff) ) ;
+    //padding-top: calc( var(--FH-05-size) - var(--h3-space-diff) ) ;
     padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
     padding-left: var(--FH-05-size);
     padding-right: var(--FH-05-size);
@@ -571,10 +579,9 @@ p {
 .flex-item-70 h5 {
     padding-left: var(--FH-05-size);
     padding-right: var(--FH-05-size);
-    padding-bottom: calc( var(--FH-05-line) );
+    padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
 
     @media (max-width: 600px) {
-    padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
         padding-left: 0px;
         padding-right: 0px;
     }
@@ -590,7 +597,6 @@ p {
     flex: 0 0 100%; /* Each item takes full width on small screens */
     max-width: 100%; /* Maximum width of 100% */
     min-height: 5rem;
-    margin-right: 100px;
 
     }
 }
@@ -633,8 +639,8 @@ p {
 /*start finale*/
 
 .finale {
-    background-color: var(--grey20);
-    color: var(--black);
+    background-color: var(--grey90);
+    color: var(--white);
     text-align: center;
     padding-bottom: var(--FH-06-size);
     padding-left: var(--FH-06-size);
@@ -669,7 +675,7 @@ p {
 .grid-item-finale {
     display: flex;
     flex-direction: column;
-    background-color: var(--white);
+    background-color: var(--grey70);
 }
 
 
@@ -711,8 +717,8 @@ p {
     align-items: center;
     max-width: var(--max-width);
     //padding: var(--padding);
-    background-color: var(--grey90);
-    color: var(--white);
+    background-color: var(--grey10);
+    color: var(--black);
 }
 
 .footer p {
