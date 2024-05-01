@@ -1,15 +1,15 @@
 /*see Ken Taylor Figma doc
  *
- *font			size	size	line	line weight	short	map
- *name			SM	MAX	SM	MAX		ID	to
+ *font			        size    line	weight	short	map
+ *name			        SM	MAX	SM	MAX		    ID	    to
  * ---------------------------------------------------------------------------
- *fluid-display-03	42	84	50	94	600	FD-03	h1
- *fluid-quotation-02	32	60	40	70	300	FQ-02	h2
- *fluid-heading-06	32	60	40	70	600	FH-06	h3
- *fluid-heading-05	32	60	40	70	300	FH-05	h4
- *fluid-heading-04	28	32	36	40	300	FH-04	h5
+ *fluid-display-03	    42	84	50	94	    600 FD-03	h1
+ *fluid-quotation-02	32	60	40	70	    300 FQ-02	h2
+ *fluid-heading-06	    32	60	40	70	    600 FH-06	h3
+ *fluid-heading-05	    32	60	40	70	    300 FH-05	h4
+ *fluid-heading-04	    28	32	36	40	    300 FH-04	h5
  *heading-compact-02 	-	1.0	-	1.375	600	HC-02	h6
- *body-02		-	1.0	-	1.5	400	BD-02	p
+ *body-02		        -	1.0	-	1.5	    400	BD-02	p
  *
  * for clamp() ramping, see "https://modern-fluid-typography.vercel.app/"
  *
@@ -50,7 +50,8 @@
     --red60: #be4747;
     --green20: #23ab23;
     --green60: #1a811a;
-    --yellow10: #d8d84e;
+    --yellow10: #fafa77;
+    --yellow20: #e9e943;
     --yellow30: #cdcd2d;
 
     --cyan20: #d2e5ef;
@@ -63,6 +64,14 @@
     --grey70: #4d5358;
     --grey90: #262626;
 
+    --gap-xs : 0.128;
+    --gap-s  : 0.272;
+    --gap-m  : 0.618;
+    --gap-l  : 1;
+    --gap-xl : 1.618;
+    --gap-xxl: 2.618;
+
+
     --font-size: 16px;
     --ff: "fira";
     --padding: 1rem;
@@ -74,7 +83,7 @@
     --padding-hero-elements: 5.25rem;
 
     /* Section break variables */
-    --section-break-height: 1rem;
+    --section-break-height: 1.0rem;
 
     /* Tab padding for sections */
     --tab-padding: 6.75rem;
@@ -190,6 +199,7 @@ h1 {
     font-weight: var(--FD-03-weight);
 }
 
+
 h2 {
     font-family: var(--ff);
     font-size: var(--FQ-02-size);
@@ -244,24 +254,20 @@ p {
     font-weight: var(--FD-01-weight);
 }
 
-.menu-container {
+/* start header */
+
+.header {
     display: flex;
     justify-content: space-between;
     max-width: var(--max-width);
     margin: auto;
-    padding: var(--padding);
-    background-color: var(--grey90);
+    background-color: var(--grey10);
 }
 
 .logo {
-    width: 12rem;
-}
+    margin: var(--padding);
+    height: 24px ;
 
-.button {
-    padding: var(--padding);
-    background-color: var(--blue60);
-    color: var(--white);
-    cursor: pointer;
 }
 
 .header-button {
@@ -269,386 +275,477 @@ p {
     padding: var(--padding);
     background-color: var(--blue60);
     color: var(--white);
-    font-size: 1rem;
-    justify-content: space-between;
+    justify-content: space-between ;
     align-items: center;
-    height: 48px;
-    width: 245px;
     cursor: pointer;
-
-    @media (max-width: 1200px) {
-        font-size: 0;
-        width: auto;
-    }
 }
+
 
 .header-button p {
+    margin-right: var(--padding);
+
     @media (max-width: 1200px) {
         font-size: 0;
         width: auto;
+        margin-right: 0;
     }
 }
-/* Start of HERO section */
 
-.hero-container {
+/*end header*/
+
+/*start section*/
+
+.section {
     display: flex;
     flex-direction: column;
-    align-items: center;
     max-width: var(--max-width);
-    text-align: center;
+    justify-self: center;
     margin: auto;
-
-    background-color: var(--grey20);
-    /* 
-		Padding between top and bottom of hero text and sub-text
-		This is how much of the image we show
-	*/
-    padding-bottom: var(--padding-section-top-bottom);
-    padding-top: var(--padding-section-top-bottom);
-
-    color: var(--black);
+    //padding-top: var(--padding-section-top-bottom);
 }
 
-.hero-heading {
-}
-
-.ruo-to-ivd {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 2rem;
-
-    @media (max-width: 1200px) {
-    }
-}
-
-/* END OF HERO SECTION */
-
-/* 
-    SECTION BREAK LOGIC 
-*/
 .section-break {
     margin: auto;
     max-width: var(--max-width);
     height: var(--section-break-height);
 
-    background-color: var(--grey40);
-    background-image: url("./assets/images/section-break.svg");
-    margin-bottom: 1rem;
-}
-/* END OF SECTION BREAK LOGIC */
-
-/* SECTION LOGIC */
-
-.section {
-    display: flex;
-    margin: auto;
-    max-width: var(--max-width);
-    flex-direction: column;
-    justify-self: center;
-    padding-bottom: var(--padding-section-top-bottom);
-    padding-top: var(--padding-section-top-bottom);
+    background-image: url("./assets/images/pattern.svg");
+    background-color: var(--grey90);
+    background-size: contain;
 }
 
-.sub-section {
-    width: 85%;
-    margin: auto;
+/*end section*/
+
+/*start hero*/
+
+.hero {
+    text-align: center;
+    color: var(--white);
+    background-color: var(--grey90);
+    
+    //see figma file zambrano for spacing rules;
+    --h1-space-diff: calc( (var(--FD-03-line) - var(--FD-03-size))* 0.5) ;
+    padding-top: calc( var(--FD-03-size) - var(--h1-space-diff) ) ;
+    padding-bottom: var(--FD-03-size);
+    padding-left: var(--FD-03-size);
+    padding-right: var(--FD-03-size);
+
+    @media (max-width: 1200px) {
+        text-align: left;
+        padding-left:  0; 
+        padding-right: 0;
+    }
+}
+    
+
+.hero h1 {
+    padding-bottom: calc( var(--FD-03-line) * var(--gap-xs) );
 }
 
-/* END SECTION LOGIC */
+.hero h2 {
+    padding-bottom: calc( var(--FQ-02-line) * var(--gap-l) );
+}
 
-/* Tab/Featured section start of logic */
 
-.tab-section-full {
-    max-width: var(--max-width);
-    margin: auto;
-    margin-bottom: 2rem;
+.connect-logo {
+    padding-bottom: calc( var(--FD-03-line) * var(--gap-m) );
+
+    @media (max-width: 1200px) {
+    }
+}
+
+.button-01 {
+    padding: var(--padding);
+    color: var(--white);
     cursor: pointer;
-    width: 90%;
+    margin-left: var(--padding) ;
+    margin-right:  var(--padding) ;
+
 }
 
-.tab-grid {
-    display: flex;
-    max-width: var(--max-width);
-    margin: auto;
-    gap: 1rem;
-    align-content: center;
+.blue {
+    background: var(--blue60) ;
 }
 
-.feature-section-image {
-    display: flex;
-    width: 12rem;
-    padding-top: 12%;
-
-    /* HTML MUST hand the image being used with URL */
-    background-color: white;
-    background-image: var(--path);
-    background-position: center;
-
-    @media (max-width: 1200px) {
-        display: none;
-    }
+.red {
+    background: var(--red60) ;
 }
 
-.tab-header-and-text {
-    display: flex;
-    width: 100%;
 
-    flex-direction: column;
-    align-self: center;
+.hero-flex-container{
+    display: flex;
     justify-content: center;
+    max-width: var(--max-width);
+    //background-color: var(--grey10);
 }
 
-.tab-header {
-    display: flex;
-    flex-direction: column;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-    width: 90%;
+/*end hero*/
 
-    @media (max-width: 1200px) {
-        width: 80%;
-        overflow-wrap: break-word;
-    }
-}
-
-.tab-header-subtext {
-    font-weight: 300;
-    font-size: 42px;
-    line-height: 50px;
-}
-
-.tab-content {
-    display: none;
-    grid-template-columns: auto auto auto;
-    gap: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-
-    @media (max-width: 1200px) {
-        grid-template-columns: auto;
-        width: 90%;
-    }
-}
-
-.tab-content-cell {
-    display: flex;
-    flex-direction: column;
-}
-
-.tab-content .tab-content-cell h5 {
-    color: var(--section-color);
-}
-
-.down {
-    padding-right: 1rem;
-    width: 5rem;
-
-    :hover {
-        cursor: pointer;
-    }
-}
-
-.tab-header-and-arrow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-}
-
-/* end of CSS logic for tabs */
-
-/* 
-    START OF PROBLEM section 
-*/
+/*start problem*/
 
 .problem {
-    background: linear-gradient(90deg, #6464c8 0%, #be4747 100%);
-    color: white;
-}
+    
+    //see figma file zambrano for spacing rules;
+    //does not required diff as top left element is not text
+    --h1-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: var(--FH-06-size);
+    
+    //bottom padding coming from the .problem-flex-container  
+    //padding-bottom: var(--FH-06-size);
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
 
-.problem-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    column-gap: 10rem;
-    padding-top: 4rem;
+    background-image: url(./assets/images/background_hero.jpg);
+    background-size: cover;
+    
     @media (max-width: 1200px) {
-        display: flex;
-        flex-direction: column;
+    padding-left: 0px ;
+    padding-right: 0px;
     }
 }
 
-/* END OF PROBLEM SECTION */
+.problem-flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    margin-bottom: var(--FH-06-size);
+}
+  
+.flex-item-20 {
+    flex: 0 0 20%; /* Don't grow, don't shrink, start at 20% width */
+    max-width: 20%; /* Maximum width of 20% */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    //background-color: var(--grey90);
+}
 
-/* 
-    START OF USER SECTION 
-*/
+.binary{
+    background-image: url(./assets/images/binary-rgb.svg);
+}
+.binary2{
+    background-image: url(./assets/images/dna-binary-rgb-2.svg);
+}
+.code{
+    background-image: url(./assets/images/dna-code-rgb.svg);
+}
 
-.users {
-    color: white;
-    background: var(--grey20);
-    background-image: url("./assets/images/background_hero.jpg");
+.flex-item-80 {
+    flex: 0 0 80%; /* Don't grow, don't shrink, start at 80% width */
+    max-width: 80%; /* Maximum width of 80% */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    color: var(--white);
+
+
+}
+
+.flex-item-80 h3 {
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+    padding-bottom: calc( var(--FH-06-line) * var(--gap-xs) );
+
+    @media (max-width: 1200px) {
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
+    padding-left: 0px ;
+    padding-right: 0px ;
+    }
+
+}
+
+.flex-item-80 h4 {
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+
+    @media (max-width: 1200px) {
+    padding-left: 0px ;
+    padding-right: 0px ;
+        
+    }
+}
+
+@media (max-width: 1200px) {
+    .flex-item-80, .flex-item-20 {
+      flex: 0 0 100%; /* Each item takes full width on small screens */
+      max-width: 100%; /* Maximum width of 100% */
+    }
+
+    .flex-item-20 {
+        max-height: 5rem;
+    }
+}
+
+
+/*end problem*/
+
+/*start solution*/
+
+.solution {
+    text-align: center;
+    color: var(--white);
+    background-color: var(--grey90);
+    
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+
+    @media (max-width: 1200px) {
+        text-align: left;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+.solution h3 {
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
+    padding-bottom: calc( var(--FH-06-line) * var(--gap-xs) );
+}
+
+.solution h4 {
+    padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
+
+}
+
+.solution h5 {
+    padding-bottom: calc( var(--FH-04-line) * var(--gap-l) );
+
+
+}
+
+.world {
+    //max-height: 20rem;
+    padding-bottom: var(--FH-06-size);
+}
+
+/*end solution*/
+
+/*start core*/
+
+.core {
+    background-color: var(--grey90);
+    color: var(--white);
+    text-align: left;
+    padding-bottom: var(--FH-05-line);
+
+    
+}
+
+.core h3 {
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
+    text-align: left;
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+    
+    @media (max-width: 1200px) {
+       padding-left: 0px;
+       padding-right: 0px; 
+    }
+
+}
+
+
+.box {
+    //background: linear-gradient(90deg, var(--blue60) 0%, var(--red60) 100%);
+    background: var(--blue60);
+    font-family: var(--ff);
+    font-size: var(--FH-05-size);
+    line-height: var(--FH-05-line);
+    font-weight: var(--FH-05-weight);
+    padding-left: calc( var(--FH-05-size) / 2 ) ;
+    padding-right: calc( var(--FH-05-size) / 2 ) ;
+
+}
+
+
+.core-flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    margin-top: calc( var(--FH-05-line) * var(--gap-m) );
+    margin-right: var(--FH-05-size); 
+    
+    @media (max-width: 1200px) {
+        margin-right: 0px; 
+
+    }
+}
+
+
+.flex-item-70 {
+    flex: 0 0 70%; /* Don't grow, don't shrink, start at 20% width */
+    max-width: 70%; /* Maximum width of 20% */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    //background-color: var(--white);
+}
+
+.flex-item-70 h4 {
+    --h3-space-diff: calc( (var(--FH-05-line) - var(--FH-05-size))* 0.5) ;
+    //padding-top: calc( var(--FH-05-size) - var(--h3-space-diff) ) ;
+    padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
+    padding-left: var(--FH-05-size);
+    padding-right: var(--FH-05-size);
+   
+    @media (max-width: 1200px) {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.flex-item-70 h5 {
+    padding-left: var(--FH-05-size);
+    padding-right: var(--FH-05-size);
+    padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
+
+    @media (max-width: 1200px) {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+
+.flex-item-30 {
+    flex: 0 0 30%; /* Don't grow, don't shrink, start at 20% width */
+    max-width: 30%; /* Maximum width of 20% */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    
+    @media (max-width: 1200px) {
+    flex: 0 0 100%; /* Each item takes full width on small screens */
+    max-width: 100%; /* Maximum width of 100% */
+    min-height: 5rem;
+
+    }
+}
+
+.circos {
+    background-image: url(./assets/images/circos-plot.png);
+    background-repeat: no-repeat ;
+    background-size:cover;
+    background-position: center;
+}
+
+.node {
+    background-image: url(./assets/images/node-diagram.jpg);
     background-size: cover;
     background-position: center;
 }
 
-.users-grid {
-    display: grid;
-    padding-top: 4rem;
-    grid-template-columns: repeat(4, 1fr);
-    max-width: var(--max-width);
-    gap: 2rem;
+.route {
+    background-image: url(./assets/images/ROUTING.png);
+    background-size: cover;
+    background-position: center;
+}
 
+
+
+@media (max-width: 1200px) {
+    .flex-item-70, .flex-item-30 {
+      flex: 0 0 100%; /* Each item takes full width on small screens */
+      max-width: 100%; /* Maximum width of 100% */
+    }
+
+    .flex-item-30 {
+    }
+
+        
+}
+
+/*end core*/
+
+/*start finale*/
+
+.finale {
+    background-color: var(--grey90);
+    color: var(--white);
+    text-align: center;
+    padding-bottom: var(--FH-06-size);
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+    
     @media (max-width: 1200px) {
-        grid-template-columns: repeat(2, 1fr);
-        margin-bottom: 0rem;
-        margin-left: 0rem;
-        margin-right: 0rem;
-        padding-top: 0rem;
-        gap: 0.1rem;
-        padding: 1rem;
+    padding-left: 0px;
+    padding-right: 0px;
+    
     }
 }
 
-.users-grid img {
-    height: 7rem;
-    width: 100%;
-    padding: 1rem;
-    background-color: transparent;
-
-    /* Little sneaky to make the svg white without resaving them */
-    filter: brightness(0) invert(1);
+.finale h3 {
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
+    padding-bottom: calc( var(--FH-06-line) * var(--gap-m) );
 }
 
-/* End of USER LOGIC */
-
-/* Submssion to regulatory bodies section */
-
-.submission {
-    background-color: var(--white);
+.connect-logo-bottom {
+    padding-bottom: var(--FH-06-size);
+    //max-height: 20em;
 }
 
-.submission-heading {
-    @media (max-width: 1200px) {
-        padding-top: 1rem;
-        font-size: 3rem;
-    }
-}
-
-.label-submission-color {
-    color: var(--blue60);
-}
-
-.submission-img-grid {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-
-    justify-content: center;
-    justify-items: center;
-
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    margin: auto;
-
-    @media (max-width: 1200px) {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        align-items: center;
-    }
-}
-
-.submission-img {
-    display: flex;
-
-    @media (max-width: 1200px) {
-        width: 12rem;
-    }
-}
-
-.world-image {
-    width: 100%;
-}
-
-/* end of sumbission CSS */
-
-/* solution section */
-
-.solution-1 {
-}
-
-.solution-grid {
+.finale-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    column-gap: 2rem;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    @media (max-width: 1200px) {
-        display: flex;
-        flex-direction: column;
-    }
+    gap: var(--padding);
+
+    padding-bottom: var(--FH-06-size);
 }
 
-/* call to action section */
-
-.call-to-action {
+.finale-grid-item {
     display: flex;
     flex-direction: column;
-    max-width: var(--max-width);
-    margin: auto;
-
-    justify-self: center;
-    justify-items: center;
-    justify-content: center;
-
-    text-align: center;
-    text-justify: center;
-
-    background-image: url("./assets/images/circo-plot-call-to-action.svg");
-    background-size: cover;
-    background-position: center;
+    background-color: var(--grey70);
 }
 
-.call-to-action-img {
+
+.finale-grid-item h5{
+    --h5-space-diff: calc( (var(--FH-04-line) - var(--FH-04-size))* 0.5) ;
+    padding-top: calc( var(--FH-04-size) - var(--h5-space-diff) ) ;
+    padding-left: var(--FH-04-size);
+    padding-right: var(--FH-04-size);
+    padding-bottom: calc( var(--FH-04-line) * var(--gap-m) );
+}
+
+.finale-grid-item .head {
+    background-color: var(--blue60);
+    color: var(--white);
+
+}
+
+.finale-grid-item .pictogram {
+    padding-top: calc( var(--FH-04-line) * var(--gap-m) );
+    max-height: 6em;
+}
+
+.finale-flex-container{
     display: flex;
-    width: 40%;
-    justify-self: center;
     justify-content: center;
-    margin: auto;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    max-width: var(--max-width);
+    //background-color: var(--grey10);
 }
 
-.call-to-action-button {
-    justify-self: center;
-    margin: auto;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+
+@media (max-width: 1200px) {
+    .finale-grid-container {
+      grid-template-columns: 1fr;
+    }
 }
 
-/* end of call to arms section */
+/*end finale*/
 
-/* footer */
+/*start footer*/
+   
 
-.footer-container {
+.footer {
     display: flex;
     justify-content: space-between;
+    margin: auto;
     align-items: center;
     max-width: var(--max-width);
-    margin: auto;
-    padding: 1rem;
-
-    :nth-child(1) {
-        justify-self: left;
-    }
+    //padding: var(--padding);
+    background-color: var(--grey10);
+    color: var(--black);
 }
 
-.footer-container p {
-    @media (max-width: 1200px) {
-        width: 20%;
-    }
+.footer p {
+    padding-right: var(--padding);
 }
 
-/* end of footer */
+/*end footer*/
+
+
+/*
+
+*/
