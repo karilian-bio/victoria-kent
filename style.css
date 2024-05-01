@@ -50,7 +50,8 @@
     --red60: #be4747;
     --green20: #23ab23;
     --green60: #1a811a;
-    --yellow10: #d8d84e;
+    --yellow10: #fafa77;
+    --yellow20: #e9e943;
     --yellow30: #cdcd2d;
 
     --cyan20: #d2e5ef;
@@ -283,7 +284,7 @@ p {
 .header-button p {
     margin-right: var(--padding);
 
-    @media (max-width: 600px) {
+    @media (max-width: 1200px) {
         font-size: 0;
         width: auto;
         margin-right: 0;
@@ -329,7 +330,7 @@ p {
     padding-left: var(--FD-03-size);
     padding-right: var(--FD-03-size);
 
-    @media (max-width: 600px) {
+    @media (max-width: 1200px) {
         text-align: left;
         padding-left:  0; 
         padding-right: 0;
@@ -354,14 +355,28 @@ p {
 }
 
 .button-01 {
-    background: linear-gradient(90deg, var(--blue60) 0%, var(--red60) 100%);
     padding: var(--padding);
     color: var(--white);
     cursor: pointer;
-    margin: auto;
+    margin-left: var(--padding) ;
+    margin-right:  var(--padding) ;
 
-    @media (max-width: 1200px) {
-    }
+}
+
+.blue {
+    background: var(--blue60) ;
+}
+
+.red {
+    background: var(--red60) ;
+}
+
+
+.hero-flex-container{
+    display: flex;
+    justify-content: center;
+    max-width: var(--max-width);
+    //background-color: var(--grey10);
 }
 
 /*end hero*/
@@ -383,7 +398,7 @@ p {
     background-image: url(./assets/images/background_hero.jpg);
     background-size: cover;
     
-    @media (max-width: 600px) {
+    @media (max-width: 1200px) {
     padding-left: 0px ;
     padding-right: 0px;
     }
@@ -426,7 +441,7 @@ p {
     padding-right: var(--FH-06-size);
     padding-bottom: calc( var(--FH-06-line) * var(--gap-xs) );
 
-    @media (max-width: 600px) {
+    @media (max-width: 1200px) {
     --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
     padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
     padding-left: 0px ;
@@ -439,14 +454,14 @@ p {
     padding-left: var(--FH-06-size);
     padding-right: var(--FH-06-size);
 
-    @media (max-width: 600px) {
+    @media (max-width: 1200px) {
     padding-left: 0px ;
     padding-right: 0px ;
         
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
     .flex-item-80, .flex-item-20 {
       flex: 0 0 100%; /* Each item takes full width on small screens */
       max-width: 100%; /* Maximum width of 100% */
@@ -470,7 +485,7 @@ p {
     padding-left: var(--FH-06-size);
     padding-right: var(--FH-06-size);
 
-    @media (max-width: 600px) {
+    @media (max-width: 1200px) {
         text-align: left;
         padding-left: 0px;
         padding-right: 0px;
@@ -511,25 +526,21 @@ p {
     
 }
 
-.mario {
-    padding-top: var(--FH-06-size);
-    max-height: 20em;
-    padding-left: var(--FH-06-size);
-    padding-right: var(--FH-06-size);
-    padding-bottom: calc( var(--FH-06-line) * var(--gap-l) );
-    
-}
 .core h3 {
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
     text-align: left;
     padding-left: var(--FH-06-size);
     padding-right: var(--FH-06-size);
     
-    @media (max-width: 600px) {
+    @media (max-width: 1200px) {
        padding-left: 0px;
        padding-right: 0px; 
     }
 
 }
+
+
 .box {
     //background: linear-gradient(90deg, var(--blue60) 0%, var(--red60) 100%);
     background: var(--blue60);
@@ -549,7 +560,7 @@ p {
     margin-top: calc( var(--FH-05-line) * var(--gap-m) );
     margin-right: var(--FH-05-size); 
     
-    @media (max-width: 600px) {
+    @media (max-width: 1200px) {
         margin-right: 0px; 
 
     }
@@ -570,7 +581,7 @@ p {
     padding-left: var(--FH-05-size);
     padding-right: var(--FH-05-size);
    
-    @media (max-width: 600px) {
+    @media (max-width: 1200px) {
         padding-left: 0px;
         padding-right: 0px;
     }
@@ -581,7 +592,7 @@ p {
     padding-right: var(--FH-05-size);
     padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
 
-    @media (max-width: 600px) {
+    @media (max-width: 1200px) {
         padding-left: 0px;
         padding-right: 0px;
     }
@@ -593,7 +604,7 @@ p {
     max-width: 30%; /* Maximum width of 20% */
     box-sizing: border-box; /* Include padding and border in the element's width */
     
-    @media (max-width: 600px) {
+    @media (max-width: 1200px) {
     flex: 0 0 100%; /* Each item takes full width on small screens */
     max-width: 100%; /* Maximum width of 100% */
     min-height: 5rem;
@@ -622,7 +633,7 @@ p {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
     .flex-item-70, .flex-item-30 {
       flex: 0 0 100%; /* Each item takes full width on small screens */
       max-width: 100%; /* Maximum width of 100% */
@@ -646,7 +657,7 @@ p {
     padding-left: var(--FH-06-size);
     padding-right: var(--FH-06-size);
     
-    @media (max-width: 600px) {
+    @media (max-width: 1200px) {
     padding-left: 0px;
     padding-right: 0px;
     
@@ -664,7 +675,7 @@ p {
     //max-height: 20em;
 }
 
-.grid-container-finale {
+.finale-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--padding);
@@ -672,14 +683,14 @@ p {
     padding-bottom: var(--FH-06-size);
 }
 
-.grid-item-finale {
+.finale-grid-item {
     display: flex;
     flex-direction: column;
     background-color: var(--grey70);
 }
 
 
-.grid-item-finale h5{
+.finale-grid-item h5{
     --h5-space-diff: calc( (var(--FH-04-line) - var(--FH-04-size))* 0.5) ;
     padding-top: calc( var(--FH-04-size) - var(--h5-space-diff) ) ;
     padding-left: var(--FH-04-size);
@@ -687,20 +698,27 @@ p {
     padding-bottom: calc( var(--FH-04-line) * var(--gap-m) );
 }
 
-.grid-item-finale .head {
+.finale-grid-item .head {
     background-color: var(--blue60);
     color: var(--white);
 
 }
 
-.grid-item-finale .pictogram {
+.finale-grid-item .pictogram {
     padding-top: calc( var(--FH-04-line) * var(--gap-m) );
     max-height: 6em;
 }
 
+.finale-flex-container{
+    display: flex;
+    justify-content: center;
+    max-width: var(--max-width);
+    //background-color: var(--grey10);
+}
 
-@media (max-width: 600px) {
-    .grid-container-finale {
+
+@media (max-width: 1200px) {
+    .finale-grid-container {
       grid-template-columns: 1fr;
     }
 }
