@@ -301,7 +301,8 @@ p {
     max-width: var(--max-width);
     justify-self: center;
     margin: auto;
-    //padding-top: var(--padding-section-top-bottom);
+
+
 }
 
 .section-break {
@@ -332,8 +333,8 @@ p {
 
     @media (max-width: 1200px) {
         text-align: left;
-        padding-left:  0; 
-        padding-right: 0;
+        padding-left:  var(--padding); 
+        padding-right: var(--padding);
     }
 }
     
@@ -432,7 +433,11 @@ p {
     max-width: 80%; /* Maximum width of 80% */
     box-sizing: border-box; /* Include padding and border in the element's width */
     color: var(--white);
-
+    
+    @media (max-width: 1200px) {
+        padding-left: var(--padding);
+        padding-right: var(--padding);
+    }
 
 }
 
@@ -487,8 +492,8 @@ p {
 
     @media (max-width: 1200px) {
         text-align: left;
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: var(--padding);
+        padding-right: var(--padding);
     }
 }
 .solution h3 {
@@ -520,7 +525,7 @@ p {
 .core {
     background-color: var(--grey90);
     color: var(--white);
-    text-align: left;
+    text-align: center;
     padding-bottom: var(--FH-05-line);
 
     
@@ -529,13 +534,13 @@ p {
 .core h3 {
     --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
     padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
-    text-align: left;
     padding-left: var(--FH-06-size);
     padding-right: var(--FH-06-size);
     
     @media (max-width: 1200px) {
-       padding-left: 0px;
-       padding-right: 0px; 
+       text-align: left;
+       padding-left: var(--padding);
+       padding-right: var(--padding); 
     }
 
 }
@@ -559,7 +564,8 @@ p {
     flex-wrap: wrap; /* Allows items to wrap onto the next line */
     margin-top: calc( var(--FH-05-line) * var(--gap-m) );
     margin-right: var(--FH-05-size); 
-    
+    text-align: left;
+
     @media (max-width: 1200px) {
         margin-right: 0px; 
 
@@ -582,8 +588,8 @@ p {
     padding-right: var(--FH-05-size);
    
     @media (max-width: 1200px) {
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: var(--padding);
+        padding-right: var(--padding);
     }
 }
 
@@ -593,8 +599,8 @@ p {
     padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
 
     @media (max-width: 1200px) {
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: var(--padding);
+        padding-right: var(--padding);
     }
 }
 
@@ -660,7 +666,6 @@ p {
     @media (max-width: 1200px) {
     padding-left: 0px;
     padding-right: 0px;
-    
     }
 }
 
