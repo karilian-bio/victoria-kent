@@ -1,0 +1,61 @@
+analyte,isolate sample,Assay Type,test name,therapy,Manufacturer,Value
+exon19del, tissue,PCR,cobas EGFR v1,erlotinib,Genentech,1
+exon19del, tissue,PCR,cobas EGFR v2,afatinib,Boehringer Ingelheim,1
+exon19del, tissue,PCR,cobas EGFR v2,gefitinib,AstraZeneca + Teva,1
+exon19del, tissue,PCR,cobas EGFR v2,osimertinib,AstraZeneca,1
+exon19del, tissue,PCR,cobas EGFR v2,dacomitinib,Pfizer,1
+exon19del, tissue,NGS,F1 CDx,afatinib,Boehringer Ingelheim,1
+exon19del, tissue,NGS,F1 CDx,gefitinib,AstraZeneca + Teva,1
+exon19del, tissue,NGS,F1 CDx,osimertinib,AstraZeneca,1
+exon19del, tissue,NGS,F1 CDx,erlotinib,Genentech,1
+exon19del, tissue,NGS,O/RDx-LCCA,afatinib,Boehringer Ingelheim,1
+exon19del, tissue,NGS,O/RDx-LCCA,gefitinib,AstraZeneca + Teva,1
+exon19del, tissue,NGS,O/RDx-LCCA,osimertinib,AstraZeneca,1
+exon19del, tissue,NGS,O/RDx-LCCA,erlotinib,Genentech,1
+exon19del, tissue,NGS,O/RDx-LCCA,dacomitinib,Pfizer,1
+exon19del, tissue,NGS,Oncomine Dx,gefitinib,AstraZeneca + Teva,1
+exon19del, tissue,PCR,therascreen EGFR,afatinib,Boehringer Ingelheim,1
+exon19del, tissue,PCR,therascreen EGFR,gefitinib,AstraZeneca + Teva,1
+exon19del, tissue,PCR,therascreen EGFR,dacomitinib,Pfizer,1
+exon19del,blood plasma,PCR,cobas EGFR v2,gefitinib,AstraZeneca + Teva,1
+exon19del,blood plasma,PCR,cobas EGFR v2,osimertinib,AstraZeneca,1
+exon19del,blood plasma,PCR,cobas EGFR v2,erlotinib,Genentech,1
+exon19del,blood plasma,NGS,F1 Liquid CDx,gefitinib,AstraZeneca + Teva,1
+exon19del,blood plasma,NGS,F1 Liquid CDx,osimertinib,AstraZeneca,1
+exon19del,blood plasma,NGS,F1 Liquid CDx,erlotinib,Genentech,1
+exon19del,blood plasma,NGS,Guardant360 CDx,osimertinib,AstraZeneca,1
+exon20ins, tissue,NGS,Oncomine Dx,mobocertinib,Takeda,1
+exon20ins, tissue,NGS,Oncomine Dx,amivantamab-vmjw,Janssen Biotech,1
+exon20ins,blood plasma,NGS,Guardant360 CDx,amivantamab-vmjw,Janssen Biotech,1
+exon21-L858R, tissue,PCR,cobas EGFR v1,erlotinib,Genentech,1
+exon21-L858R, tissue,PCR,cobas EGFR v2,afatinib,Boehringer Ingelheim,1
+exon21-L858R, tissue,PCR,cobas EGFR v2,gefitinib,AstraZeneca + Teva,1
+exon21-L858R, tissue,PCR,cobas EGFR v2,osimertinib,AstraZeneca,1
+exon21-L858R, tissue,PCR,cobas EGFR v2,dacomitinib,Pfizer,1
+exon21-L858R, tissue,NGS,F1 CDx,afatinib,Boehringer Ingelheim,1
+exon21-L858R, tissue,NGS,F1 CDx,gefitinib,AstraZeneca + Teva,1
+exon21-L858R, tissue,NGS,F1 CDx,osimertinib,AstraZeneca,1
+exon21-L858R, tissue,NGS,F1 CDx,erlotinib,Genentech,1
+exon21-L858R, tissue,NGS,O/RDx-LCCA,afatinib,Boehringer Ingelheim,1
+exon21-L858R, tissue,NGS,O/RDx-LCCA,gefitinib,AstraZeneca + Teva,1
+exon21-L858R, tissue,NGS,O/RDx-LCCA,osimertinib,AstraZeneca,1
+exon21-L858R, tissue,NGS,O/RDx-LCCA,erlotinib,Genentech,1
+exon21-L858R, tissue,NGS,O/RDx-LCCA,dacomitinib,Pfizer,1
+exon21-L858R, tissue,NGS,Oncomine Dx,gefitinib,AstraZeneca + Teva,1
+exon21-L858R, tissue,PCR,therascreen EGFR,afatinib,Boehringer Ingelheim,1
+exon21-L858R, tissue,PCR,therascreen EGFR,gefitinib,AstraZeneca + Teva,1
+exon21-L858R, tissue,PCR,therascreen EGFR,dacomitinib,Pfizer,1
+exon21-L858R,blood plasma,PCR,cobas EGFR v2,gefitinib,AstraZeneca + Teva,1
+exon21-L858R,blood plasma,PCR,cobas EGFR v2,osimertinib,AstraZeneca,1
+exon21-L858R,blood plasma,PCR,cobas EGFR v2,erlotinib,Genentech,1
+exon21-L858R,blood plasma,NGS,F1 Liquid CDx,gefitinib,AstraZeneca + Teva,1
+exon21-L858R,blood plasma,NGS,F1 Liquid CDx,osimertinib,AstraZeneca,1
+exon21-L858R,blood plasma,NGS,F1 Liquid CDx,erlotinib,Genentech,1
+exon21-L858R,blood plasma,NGS,Guardant360 CDx,osimertinib,AstraZeneca,1
+G719X, tissue,PCR,therascreen EGFR,afatinib,Boehringer Ingelheim,1
+L861Q, tissue,PCR,therascreen EGFR,afatinib,Boehringer Ingelheim,1
+S768I, tissue,PCR,therascreen EGFR,afatinib,Boehringer Ingelheim,1
+T790M, tissue,PCR,cobas EGFR v2,osimertinib,AstraZeneca,1
+T790M, tissue,NGS,F1 CDx,osimertinib,AstraZeneca,1
+T790M,blood plasma,PCR,cobas EGFR v2,osimertinib,AstraZeneca,1
+T790M,blood plasma,NGS,Guardant360 CDx,osimertinib,AstraZeneca,1
