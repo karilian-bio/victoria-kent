@@ -45,14 +45,23 @@
     --BD-02-line: 1.5rem;
     --BD-02-weight: 400;
 
-    --blue60: #6464c8;
-    --blue90: #1f1f56;
-    --red60: #be4747;
-    --green20: #23ab23;
-    --green60: #1a811a;
-    --yellow10: #fafa77;
-    --yellow20: #e9e943;
-    --yellow30: #cdcd2d;
+    --blue60:       #6464c8;
+    --blue90:       #1f1f56;
+    --red60:        #be4747;
+    --green20:      #23ab23;
+    --green60:      #1a811a;
+    --yellow10:     #fafa77;
+    --yellow20:     #e9e943;
+    --yellow30:     #cdcd2d;
+
+    --purple30hover:    #c5a3ff;
+    --red30hover:       #ff99a0;
+    --green20hover:     #74e792;
+    --yellow10:         #fafa77;
+    --orange30hover:    #ff9d57;
+    --blue40hover:      #5c97ff;
+    --magenta20hover:   #ffbdda;
+
 
     --cyan20: #d2e5ef;
     --white: #ffffff;
@@ -61,8 +70,12 @@
     --grey20: #e0e0e0;
     --grey30: #c6c6c6;
     --grey40: #a8a8a8;
+    --grey50: #8d8d8d;
+    --grey60: #6f6f6f;
     --grey70: #4d5358;
+    --grey80: #393939;
     --grey90: #262626;
+    --grey100: #161616;
 
     --gap-xs : 0.128;
     --gap-s  : 0.272;
@@ -311,7 +324,7 @@ p {
     height: var(--section-break-height);
 
     background-image: url("./assets/images/pattern.svg");
-    background-color: var(--grey90);
+    background-color: var(--white);
     background-size: contain;
 }
 
@@ -320,19 +333,16 @@ p {
 /*start hero*/
 
 .hero {
-    text-align: center;
-    color: var(--white);
-    background-color: var(--grey90);
+    color: var(--grey90);
+    background-color: var(--white);
     
-    //see figma file zambrano for spacing rules;
-    --h1-space-diff: calc( (var(--FD-03-line) - var(--FD-03-size))* 0.5) ;
-    padding-top: calc( var(--FD-03-size) - var(--h1-space-diff) ) ;
-    padding-bottom: var(--FD-03-size);
+    /*see figma file zambrano for spacing rules;*/
     padding-left: var(--FD-03-size);
     padding-right: var(--FD-03-size);
+    padding-bottom: var(--FD-03-size);
+
 
     @media (max-width: 1200px) {
-        text-align: left;
         padding-left:  var(--padding); 
         padding-right: var(--padding);
     }
@@ -340,28 +350,42 @@ p {
     
 
 .hero h1 {
+    --h1-space-diff: calc( (var(--FD-03-line) - var(--FD-03-size))* 0.5) ;
+    padding-top: calc( var(--FD-03-size) - var(--h1-space-diff) ) ;
     padding-bottom: calc( var(--FD-03-line) * var(--gap-xs) );
 }
 
 .hero h2 {
-    padding-bottom: calc( var(--FQ-02-line) * var(--gap-l) );
+    padding-bottom: calc( var(--FQ-02-line) * var(--gap-m) );
 }
 
 
-.connect-logo {
-    padding-bottom: calc( var(--FD-03-line) * var(--gap-m) );
-
+.hero-flex-container{
+    display: flex;
+    justify-content: center;
+    max-width: var(--max-width);
+    background-color: var(--white);
+    padding-bottom: calc( var(--FQ-02-line) * var(--gap-m) );
+    gap: 2rem;
     @media (max-width: 1200px) {
     }
 }
+
 
 .button-01 {
     padding: var(--padding);
     color: var(--white);
     cursor: pointer;
-    margin-left: var(--padding) ;
-    margin-right:  var(--padding) ;
+    max-width: 140px;
 
+}
+
+.h1-red {
+    font-family: var(--ff);
+    font-size: var(--FD-03-size);
+    line-height: var(--FD-03-line);
+    font-weight: var(--FD-03-weight);
+    color: var(--red60)
 }
 
 .blue {
@@ -373,14 +397,527 @@ p {
 }
 
 
-.hero-flex-container{
-    display: flex;
-    justify-content: center;
-    max-width: var(--max-width);
-    //background-color: var(--grey10);
+.hero-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--padding);
+
+    
+    @media (max-width: 1200px) {
+          grid-template-columns: 1fr;
+        }
 }
 
+
+.hero-grid-item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grey10);
+
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);  
+    /*below 1.25 is to accomodate height of icon, its a hack :-)*/
+    padding-bottom: calc( var(--FH-06-size) * 1.25 );
+
+    @media (max-width: 1200px) {
+        padding-left: var(--padding);
+        padding-right: var(--padding);
+    }  
+}
+
+.hero-grid-item h3 {
+    //see figma file zambrano for spacing rules;
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
+}
+
+.hero-grid-item h6 {
+    padding-bottom: calc( var(--HC-02-line) * var(--gap-m) );
+ 
+}
+
+
+.icon {
+    min-height: 1.25rem;
+    background-color: white;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+li {
+    display: flex;
+    gap: 1rem ;
+    align-items: center;
+}
+
+
+
+
+
 /*end hero*/
+
+/*start new-problem*/
+
+.new-problem{
+
+    color: var(--grey90);
+    
+    /*see figma file zambrano for spacing rules;*/
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+    padding-bottom: var(--FH-06-size);
+
+    @media (max-width: 1200px) {
+        padding-left: var(--padding);
+        padding-right: var(--padding);
+    }
+}
+
+.new-problem h3 {
+}
+
+.new-problem h4 {
+    padding-bottom: calc( var(--FH-06-line) * var(--gap-m) );
+}
+
+.new-problem-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--padding);
+
+    
+    @media (max-width: 1200px) {
+          grid-template-columns: 1fr;
+        }
+}
+
+
+.new-problem-grid-item {
+    display:flex;
+    flex-direction: column;
+    //align-items: center;
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    
+    --h5-space-diff: calc( (var(--FH-04-line) - var(--FH-04-size))* 0.5) ;
+    padding-top: calc( var(--FH-04-size) - var(--h5-space-diff) ) ;
+    padding-left: var(--FH-04-size);
+    padding-right: var(--FH-04-size);
+    padding-bottom: var(--FH-04-size);
+
+    background-color: var(--grey10);
+
+    @media (max-width: 1200px) {
+        padding-left: var(--padding);
+        padding-right: var(--padding);
+    }
+}
+
+.new-problem-grid-item h5 {
+    padding-bottom: calc(var(--FH-04-size) * var(--gap-xs) );
+}
+
+.new-problem-grid-item p {
+    padding-bottom: calc(var(--BD-02-size) * var(--gap-xxl) );
+}
+
+.biomarker {
+    width: 100%;
+}
+/*end new-problem*/
+
+/*start complex*/
+
+.complex {
+    //text-align: center;
+    color: var(--grey90);
+    
+    /*see figma file zambrano for spacing rules;*/
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+    padding-bottom: var(--FH-06-size);
+
+    @media (max-width: 1200px) {
+        text-align: left;
+        padding-left: var(--padding);
+        padding-right: var(--padding);
+    }
+
+}
+.complex h3 {
+}
+
+.complex h4 {
+    padding-bottom: calc( var(--FH-06-line) * var(--gap-m) );
+
+}
+
+.complex-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--padding);
+
+}
+
+
+/*
+logic to show wide sankey in web view and square sankey in phone view
+*/
+
+#sankey-wide {
+    display: block;
+}
+
+#sankey-square {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    #sankey-wide {
+        display: none;
+    }
+    #sankey-square {
+        display: block;
+    }
+
+}
+
+
+/*end complex*/
+
+
+/* Submssion to regulatory bodies section */
+
+.submission {
+    //text-align: center;
+    color: var(--grey90);
+    
+    /*see figma file zambrano for spacing rules;*/
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+    padding-bottom: var(--FH-06-size);
+
+    @media (max-width: 1200px) {
+        text-align: left;
+        padding-left: var(--padding);
+        padding-right: var(--padding);
+    }
+}
+
+.submission h3 {
+
+}
+
+.submission h4 {
+    padding-bottom: calc( var(--FH-06-line) * var(--gap-m) );
+}
+
+.submission-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--padding);
+
+
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr;
+        }
+}
+
+.submission-grid-item {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    box-sizing: border-box; /* Include padding and border in the element's width */
+   
+    
+    padding: var(--FH-06-size);
+
+    background-color: var(--grey10);
+    
+}
+
+
+.blue-text {
+    color: var(--blue60);
+}
+
+
+.submission-img {
+    height: 6rem;
+
+    @media (max-width: 1200px) {
+        height: 4rem;
+    }
+}
+
+.world-image {
+    padding-top: calc( var(--FH-06-line) * var(--gap-m) );
+    max-height: 500px;
+    width: 100%;
+}
+
+/* end of sumbission CSS */
+
+
+/*
+START OF USER SECTION 
+*/
+
+.users {
+    //background-image: url("./assets/images/background_hero.jpg");
+    background-size: cover;
+    background-position: center;
+
+    //text-align: center;
+    color: var(--grey90);
+    
+    /*see figma file zambrano for spacing rules;*/
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+    padding-bottom: var(--FH-06-size);
+
+    @media (max-width: 1200px) {
+        text-align: left;
+        padding-left: var(--padding);
+        padding-right: var(--padding);
+    }
+}
+
+.users h3 {   
+}
+
+.users h4 {
+    padding-bottom: calc( var(--FH-06-line) * var(--gap-m) );
+
+}
+
+.user-grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--padding);
+
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(2, 1fr);
+        }
+}
+
+.user-grid-item {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--grey10);
+    padding: var(--FH-06-size);
+    height: 200px;
+}
+
+
+/*
+.users-grid img {
+    height: 7rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: transparent;
+    //filter: brightness(0) invert(1);
+}
+*/
+    /* Little sneaky to make the svg white without resaving them */
+
+
+/* End of USER LOGIC */
+
+/*start solution*/
+
+.solution {
+    color: var(--white);
+    background-color: var(--grey90);
+    
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+    padding-bottom: var(--FH-06-size);
+
+    @media (max-width: 1200px) {
+        text-align: left;
+        padding-left: var(--padding);
+        padding-right: var(--padding);
+    }
+}
+
+.connect-logo {
+    //padding-bottom: calc( var(--FD-03-line) * var(--gap-m) );
+    max-height: 50px;
+}
+
+
+
+.solution h3 {
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
+    padding-bottom: calc( var(--FH-06-line) * var(--gap-xs) );
+}
+
+.solution h4 {
+    padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
+
+}
+
+.solution h5 {
+    padding-bottom: calc( var(--FH-04-line) * var(--gap-l) );
+
+
+}
+
+.world {
+    //max-height: 20rem;
+}
+
+/*end solution*/
+
+/*start core*/
+
+.core {
+    background-color: var(--white);
+    color: var(--grey90);
+
+    padding-left: var(--FH-06-size);
+    padding-right: var(--FH-06-size);
+    padding-bottom: var(--FH-06-size);
+    
+    @media (max-width: 1200px) {
+       padding-left: var(--padding);
+       padding-right: var(--padding); 
+    }
+    
+}
+
+.core h3 {
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
+    padding-bottom: calc( var(--FH-06-line) * var(--gap-xs) );
+    
+}
+
+.core h4 {
+    padding-bottom: calc( var(--FH-05-line) * var(--gap-m) );
+
+}
+
+.box {
+    //background: linear-gradient(90deg, var(--blue60) 0%, var(--red60) 100%);
+    background: var(--blue60);
+    color: var(--white);
+    font-family: var(--ff);
+    font-size: var(--FH-05-size);
+    line-height: var(--FH-05-line);
+    font-weight: var(--FH-05-weight);
+    padding-left: calc( var(--FH-05-size) / 2 ) ;
+    padding-right: calc( var(--FH-05-size) / 2 ) ;
+
+}
+
+
+.core-flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding);
+
+}
+
+.core-flex-item-container {
+    display: flex;
+    flex-direction: reverse;
+    
+    @media (max-width: 1200px) {
+        flex-direction: column-reverse;
+    }
+    
+}
+
+.flex-item-70 {
+    flex: 0 0 70%; /* Don't grow, don't shrink, start at 20% width */
+    max-width: 70%; /* Maximum width of 20% */
+    box-sizing: border-box; /* Include padding and border in the element's width */
+    background-color: var(--grey10);
+    
+    --h4-space-diff: calc( (var(--FH-05-line) - var(--FH-05-size))* 0.5) ;
+    padding-top: calc( var(--FH-05-size) - var(--h4-space-diff) ) ;
+    padding-left: var(--FH-05-size);
+    padding-right: var(--padding);
+    padding-bottom: var(--FH-05-size);
+    
+    @media (max-width: 1200px) {
+        padding-left: var(--padding);
+        padding-right: var(--padding);
+    }
+}
+
+.flex-item-70 h4 {
+    padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
+
+}
+
+.flex-item-30 {
+    flex: 0 0 30%; /* Don't grow, don't shrink, start at 20% width */
+    max-width: 30%; /* Maximum width of 20% */
+
+    @media (max-width: 1200px) {
+    flex: 0 0 100%; /* Each item takes full width on small screens */
+    max-width: 100%; /* Maximum width of 100% */
+    min-height: 5rem;
+
+    }
+}
+
+.circos {
+    background-image: url(./assets/images/circos-plot.png);
+    background-repeat: no-repeat ;
+    background-size:cover;
+    background-position: center;
+}
+
+.node {
+    background-image: url(./assets/images/node-diagram.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.route {
+    background-image: url(./assets/images/ROUTING.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+@media (max-width: 1200px) {
+    .flex-item-70, .flex-item-30 {
+      flex: 0 0 100%; /* Each item takes full width on small screens */
+      max-width: 100%; /* Maximum width of 100% */
+    }
+
+    .flex-item-30 {
+    }
+
+        
+}
+
+/*end core*/
+
+
 
 /*start problem*/
 
@@ -388,7 +925,7 @@ p {
     
     //see figma file zambrano for spacing rules;
     //does not required diff as top left element is not text
-    --h1-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
+    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
     padding-top: var(--FH-06-size);
     
     //bottom padding coming from the .problem-flex-container  
@@ -467,7 +1004,7 @@ p {
 }
 
 @media (max-width: 1200px) {
-    .flex-item-80, .flex-item-20 {
+    .flex-item-80, .flex-item-20{
       flex: 0 0 100%; /* Each item takes full width on small screens */
       max-width: 100%; /* Maximum width of 100% */
     }
@@ -480,252 +1017,76 @@ p {
 
 /*end problem*/
 
-/*start solution*/
-
-.solution {
-    text-align: center;
-    color: var(--white);
-    background-color: var(--grey90);
-    
-    padding-left: var(--FH-06-size);
-    padding-right: var(--FH-06-size);
-
-    @media (max-width: 1200px) {
-        text-align: left;
-        padding-left: var(--padding);
-        padding-right: var(--padding);
-    }
-}
-.solution h3 {
-    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
-    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
-    padding-bottom: calc( var(--FH-06-line) * var(--gap-xs) );
-}
-
-.solution h4 {
-    padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
-
-}
-
-.solution h5 {
-    padding-bottom: calc( var(--FH-04-line) * var(--gap-l) );
-
-
-}
-
-.world {
-    //max-height: 20rem;
-    padding-bottom: var(--FH-06-size);
-}
-
-/*end solution*/
-
-/*start core*/
-
-.core {
-    background-color: var(--grey90);
-    color: var(--white);
-    text-align: center;
-    padding-bottom: var(--FH-05-line);
-
-    
-}
-
-.core h3 {
-    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
-    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
-    padding-left: var(--FH-06-size);
-    padding-right: var(--FH-06-size);
-    
-    @media (max-width: 1200px) {
-       text-align: left;
-       padding-left: var(--padding);
-       padding-right: var(--padding); 
-    }
-
-}
-
-
-.box {
-    //background: linear-gradient(90deg, var(--blue60) 0%, var(--red60) 100%);
-    background: var(--blue60);
-    font-family: var(--ff);
-    font-size: var(--FH-05-size);
-    line-height: var(--FH-05-line);
-    font-weight: var(--FH-05-weight);
-    padding-left: calc( var(--FH-05-size) / 2 ) ;
-    padding-right: calc( var(--FH-05-size) / 2 ) ;
-
-}
-
-
-.core-flex-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap onto the next line */
-    margin-top: calc( var(--FH-05-line) * var(--gap-m) );
-    margin-right: var(--FH-05-size); 
-    text-align: left;
-
-    @media (max-width: 1200px) {
-        margin-right: 0px; 
-
-    }
-}
-
-
-.flex-item-70 {
-    flex: 0 0 70%; /* Don't grow, don't shrink, start at 20% width */
-    max-width: 70%; /* Maximum width of 20% */
-    box-sizing: border-box; /* Include padding and border in the element's width */
-    //background-color: var(--white);
-}
-
-.flex-item-70 h4 {
-    --h3-space-diff: calc( (var(--FH-05-line) - var(--FH-05-size))* 0.5) ;
-    //padding-top: calc( var(--FH-05-size) - var(--h3-space-diff) ) ;
-    padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
-    padding-left: var(--FH-05-size);
-    padding-right: var(--FH-05-size);
-   
-    @media (max-width: 1200px) {
-        padding-left: var(--padding);
-        padding-right: var(--padding);
-    }
-}
-
-.flex-item-70 h5 {
-    padding-left: var(--FH-05-size);
-    padding-right: var(--FH-05-size);
-    padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
-
-    @media (max-width: 1200px) {
-        padding-left: var(--padding);
-        padding-right: var(--padding);
-    }
-}
-
-
-.flex-item-30 {
-    flex: 0 0 30%; /* Don't grow, don't shrink, start at 20% width */
-    max-width: 30%; /* Maximum width of 20% */
-    box-sizing: border-box; /* Include padding and border in the element's width */
-    
-    @media (max-width: 1200px) {
-    flex: 0 0 100%; /* Each item takes full width on small screens */
-    max-width: 100%; /* Maximum width of 100% */
-    min-height: 5rem;
-
-    }
-}
-
-.circos {
-    background-image: url(./assets/images/circos-plot.png);
-    background-repeat: no-repeat ;
-    background-size:cover;
-    background-position: center;
-}
-
-.node {
-    background-image: url(./assets/images/node-diagram.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.route {
-    background-image: url(./assets/images/ROUTING.png);
-    background-size: cover;
-    background-position: center;
-}
-
-
-
-@media (max-width: 1200px) {
-    .flex-item-70, .flex-item-30 {
-      flex: 0 0 100%; /* Each item takes full width on small screens */
-      max-width: 100%; /* Maximum width of 100% */
-    }
-
-    .flex-item-30 {
-    }
-
-        
-}
-
-/*end core*/
 
 /*start finale*/
 
 .finale {
-    background-color: var(--grey90);
-    color: var(--white);
-    text-align: center;
-    padding-bottom: var(--FH-06-size);
-    padding-left: var(--FH-06-size);
-    padding-right: var(--FH-06-size);
+    color: var(--grey90);
+    background-color: var(--white);
     
+    /*see figma file zambrano for spacing rules;*/
+    padding-left: var(--FD-03-size);
+    padding-right: var(--FD-03-size);
+    padding-bottom: var(--FD-03-size);
+
+
     @media (max-width: 1200px) {
-    padding-left: 0px;
-    padding-right: 0px;
+        padding-left:  var(--padding); 
+        padding-right: var(--padding);
     }
 }
 
-.finale h3 {
-    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
-    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
-    padding-bottom: calc( var(--FH-06-line) * var(--gap-m) );
+.finale h1 {
+    --h1-space-diff: calc( (var(--FD-03-line) - var(--FD-03-size))* 0.5) ;
+    padding-top: calc( var(--FD-03-size) - var(--h1-space-diff) ) ;
+    padding-bottom: calc( var(--FD-03-line) * var(--gap-xs) );
 }
 
-.connect-logo-bottom {
-    padding-bottom: var(--FH-06-size);
-    //max-height: 20em;
+.finale h2 {
+    padding-bottom: calc( var(--FQ-02-line) * var(--gap-m) );
+}
+
+.finale-connect-logo {
+    padding-bottom: calc( var(--FQ-02-line) * var(--gap-m) );
+
 }
 
 .finale-grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: var(--padding);
+    grid-template-columns: repeat(3, 1fr);
+    
+    padding-bottom: calc( var(--FH-04-line) * var(--gap-l) );
 
-    padding-bottom: var(--FH-06-size);
+    @media (max-width: 1200px) {
+        grid-template-columns: 1fr;
+        } 
 }
 
 .finale-grid-item {
     display: flex;
-    flex-direction: column;
-    background-color: var(--grey70);
-}
+    flex-direction: column; 
+    text-align: center;
+    background-color: var(--grey10);
 
-
-.finale-grid-item h5{
     --h5-space-diff: calc( (var(--FH-04-line) - var(--FH-04-size))* 0.5) ;
     padding-top: calc( var(--FH-04-size) - var(--h5-space-diff) ) ;
     padding-left: var(--FH-04-size);
     padding-right: var(--FH-04-size);
-    padding-bottom: calc( var(--FH-04-line) * var(--gap-m) );
+    padding-bottom: var(--FH-04-size);
 }
 
-.finale-grid-item .head {
-    background-color: var(--blue60);
-    color: var(--white);
-
+.pictogram {
+    max-height: 10rem;
+    padding-top: var(--FH-04-size);
+    padding-bottom: var(--FH-04-size);
 }
-
-.finale-grid-item .pictogram {
-    padding-top: calc( var(--FH-04-line) * var(--gap-m) );
-    max-height: 6em;
-}
-
-.finale-flex-container{
+.finale-flex-container {
     display: flex;
     justify-content: center;
-    max-width: var(--max-width);
-    //background-color: var(--grey10);
-}
+    gap: var(--padding);
 
 
-@media (max-width: 1200px) {
-    .finale-grid-container {
-      grid-template-columns: 1fr;
-    }
 }
 
 /*end finale*/
