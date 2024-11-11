@@ -48,7 +48,7 @@
 
     --blue40hover: #5c97ff;
     --green30hover: #36ce5e;
-    --yellow20hover: #fccd27;
+    --yellow20: #f1c21b;
 
 
     --blue60:       #6464c8;
@@ -463,7 +463,7 @@ li {
 }
 
 .colr-yellow {
-    color: var(--yellow20hover);
+    color: var(--yellow20);
 
 }
 
