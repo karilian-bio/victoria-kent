@@ -45,22 +45,14 @@
     --BD-02-line: 1.5rem;
     --BD-02-weight: 400;
 
-    --blue60:       #6464c8;
-    --blue90:       #1f1f56;
-    --red60:        #be4747;
-    --green20:      #23ab23;
-    --green60:      #1a811a;
-    --yellow10:     #fafa77;
-    --yellow20:     #e9e943;
-    --yellow30:     #cdcd2d;
 
-    --purple30hover:    #c5a3ff;
-    --red30hover:       #ff99a0;
-    --green20hover:     #74e792;
-    --yellow10:         #fafa77;
-    --orange30hover:    #ff9d57;
-    --blue40hover:      #5c97ff;
-    --magenta20hover:   #ffbdda;
+    --blue40hover: #5c97ff;
+    --green30hover: #36ce5e;
+    --yellow20hover: #fccd27;
+
+
+    --blue60:       #6464c8;
+    --red60:        #be4747;
 
 
     --cyan20: #d2e5ef;
@@ -388,11 +380,11 @@ p {
     color: var(--red60)
 }
 
-.blue {
+.back-blue {
     background: var(--blue60) ;
 }
 
-.red {
+.back-red {
     background: var(--red60) ;
 }
 
@@ -442,7 +434,9 @@ p {
     background-color: white;
 }
 
+
 ul {
+    padding-top: var(--padding);
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -463,9 +457,23 @@ li {
 
 /*start new-problem*/
 
+.colr-green {
+    color: var(--green30hover);
+
+}
+
+.colr-yellow {
+    color: var(--yellow20hover);
+
+}
+
+.colr-blue {
+    color: var(--blue40hover);
+}
+
 .new-problem{
 
-    color: var(--grey90);
+
     
     /*see figma file zambrano for spacing rules;*/
     --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
@@ -481,18 +489,17 @@ li {
 }
 
 .new-problem h3 {
+    padding-bottom: calc( var(--FH-06-line) * var(--gap-m) );
 }
 
 .new-problem h4 {
-    padding-bottom: calc( var(--FH-06-line) * var(--gap-m) );
+    padding-top: calc( var(--FH-06-line) * var(--gap-m));
 }
 
 .new-problem-grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--padding);
-
-    
     @media (max-width: 1200px) {
           grid-template-columns: 1fr;
         }
@@ -502,25 +509,29 @@ li {
 .new-problem-grid-item {
     display:flex;
     flex-direction: column;
-    //align-items: center;
+    align-items: center;
+    gap: 5rem;
     box-sizing: border-box; /* Include padding and border in the element's width */
     
     --h5-space-diff: calc( (var(--FH-04-line) - var(--FH-04-size))* 0.5) ;
-    padding-top: calc( var(--FH-04-size) - var(--h5-space-diff) ) ;
-    padding-left: var(--FH-04-size);
-    padding-right: var(--FH-04-size);
-    padding-bottom: var(--FH-04-size);
-
+    //padding-top: calc( var(--FH-04-size) - var(--h5-space-diff) ) ;
+    padding: 5rem;
+    //padding-left: var(--FH-04-size);
+    //padding-right: var(--FH-04-size);
+    //padding-bottom: var(--FH-04-size);
+    
     background-color: var(--grey10);
 
     @media (max-width: 1200px) {
         padding-left: var(--padding);
         padding-right: var(--padding);
+        padding-top: calc( var(--FH-04-size) - var(--h5-space-diff) ) ;
+        padding-bottom: var(--FH-04-size);
+        gap: var(--padding);
     }
 }
 
 .new-problem-grid-item h5 {
-    padding-bottom: calc(var(--FH-04-size) * var(--gap-xs) );
 }
 
 .new-problem-grid-item p {
@@ -528,70 +539,13 @@ li {
 }
 
 .biomarker {
-    width: 100%;
-}
-/*end new-problem*/
-
-/*start complex*/
-
-.complex {
-    //text-align: center;
-    color: var(--grey90);
-    
-    /*see figma file zambrano for spacing rules;*/
-    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
-    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
-    padding-left: var(--FH-06-size);
-    padding-right: var(--FH-06-size);
-    padding-bottom: var(--FH-06-size);
+    width: 10rem;
 
     @media (max-width: 1200px) {
-        text-align: left;
-        padding-left: var(--padding);
-        padding-right: var(--padding);
+        width: 6rem;
     }
-
 }
-.complex h3 {
-}
-
-.complex h4 {
-    padding-bottom: calc( var(--FH-06-line) * var(--gap-m) );
-
-}
-
-.complex-grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--padding);
-
-}
-
-
-/*
-logic to show wide sankey in web view and square sankey in phone view
-*/
-
-#sankey-wide {
-    display: block;
-}
-
-#sankey-square {
-    display: none;
-}
-
-@media (max-width: 1200px) {
-    #sankey-wide {
-        display: none;
-    }
-    #sankey-square {
-        display: block;
-    }
-
-}
-
-
-/*end complex*/
+/*end new-problem*/
 
 
 /* Submssion to regulatory bodies section */
@@ -599,6 +553,7 @@ logic to show wide sankey in web view and square sankey in phone view
 .submission {
     //text-align: center;
     color: var(--grey90);
+
     
     /*see figma file zambrano for spacing rules;*/
     --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
