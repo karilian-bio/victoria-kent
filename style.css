@@ -17,33 +17,33 @@
  */
 
 :root {
-    --FD-03-size: clamp(2.625rem, 5vw + 1.5rem, 5.25rem);
-    --FD-03-line: clamp(3.125rem, 5vw + 2rem, 5.875rem);
-    --FD-03-weight: 600;
+    --h1-size: clamp(2.625rem, 5vw + 1.5rem, 5.25rem);
+    --h1-line: clamp(3.125rem, 5vw + 2rem, 5.875rem);
+    --h1-weight: 600;
 
-    --FQ-02-size: clamp(2rem, 5vw + 1rem, 3.75rem);
-    --FQ-02-line: clamp(2.5rem, 5vw + 1.25rem, 4.375rem);
-    --FQ-02-weight: 300;
+    --h2-size: clamp(2rem, 5vw + 1rem, 3.75rem);
+    --h2-line: clamp(2.5rem, 5vw + 1.25rem, 4.375rem);
+    --h2-weight: 300;
 
-    --FH-06-size: clamp(2rem, 5vw + 1rem, 3.75rem);
-    --FH-06-line: clamp(2.5rem, 5vw + 1.25rem, 4.375rem);
-    --FH-06-weight: 600;
+    --h3-size: clamp(2rem, 5vw + 1rem, 3.75rem);
+    --h3-line: clamp(2.5rem, 5vw + 1.25rem, 4.375rem);
+    --h3-weight: 600;
 
-    --FH-05-size: clamp(2rem, 5vw + 1rem, 3.75rem);
-    --FH-05-line: clamp(2.5rem, 5vw + 1.25rem, 4.375rem);
-    --FH-05-weight: 300;
+    --h4-size: clamp(2rem, 5vw + 1rem, 3.75rem);
+    --h4-line: clamp(2.5rem, 5vw + 1.25rem, 4.375rem);
+    --h4-weight: 300;
 
-    --FH-04-size: clamp(1.75rem, 2vw + 1.25rem, 2rem);
-    --FH-04-line: clamp(2.25rem, 4vw + 1.25rem, 2.5rem);
-    --FH-04-weight: 300;
+    --h5-size: clamp(1.75rem, 2vw + 1.25rem, 2rem);
+    --h5-line: clamp(2.25rem, 4vw + 1.25rem, 2.5rem);
+    --h5-weight: 300;
 
-    --HC-02-size: 1rem;
-    --HC-02-line: 1.375rem;
-    --HC-02-weight: 600;
+    --h6-size: 1rem;
+    --h6-line: 1.375rem;
+    --h6-weight: 600;
 
-    --BD-02-size: 1rem;
-    --BD-02-line: 1.5rem;
-    --BD-02-weight: 400;
+    --p-size: 12px;
+    --p-line: 16px;
+    --p-weight: 400;
 
 
     --blue40hover: #5c97ff;
@@ -158,7 +158,6 @@ html:focus-within {
 body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-    background-color: var(--gray10);
 }
 
 /* A elements that don't have a class get default styles */
@@ -197,54 +196,82 @@ select {
     }
 }
 
+/* Animation for scrolling */
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+/* Ensure smooth infinite loop */
+#carousel-track:hover {
+animation-play-state: paused;
+}
+
+button:hover {
+    background-color: var(--red60);
+    color: var(--white)
+}
+
+
 h1 {
     font-family: var(--ff);
-    font-size: var(--FD-03-size);
-    line-height: var(--FD-03-line);
-    font-weight: var(--FD-03-weight);
+    font-size: var(--h1-size);
+    line-height: var(--h1-line);
+    font-weight: var(--h1-weight);
+}
+
+h1 span {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
 }
 
 
 h2 {
     font-family: var(--ff);
-    font-size: var(--FQ-02-size);
-    line-height: var(--FQ-02-line);
-    font-weight: var(--FQ-02-weight);
+    font-size: var(--h2-size);
+    line-height: var(--h2-line);
+    font-weight: var(--h2-weight);
 }
 
 h3 {
     font-family: var(--ff);
-    font-size: var(--FH-06-size);
-    line-height: var(--FH-06-line);
-    font-weight: var(--FH-06-weight);
+    font-size: var(--h3-size);
+    line-height: var(--h3-line);
+    font-weight: var(--h3-weight);
 }
 
 h4 {
     font-family: var(--ff);
-    font-size: var(--FH-05-size);
-    line-height: var(--FH-05-line);
-    font-weight: var(--FH-05-weight);
+    font-size: var(--h4-size);
+    line-height: var(--h4-line);
+    font-weight: var(--h4-weight);
 }
 
 h5 {
     font-family: var(--ff);
-    font-size: var(--FH-04-size);
-    line-height: var(--FH-04-line);
-    font-weight: var(--FH-04-weight);
+    font-size: var(--h5-size);
+    line-height: var(--h5-line);
+    font-weight: var(--h5-weight);
 }
 
 h6 {
     font-family: var(--ff);
-    font-size: var(--HC-02-size);
-    line-height: var(--HC-02-line);
-    font-weight: var(--HC-02-weight);
+    font-size: var(--h6-size);
+    line-height: var(--h6-line);
+    font-weight: var(--h6-weight);
 }
 
 p {
     font-family: var(--ff);
-    font-size: var(--BD-02-size);
-    line-height: var(--BD-02-line);
-    font-weight: var(--BD-02-weight);
+    font-size: var(--p-size);
+    line-height: var(--p-line);
+    font-weight: var(--p-weight);
 }
 
 .fixed-heading-07 {
@@ -259,814 +286,488 @@ p {
     font-weight: var(--FD-01-weight);
 }
 
-/* start header */
+.anim-sc10 {
+    animation: scroll 10s linear infinite;
+}
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    max-width: var(--max-width);
-    margin: auto;
+.alnitm-cen {
+    align-items: center;
+}
+
+.alnitm-end {
+    align-items: end/;
+}
+
+.alnitm-start {
+    align-items: start;
+}
+
+.back-gr10 {
     background-color: var(--grey10);
 }
 
-.logo {
-    margin: var(--padding);
-    height: 24px ;
-
+.back-gr90 {
+    background-color: var(--grey90);
 }
 
-.header-button {
-    display: flex;
-    padding: var(--padding);
+
+.back-bl60 {
     background-color: var(--blue60);
+}
+
+.back-rd60 {
+    background-color: var(--red60);
+}
+
+.back-whit {
+    background-color: var(--white);
+}
+
+.back-yl20 {
+    background-color: var(--yellow20);
+}
+
+.back-grad-01 {
+    background-image: linear-gradient( var(--white), var(--grey90) );
+}
+
+.back-tran {
+    background-color: transparent;
+}
+
+
+
+.bkim-wide-road {
+    background-image: url(./assets/images/road_desat_colorize60_16x9_1200px.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.bkim-wide-cup {
+    background-image: url(./assets/images/cup_desat_colorize60_16x9_1200px_72dpi.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.bkim-sqre-kids {
+    background-image: url(./assets/images/kids_1x1_600px_72dpi.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.bkim-sqre-papr {
+    background-image: url(./assets/images/paper_1x1_600px_72dpi.webp.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.bkim-sqre-pipe {
+    background-image: url(./assets/images/pipe_1x1_600px_72dpi.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.bkim-sqre-botl {
+    background-image: url(./assets/images/bottle_1x1_600px_72dpi.webp);
+    background-size: cover;
+    background-position: center;
+}
+
+.brad-20px {
+    border-radius: 20px;
+}
+
+.brad-50pc {
+    border-radius: 50%;
+}
+
+.colr-whit {
     color: var(--white);
-    justify-content: space-between ;
-    align-items: center;
-    cursor: pointer;
 }
 
-
-.header-button p {
-    margin-right: var(--padding);
-
-    @media (max-width: 1200px) {
-        font-size: 0;
-        width: auto;
-        margin-right: 0;
-    }
-}
-
-/*end header*/
-
-/*start section*/
-
-.section {
-    display: flex;
-    flex-direction: column;
-    max-width: var(--max-width);
-    justify-self: center;
-    margin: auto;
-
-
-}
-
-.section-break {
-    margin: auto;
-    max-width: var(--max-width);
-    height: var(--section-break-height);
-
-    background-image: url("./assets/images/pattern.svg");
-    background-color: var(--white);
-    background-size: contain;
-}
-
-/*end section*/
-
-/*start hero*/
-
-.hero {
-    color: var(--grey90);
-    background-color: var(--white);
-    
-    /*see figma file zambrano for spacing rules;*/
-    padding-left: var(--FD-03-size);
-    padding-right: var(--FD-03-size);
-    padding-bottom: var(--FD-03-size);
-
-
-    @media (max-width: 1200px) {
-        padding-left:  var(--padding); 
-        padding-right: var(--padding);
-    }
-}
-    
-
-.hero h1 {
-    --h1-space-diff: calc( (var(--FD-03-line) - var(--FD-03-size))* 0.5) ;
-    padding-top: calc( var(--FD-03-size) - var(--h1-space-diff) ) ;
-    padding-bottom: calc( var(--FD-03-line) * var(--gap-xs) );
-}
-
-.hero h2 {
-    padding-bottom: calc( var(--FQ-02-line) * var(--gap-m) );
-}
-
-
-.hero-flex-container{
-    display: flex;
-    justify-content: center;
-    max-width: var(--max-width);
-    background-color: var(--white);
-    padding-bottom: calc( var(--FQ-02-line) * var(--gap-m) );
-    gap: 2rem;
-    @media (max-width: 1200px) {
-    }
-}
-
-
-.button-01 {
-    padding: var(--padding);
-    color: var(--white);
-    cursor: pointer;
-    max-width: 140px;
-
-}
-
-.h1-red {
-    font-family: var(--ff);
-    font-size: var(--FD-03-size);
-    line-height: var(--FD-03-line);
-    font-weight: var(--FD-03-weight);
-    color: var(--red60)
-}
-
-.back-blue {
-    background: var(--blue60) ;
-}
-
-.back-red {
-    background: var(--red60) ;
-}
-
-
-.hero-grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--padding);
-
-    
-    @media (max-width: 1200px) {
-          grid-template-columns: 1fr;
-        }
-}
-
-
-.hero-grid-item {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--grey10);
-
-    padding-left: var(--FH-06-size);
-    padding-right: var(--FH-06-size);  
-    /*below 1.25 is to accomodate height of icon, its a hack :-)*/
-    padding-bottom: calc( var(--FH-06-size) * 1.25 );
-
-    @media (max-width: 1200px) {
-        padding-left: var(--padding);
-        padding-right: var(--padding);
-    }  
-}
-
-.hero-grid-item h3 {
-    //see figma file zambrano for spacing rules;
-    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
-    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
-}
-
-.hero-grid-item h6 {
-    padding-bottom: calc( var(--HC-02-line) * var(--gap-m) );
- 
-}
-
-
-.icon {
-    min-height: 1.25rem;
-    background-color: white;
-}
-
-
-ul {
-    padding-top: var(--padding);
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-li {
-    display: flex;
-    gap: 1rem ;
-    align-items: center;
-}
-
-
-
-
-
-/*end hero*/
-
-/*start new-problem*/
-
-.colr-green {
-    color: var(--green30hover);
-
-}
-
-.colr-yellow {
-    color: var(--yellow20);
-
-}
-
-.colr-blue {
-    color: var(--blue40hover);
-}
-
-.new-problem{
-
-
-    
-    /*see figma file zambrano for spacing rules;*/
-    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
-    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
-    padding-left: var(--FH-06-size);
-    padding-right: var(--FH-06-size);
-    padding-bottom: var(--FH-06-size);
-
-    @media (max-width: 1200px) {
-        padding-left: var(--padding);
-        padding-right: var(--padding);
-    }
-}
-
-.new-problem h3 {
-    padding-bottom: calc( var(--FH-06-line) * var(--gap-m) );
-}
-
-.new-problem h4 {
-    padding-top: calc( var(--FH-06-line) * var(--gap-m));
-}
-
-.new-problem-grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--padding);
-    @media (max-width: 1200px) {
-          grid-template-columns: 1fr;
-        }
-}
-
-
-.new-problem-grid-item {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5rem;
-    box-sizing: border-box; /* Include padding and border in the element's width */
-    
-    --h5-space-diff: calc( (var(--FH-04-line) - var(--FH-04-size))* 0.5) ;
-    //padding-top: calc( var(--FH-04-size) - var(--h5-space-diff) ) ;
-    padding: 5rem;
-    //padding-left: var(--FH-04-size);
-    //padding-right: var(--FH-04-size);
-    //padding-bottom: var(--FH-04-size);
-    
-    background-color: var(--grey10);
-
-    @media (max-width: 1200px) {
-        padding-left: var(--padding);
-        padding-right: var(--padding);
-        padding-top: calc( var(--FH-04-size) - var(--h5-space-diff) ) ;
-        padding-bottom: var(--FH-04-size);
-        gap: var(--padding);
-    }
-}
-
-.new-problem-grid-item h5 {
-}
-
-.new-problem-grid-item p {
-    padding-bottom: calc(var(--BD-02-size) * var(--gap-xxl) );
-}
-
-.biomarker {
-    width: 10rem;
-
-    @media (max-width: 1200px) {
-        width: 6rem;
-    }
-}
-/*end new-problem*/
-
-
-/* Submssion to regulatory bodies section */
-
-.submission {
-    //text-align: center;
-    color: var(--grey90);
-
-    
-    /*see figma file zambrano for spacing rules;*/
-    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
-    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
-    padding-left: var(--FH-06-size);
-    padding-right: var(--FH-06-size);
-    padding-bottom: var(--FH-06-size);
-
-    @media (max-width: 1200px) {
-        text-align: left;
-        padding-left: var(--padding);
-        padding-right: var(--padding);
-    }
-}
-
-.submission h3 {
-
-}
-
-.submission h4 {
-    padding-bottom: calc( var(--FH-06-line) * var(--gap-m) );
-}
-
-.submission-grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--padding);
-
-
-    @media (max-width: 1200px) {
-        grid-template-columns: 1fr;
-        }
-}
-
-.submission-grid-item {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    box-sizing: border-box; /* Include padding and border in the element's width */
-   
-    
-    padding: var(--FH-06-size);
-
-    background-color: var(--grey10);
-    
-}
-
-
-.blue-text {
+.colr-bl60 {
     color: var(--blue60);
 }
 
-
-.submission-img {
-    height: 6rem;
-
-    @media (max-width: 1200px) {
-        height: 4rem;
-    }
-}
-
-.world-image {
-    padding-top: calc( var(--FH-06-line) * var(--gap-m) );
-    max-height: 500px;
-    width: 100%;
-}
-
-/* end of sumbission CSS */
-
-
-/*
-START OF USER SECTION 
-*/
-
-.users {
-    //background-image: url("./assets/images/background_hero.jpg");
-    background-size: cover;
-    background-position: center;
-
-    //text-align: center;
+.colr-gr90 {
     color: var(--grey90);
-    
-    /*see figma file zambrano for spacing rules;*/
-    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
-    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
-    padding-left: var(--FH-06-size);
-    padding-right: var(--FH-06-size);
-    padding-bottom: var(--FH-06-size);
-
-    @media (max-width: 1200px) {
-        text-align: left;
-        padding-left: var(--padding);
-        padding-right: var(--padding);
-    }
 }
 
-.users h3 {   
+.colr-gr70 {
+    color: var(--grey70);
 }
 
-.users h4 {
-    padding-bottom: calc( var(--FH-06-line) * var(--gap-m) );
-
+.colr-gr10 {
+    color: var(--grey40);
 }
 
-.user-grid-container {
+.colr-rd60 {
+    color: var(--red60);
+}
+
+.colr-yl20 {
+    color: var(--yellow20);
+}
+
+.disp-flex {
+    display: flex;
+}
+
+.disp-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--padding);
-
-
-    @media (max-width: 1200px) {
-        grid-template-columns: repeat(2, 1fr);
-        }
 }
 
-.user-grid-item {
-    display:flex;
+.disp-none {
+    display: none;
+}
+
+.flxdir-col {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--grey10);
-    padding: var(--FH-06-size);
-    height: 200px;
 }
 
-
-/*
-.users-grid img {
-    height: 7rem;
-    width: 100%;
-    padding: 1rem;
-    background-color: transparent;
-    //filter: brightness(0) invert(1);
-}
-*/
-    /* Little sneaky to make the svg white without resaving them */
-
-
-/* End of USER LOGIC */
-
-/*start solution*/
-
-.solution {
-    color: var(--white);
-    background-color: var(--grey90);
-    
-    padding-left: var(--FH-06-size);
-    padding-right: var(--FH-06-size);
-    padding-bottom: var(--FH-06-size);
-
-    @media (max-width: 1200px) {
-        text-align: left;
-        padding-left: var(--padding);
-        padding-right: var(--padding);
-    }
+.grcl-1sp2 {
+    grid-column: span 2;
 }
 
-.connect-logo {
-    //padding-bottom: calc( var(--FD-03-line) * var(--gap-m) );
-    max-height: 50px;
+.grcl-1sp3 {
+    grid-column: span 3;
+3}
+
+.grtc-21fr {
+    grid-template-columns: repeat(2, 1fr);
 }
 
-
-
-.solution h3 {
-    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
-    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
-    padding-bottom: calc( var(--FH-06-line) * var(--gap-xs) );
-}
-
-.solution h4 {
-    padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
-
-}
-
-.solution h5 {
-    padding-bottom: calc( var(--FH-04-line) * var(--gap-l) );
-
-
-}
-
-.world {
-    //max-height: 20rem;
-}
-
-/*end solution*/
-
-/*start core*/
-
-.core {
-    background-color: var(--white);
-    color: var(--grey90);
-
-    padding-left: var(--FH-06-size);
-    padding-right: var(--FH-06-size);
-    padding-bottom: var(--FH-06-size);
-    
-    @media (max-width: 1200px) {
-       padding-left: var(--padding);
-       padding-right: var(--padding); 
-    }
-    
-}
-
-.core h3 {
-    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
-    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
-    padding-bottom: calc( var(--FH-06-line) * var(--gap-xs) );
-    
-}
-
-.core h4 {
-    padding-bottom: calc( var(--FH-05-line) * var(--gap-m) );
-
-}
-
-.box {
-    //background: linear-gradient(90deg, var(--blue60) 0%, var(--red60) 100%);
-    background: var(--blue60);
-    color: var(--white);
-    font-family: var(--ff);
-    font-size: var(--FH-05-size);
-    line-height: var(--FH-05-line);
-    font-weight: var(--FH-05-weight);
-    padding-left: calc( var(--FH-05-size) / 2 ) ;
-    padding-right: calc( var(--FH-05-size) / 2 ) ;
-
-}
-
-
-.core-flex-container {
-    display: flex;
-    flex-direction: column;
-    gap: var(--padding);
-
-}
-
-.core-flex-item-container {
-    display: flex;
-    flex-direction: reverse;
-    
-    @media (max-width: 1200px) {
-        flex-direction: column-reverse;
-    }
-    
-}
-
-.flex-item-70 {
-    flex: 0 0 70%; /* Don't grow, don't shrink, start at 20% width */
-    max-width: 70%; /* Maximum width of 20% */
-    box-sizing: border-box; /* Include padding and border in the element's width */
-    background-color: var(--grey10);
-    
-    --h4-space-diff: calc( (var(--FH-05-line) - var(--FH-05-size))* 0.5) ;
-    padding-top: calc( var(--FH-05-size) - var(--h4-space-diff) ) ;
-    padding-left: var(--FH-05-size);
-    padding-right: var(--padding);
-    padding-bottom: var(--FH-05-size);
-    
-    @media (max-width: 1200px) {
-        padding-left: var(--padding);
-        padding-right: var(--padding);
-    }
-}
-
-.flex-item-70 h4 {
-    padding-bottom: calc( var(--FH-05-line) * var(--gap-xs) );
-
-}
-
-.flex-item-30 {
-    flex: 0 0 30%; /* Don't grow, don't shrink, start at 20% width */
-    max-width: 30%; /* Maximum width of 20% */
-
-    @media (max-width: 1200px) {
-    flex: 0 0 100%; /* Each item takes full width on small screens */
-    max-width: 100%; /* Maximum width of 100% */
-    min-height: 5rem;
-
-    }
-}
-
-.circos {
-    background-image: url(./assets/images/circos-plot.png);
-    background-repeat: no-repeat ;
-    background-size:cover;
-    background-position: center;
-}
-
-.node {
-    background-image: url(./assets/images/node-diagram.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.route {
-    background-image: url(./assets/images/ROUTING.png);
-    background-size: cover;
-    background-position: center;
-}
-
-
-
-@media (max-width: 1200px) {
-    .flex-item-70, .flex-item-30 {
-      flex: 0 0 100%; /* Each item takes full width on small screens */
-      max-width: 100%; /* Maximum width of 100% */
-    }
-
-    .flex-item-30 {
-    }
-
-        
-}
-
-/*end core*/
-
-
-
-/*start problem*/
-
-.problem {
-    
-    //see figma file zambrano for spacing rules;
-    //does not required diff as top left element is not text
-    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
-    padding-top: var(--FH-06-size);
-    
-    //bottom padding coming from the .problem-flex-container  
-    //padding-bottom: var(--FH-06-size);
-    padding-left: var(--FH-06-size);
-    padding-right: var(--FH-06-size);
-
-    background-image: url(./assets/images/background_hero.jpg);
-    background-size: cover;
-    
-    @media (max-width: 1200px) {
-    padding-left: 0px ;
-    padding-right: 0px;
-    }
-}
-
-.problem-flex-container {
-    display: flex;
-    flex-wrap: wrap; /* Allows items to wrap onto the next line */
-    margin-bottom: var(--FH-06-size);
-}
-  
-.flex-item-20 {
-    flex: 0 0 20%; /* Don't grow, don't shrink, start at 20% width */
-    max-width: 20%; /* Maximum width of 20% */
-    box-sizing: border-box; /* Include padding and border in the element's width */
-    //background-color: var(--grey90);
-}
-
-.binary{
-    background-image: url(./assets/images/binary-rgb.svg);
-}
-.binary2{
-    background-image: url(./assets/images/dna-binary-rgb-2.svg);
-}
-.code{
-    background-image: url(./assets/images/dna-code-rgb.svg);
-}
-
-.flex-item-80 {
-    flex: 0 0 80%; /* Don't grow, don't shrink, start at 80% width */
-    max-width: 80%; /* Maximum width of 80% */
-    box-sizing: border-box; /* Include padding and border in the element's width */
-    color: var(--white);
-    
-    @media (max-width: 1200px) {
-        padding-left: var(--padding);
-        padding-right: var(--padding);
-    }
-
-}
-
-.flex-item-80 h3 {
-    padding-left: var(--FH-06-size);
-    padding-right: var(--FH-06-size);
-    padding-bottom: calc( var(--FH-06-line) * var(--gap-xs) );
-
-    @media (max-width: 1200px) {
-    --h3-space-diff: calc( (var(--FH-06-line) - var(--FH-06-size))* 0.5) ;
-    padding-top: calc( var(--FH-06-size) - var(--h3-space-diff) ) ;
-    padding-left: 0px ;
-    padding-right: 0px ;
-    }
-
-}
-
-.flex-item-80 h4 {
-    padding-left: var(--FH-06-size);
-    padding-right: var(--FH-06-size);
-
-    @media (max-width: 1200px) {
-    padding-left: 0px ;
-    padding-right: 0px ;
-        
-    }
-}
-
-@media (max-width: 1200px) {
-    .flex-item-80, .flex-item-20{
-      flex: 0 0 100%; /* Each item takes full width on small screens */
-      max-width: 100%; /* Maximum width of 100% */
-    }
-
-    .flex-item-20 {
-        max-height: 5rem;
-    }
-}
-
-
-/*end problem*/
-
-
-/*start finale*/
-
-.finale {
-    color: var(--grey90);
-    background-color: var(--white);
-    
-    /*see figma file zambrano for spacing rules;*/
-    padding-left: var(--FD-03-size);
-    padding-right: var(--FD-03-size);
-    padding-bottom: var(--FD-03-size);
-
-
-    @media (max-width: 1200px) {
-        padding-left:  var(--padding); 
-        padding-right: var(--padding);
-    }
-}
-
-.finale h1 {
-    --h1-space-diff: calc( (var(--FD-03-line) - var(--FD-03-size))* 0.5) ;
-    padding-top: calc( var(--FD-03-size) - var(--h1-space-diff) ) ;
-    padding-bottom: calc( var(--FD-03-line) * var(--gap-xs) );
-}
-
-.finale h2 {
-    padding-bottom: calc( var(--FQ-02-line) * var(--gap-m) );
-}
-
-.finale-connect-logo {
-    padding-bottom: calc( var(--FQ-02-line) * var(--gap-m) );
-
-}
-
-.finale-grid-container {
-    display: grid;
-    gap: var(--padding);
+.grtc-31fr {
     grid-template-columns: repeat(3, 1fr);
-    
-    padding-bottom: calc( var(--FH-04-line) * var(--gap-l) );
-
-    @media (max-width: 1200px) {
-        grid-template-columns: 1fr;
-        } 
 }
 
-.finale-grid-item {
-    display: flex;
-    flex-direction: column; 
-    text-align: center;
-    background-color: var(--grey10);
-
-    --h5-space-diff: calc( (var(--FH-04-line) - var(--FH-04-size))* 0.5) ;
-    padding-top: calc( var(--FH-04-size) - var(--h5-space-diff) ) ;
-    padding-left: var(--FH-04-size);
-    padding-right: var(--FH-04-size);
-    padding-bottom: var(--FH-04-size);
+.grtc-41fr {
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.pictogram {
-    max-height: 10rem;
-    padding-top: var(--FH-04-size);
-    padding-bottom: var(--FH-04-size);
+.grtc-51fr {
+    grid-template-columns: repeat(5, 1fr);
 }
-.finale-flex-container {
-    display: flex;
+
+.grtc-61fr {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.gap-pad {
+    gap: var(--padding) ;
+}
+
+.gap-2rem {
+    gap: 2rem ;
+}
+
+.gap-3rem {
+    gap: 6rem ;
+}
+
+
+.higt-1rem {
+    height: 1rem;
+}
+
+.higt-2rem {
+    height: 2rem;
+}
+
+.higt-4rem {
+    height: 4rem;
+}
+
+.higt-6rem {
+    height: 6rem;
+}
+
+
+
+.higt-hero {
+    height: min(60rem, 95svh);
+}
+
+.higt-full {
+    height: 100%;
+}
+
+.juscon-end {
     justify-content: center;
-    gap: var(--padding);
-
-
 }
 
-/*end finale*/
-
-/*start footer*/
-   
-
-.footer {
-    display: flex;
+.juscon-spbt {
     justify-content: space-between;
-    margin: auto;
-    align-items: center;
-    max-width: var(--max-width);
-    //padding: var(--padding);
-    background-color: var(--grey10);
-    color: var(--black);
 }
 
-.footer p {
-    padding-right: var(--padding);
+.left-zero {
+    left: 0;
 }
 
-/*end footer*/
+.malr-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.marb-1rem {
+    margin-bottom: 1rem;
+}
+
+.marb-2rem {
+    margin-bottom: 2rem;
+}
+
+.marb-3rem {
+    margin-bottom: 3rem;
+}
+
+.marb-20rem {
+    margin-bottom: 20rem;
+}
+
+.marr-1rem {
+    margin-right: 1rem;
+}
+
+.marr-2rem {
+    margin-right: 2rem;
+}
+
+.mart-4rem {
+    margin-top: 4rem;
+}
+
+.matb-4rem {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.matb-2rem {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
 
-/*
 
-*/
+.mxwd-1536 {
+    max-width: 1536px;
+}
+
+.mxwd-2rem {
+    max-width: 2rem;
+}
+
+.obft-covr {
+    object-fit: cover;
+}
+
+.opac-50pc {
+    opacity: 0.5;
+}
+
+.pad-pad {
+    padding: var(--padding);
+}
+
+.padb-h1xs {
+    padding-bottom: calc(var(--h1-size) * var(--gap-xs) );
+}
+
+.padb-h1m {
+    padding-bottom: calc(var(--h1-size) * var(--gap-m) );
+}
+
+.padb-h1xl {
+    padding-bottom: calc(var(--h1-size) * var(--gap-xl) );
+}
+
+.padb-h2l {
+    padding-bottom: calc(var(--h2-size) * var(--gap-l) );
+}
+
+.padb-h3xs {
+    padding-bottom: calc(var(--h3-size) * var(--gap-xs) );
+}
+
+.padb-h3m {
+    padding-bottom: calc(var(--h3-size) * var(--gap-m) );
+}
+
+.padb-h3l {
+    padding-bottom: calc(var(--h3-size) * var(--gap-l) );
+}
+
+.padb-h3xl {
+    padding-bottom: calc(var(--h3-size) * var(--gap-xl) );
+}
+
+
+.padb-h5s {
+    padding-bottom: calc(var(--h5-size) * var(--gap-s) );
+}
+
+.padb-h5m {
+    padding-bottom: calc(var(--h5-size) * var(--gap-m) );
+}
+
+.padb-h5xl {
+    padding-bottom: calc(var(--h5-size) * var(--gap-xl) );
+}
+
+.padb-h5l {
+    padding-bottom: calc(var(--h5-size) * var(--gap-xl) );
+}
+
+.padb-h6xs {
+    padding-bottom: calc(var(--h6-size) * var(--gap-xs) );
+}
+
+.padb-pl {
+    padding-bottom: calc(var(--p-size) * var(--gap-l) );
+}
+
+
+.padb-400p {
+    padding-bottom: 400px;
+}
+
+
+.padt-400p {
+    padding-top: 400px;
+}
+
+.padt-h2l {
+    padding-top: calc(var(--h2-size) * var(--gap-l) );
+}
+
+.pdlrtb-h1 {
+    --h1-space-diff: calc( calc(var(--h1-line) - var(--h1-size)) * 0.5) ;
+    padding-top: calc(var(--h1-size) - var(--h1-space-diff) )  ;
+    
+    padding-left: var(--h1-size);
+    padding-right: var(--h1-size);
+    padding-bottom: var(--h1-size);
+
+}
+
+.pdlrtb-h3 {
+    --h3-space-diff: calc( calc(var(--h3-line) - var(--h3-size)) * 0.5) ;
+    padding-top: calc(var(--h3-size) - var(--h3-space-diff) )  ;
+    
+    padding-left: var(--h3-size);
+    padding-right: var(--h3-size);
+    padding-bottom: var(--h3-size);
+
+}
+
+.pdlrtb-h5 {
+    --h5-space-diff: calc( calc(var(--h5-line) - var(--h5-size)) * 0.5) ;
+    padding-top: calc(var(--h5-size) - var(--h5-space-diff) )  ;
+    
+    padding-left: var(--h5-size);
+    padding-right: var(--h5-size);
+    padding-bottom: var(--h5-size);
+}
+
+.pdlrtb-h6 {
+    --h6-space-diff: calc( calc(var(--h6-line) - var(--h6-size)) * 0.5) ;
+    padding-top: calc(var(--h6-size) - var(--h6-space-diff) )  ;
+    
+    padding-left: var(--h6-size);
+    padding-right: var(--h6-size);
+    padding-bottom: var(--h6-size);
+}
+
+.pdtb-h1 {
+    --h1-space-diff: calc( calc(var(--h1-line) - var(--h1-size)) * 0.5) ;
+    padding-top: calc(var(--h1-size) - var(--h1-space-diff) )  ;
+    
+    padding-bottom: var(--h1-size);
+
+}
+
+.pdtb-h3 {
+    --h3-space-diff: calc( calc(var(--h3-line) - var(--h3-size)) * 0.5) ;
+    padding-top: calc(var(--h3-size) - var(--h3-space-diff) )  ;
+    
+    padding-bottom: var(--h3-size);
+
+}
+
+.obft-covr {
+    object-fit: cover;
+}
+
+.ovfl-hidn {
+    overflow: hidden;
+}
+
+.posi-rela {
+    position: relative;
+}
+
+.posi-absl {
+    position: absolute;
+}
+
+.text-rite{
+    text-align: right;
+}
+
+.text-cent{
+    text-align: center;
+}
+
+.top-zero {
+    top: 0;
+}
+
+.wdth-full{
+    width: 100%;
+}
+
+.wdth-navi {
+    width: min(1584px, 100vw);
+}
+
+.zind-men1 {
+    z-index: -1 ;
+}
+
+#kevin:hover {
+    content: url(./assets/images/linkedin.webp);
+    border-radius: 0%;
+}
+
+@media (max-width: 768px) {
+
+    .med\:alnitm-cen {
+        align-items: center;
+
+    }
+
+    .med\:grtc-1fr {
+        grid-template-columns: 1fr;
+    }
+
+    .med\:malr-pad {
+        margin-left: var(--padding);
+        margin-right: var(--padding);
+    }
+
+    .med\:pdlr-pad {
+        padding-left: var(--padding);
+        padding-right: var(--padding);
+    }
+
+    .med\:disp-none {
+        display: none;
+    }
+    
+    .med\:disp-blok {
+        display: block;
+    }
+
+
+
+}
